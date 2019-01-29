@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B24BF61C2200EA0A009C5C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */; };
+		B24BF61E2200EA0A009C5C51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF61D2200EA0A009C5C51 /* ViewController.swift */; };
+		B24BF6212200EA0A009C5C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24BF61F2200EA0A009C5C51 /* Main.storyboard */; };
+		B24BF6232200EA0B009C5C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24BF6222200EA0B009C5C51 /* Assets.xcassets */; };
+		B24BF6262200EA0B009C5C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */; };
+		B24BF6312200EA0B009C5C51 /* Road_CaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF6302200EA0B009C5C51 /* Road_CaptureTests.swift */; };
+		B24BF63C2200EA0B009C5C51 /* Road_CaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B24BF62D2200EA0B009C5C51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B24BF6102200EA0A009C5C51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B24BF6172200EA0A009C5C51;
+			remoteInfo = "Road Capture";
+		};
+		B24BF6382200EA0B009C5C51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B24BF6102200EA0A009C5C51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B24BF6172200EA0A009C5C51;
+			remoteInfo = "Road Capture";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B24BF6182200EA0A009C5C51 /* Road Capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Road Capture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B24BF61D2200EA0A009C5C51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B24BF6202200EA0A009C5C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B24BF6222200EA0B009C5C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B24BF6252200EA0B009C5C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B24BF6272200EA0B009C5C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B24BF62C2200EA0B009C5C51 /* Road CaptureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Road CaptureTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24BF6302200EA0B009C5C51 /* Road_CaptureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road_CaptureTests.swift; sourceTree = "<group>"; };
+		B24BF6322200EA0B009C5C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B24BF6372200EA0B009C5C51 /* Road CaptureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Road CaptureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road_CaptureUITests.swift; sourceTree = "<group>"; };
+		B24BF63D2200EA0B009C5C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B24BF6152200EA0A009C5C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B24BF6292200EA0B009C5C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B24BF6342200EA0B009C5C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B24BF60F2200EA0A009C5C51 = {
+			isa = PBXGroup;
+			children = (
+				B24BF61A2200EA0A009C5C51 /* Road Capture */,
+				B24BF62F2200EA0B009C5C51 /* Road CaptureTests */,
+				B24BF63A2200EA0B009C5C51 /* Road CaptureUITests */,
+				B24BF6192200EA0A009C5C51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B24BF6192200EA0A009C5C51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B24BF6182200EA0A009C5C51 /* Road Capture.app */,
+				B24BF62C2200EA0B009C5C51 /* Road CaptureTests.xctest */,
+				B24BF6372200EA0B009C5C51 /* Road CaptureUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B24BF61A2200EA0A009C5C51 /* Road Capture */ = {
+			isa = PBXGroup;
+			children = (
+				B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */,
+				B24BF61D2200EA0A009C5C51 /* ViewController.swift */,
+				B24BF61F2200EA0A009C5C51 /* Main.storyboard */,
+				B24BF6222200EA0B009C5C51 /* Assets.xcassets */,
+				B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */,
+				B24BF6272200EA0B009C5C51 /* Info.plist */,
+			);
+			path = "Road Capture";
+			sourceTree = "<group>";
+		};
+		B24BF62F2200EA0B009C5C51 /* Road CaptureTests */ = {
+			isa = PBXGroup;
+			children = (
+				B24BF6302200EA0B009C5C51 /* Road_CaptureTests.swift */,
+				B24BF6322200EA0B009C5C51 /* Info.plist */,
+			);
+			path = "Road CaptureTests";
+			sourceTree = "<group>";
+		};
+		B24BF63A2200EA0B009C5C51 /* Road CaptureUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */,
+				B24BF63D2200EA0B009C5C51 /* Info.plist */,
+			);
+			path = "Road CaptureUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B24BF6172200EA0A009C5C51 /* Road Capture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B24BF6402200EA0B009C5C51 /* Build configuration list for PBXNativeTarget "Road Capture" */;
+			buildPhases = (
+				B24BF6142200EA0A009C5C51 /* Sources */,
+				B24BF6152200EA0A009C5C51 /* Frameworks */,
+				B24BF6162200EA0A009C5C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Road Capture";
+			productName = "Road Capture";
+			productReference = B24BF6182200EA0A009C5C51 /* Road Capture.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B24BF62B2200EA0B009C5C51 /* Road CaptureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B24BF6432200EA0B009C5C51 /* Build configuration list for PBXNativeTarget "Road CaptureTests" */;
+			buildPhases = (
+				B24BF6282200EA0B009C5C51 /* Sources */,
+				B24BF6292200EA0B009C5C51 /* Frameworks */,
+				B24BF62A2200EA0B009C5C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B24BF62E2200EA0B009C5C51 /* PBXTargetDependency */,
+			);
+			name = "Road CaptureTests";
+			productName = "Road CaptureTests";
+			productReference = B24BF62C2200EA0B009C5C51 /* Road CaptureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B24BF6362200EA0B009C5C51 /* Road CaptureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B24BF6462200EA0B009C5C51 /* Build configuration list for PBXNativeTarget "Road CaptureUITests" */;
+			buildPhases = (
+				B24BF6332200EA0B009C5C51 /* Sources */,
+				B24BF6342200EA0B009C5C51 /* Frameworks */,
+				B24BF6352200EA0B009C5C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B24BF6392200EA0B009C5C51 /* PBXTargetDependency */,
+			);
+			name = "Road CaptureUITests";
+			productName = "Road CaptureUITests";
+			productReference = B24BF6372200EA0B009C5C51 /* Road CaptureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B24BF6102200EA0A009C5C51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Aaron Sletten";
+				TargetAttributes = {
+					B24BF6172200EA0A009C5C51 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B24BF62B2200EA0B009C5C51 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B24BF6172200EA0A009C5C51;
+					};
+					B24BF6362200EA0B009C5C51 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B24BF6172200EA0A009C5C51;
+					};
+				};
+			};
+			buildConfigurationList = B24BF6132200EA0A009C5C51 /* Build configuration list for PBXProject "Road Capture" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B24BF60F2200EA0A009C5C51;
+			productRefGroup = B24BF6192200EA0A009C5C51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B24BF6172200EA0A009C5C51 /* Road Capture */,
+				B24BF62B2200EA0B009C5C51 /* Road CaptureTests */,
+				B24BF6362200EA0B009C5C51 /* Road CaptureUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B24BF6162200EA0A009C5C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24BF6262200EA0B009C5C51 /* LaunchScreen.storyboard in Resources */,
+				B24BF6232200EA0B009C5C51 /* Assets.xcassets in Resources */,
+				B24BF6212200EA0A009C5C51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B24BF62A2200EA0B009C5C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B24BF6352200EA0B009C5C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B24BF6142200EA0A009C5C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24BF61E2200EA0A009C5C51 /* ViewController.swift in Sources */,
+				B24BF61C2200EA0A009C5C51 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B24BF6282200EA0B009C5C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24BF6312200EA0B009C5C51 /* Road_CaptureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B24BF6332200EA0B009C5C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24BF63C2200EA0B009C5C51 /* Road_CaptureUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B24BF62E2200EA0B009C5C51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B24BF6172200EA0A009C5C51 /* Road Capture */;
+			targetProxy = B24BF62D2200EA0B009C5C51 /* PBXContainerItemProxy */;
+		};
+		B24BF6392200EA0B009C5C51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B24BF6172200EA0A009C5C51 /* Road Capture */;
+			targetProxy = B24BF6382200EA0B009C5C51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B24BF61F2200EA0A009C5C51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B24BF6202200EA0A009C5C51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B24BF6252200EA0B009C5C51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B24BF63E2200EA0B009C5C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B24BF63F2200EA0B009C5C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B24BF6412200EA0B009C5C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PN7664863P;
+				INFOPLIST_FILE = "Road Capture/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B24BF6422200EA0B009C5C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PN7664863P;
+				INFOPLIST_FILE = "Road Capture/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B24BF6442200EA0B009C5C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Road CaptureTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-CaptureTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Road Capture.app/Road Capture";
+			};
+			name = Debug;
+		};
+		B24BF6452200EA0B009C5C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Road CaptureTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-CaptureTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Road Capture.app/Road Capture";
+			};
+			name = Release;
+		};
+		B24BF6472200EA0B009C5C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Road CaptureUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-CaptureUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Road Capture";
+			};
+			name = Debug;
+		};
+		B24BF6482200EA0B009C5C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Road CaptureUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-CaptureUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Road Capture";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B24BF6132200EA0A009C5C51 /* Build configuration list for PBXProject "Road Capture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B24BF63E2200EA0B009C5C51 /* Debug */,
+				B24BF63F2200EA0B009C5C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B24BF6402200EA0B009C5C51 /* Build configuration list for PBXNativeTarget "Road Capture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B24BF6412200EA0B009C5C51 /* Debug */,
+				B24BF6422200EA0B009C5C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B24BF6432200EA0B009C5C51 /* Build configuration list for PBXNativeTarget "Road CaptureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B24BF6442200EA0B009C5C51 /* Debug */,
+				B24BF6452200EA0B009C5C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B24BF6462200EA0B009C5C51 /* Build configuration list for PBXNativeTarget "Road CaptureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B24BF6472200EA0B009C5C51 /* Debug */,
+				B24BF6482200EA0B009C5C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B24BF6102200EA0A009C5C51 /* Project object */;
+}

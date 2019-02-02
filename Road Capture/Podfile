@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'Road Capture' do
+  use_frameworks!
+pod 'Alamofire'
+pod 'CameraManager', '~> 4.3'
+pod 'SwiftLint'
+
+  # Pods for Road Capture
+
+  target 'Road CaptureTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'Road CaptureUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

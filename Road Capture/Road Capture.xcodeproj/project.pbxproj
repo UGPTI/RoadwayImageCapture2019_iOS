@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		7C532BDC42CEBE4116639420 /* Pods_Road_CaptureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D39BCC8358248401532C608 /* Pods_Road_CaptureUITests.framework */; };
 		B24BF61C2200EA0A009C5C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */; };
-		B24BF61E2200EA0A009C5C51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF61D2200EA0A009C5C51 /* ViewController.swift */; };
+		B24BF61E2200EA0A009C5C51 /* ImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF61D2200EA0A009C5C51 /* ImageCaptureViewController.swift */; };
 		B24BF6212200EA0A009C5C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24BF61F2200EA0A009C5C51 /* Main.storyboard */; };
 		B24BF6232200EA0B009C5C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24BF6222200EA0B009C5C51 /* Assets.xcassets */; };
 		B24BF6262200EA0B009C5C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */; };
 		B24BF6312200EA0B009C5C51 /* Road_CaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF6302200EA0B009C5C51 /* Road_CaptureTests.swift */; };
 		B24BF63C2200EA0B009C5C51 /* Road_CaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */; };
+		B2A52B502207FD160079F120 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A52B4F2207FD160079F120 /* Marker.swift */; };
 		C12380D222010410DD8B498F /* Pods_Road_Capture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DCB327D447DECDEE7D32C6 /* Pods_Road_Capture.framework */; };
 		C35F6AC520B04C744BFC1CDB /* Pods_Road_CaptureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217BD9146AC12AF8A0C8306B /* Pods_Road_CaptureTests.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +46,7 @@
 		79C713802C0EBD84E8B60048 /* Pods-Road CaptureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureTests/Pods-Road CaptureTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B24BF6182200EA0A009C5C51 /* Road Capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Road Capture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B24BF61D2200EA0A009C5C51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B24BF61D2200EA0A009C5C51 /* ImageCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaptureViewController.swift; sourceTree = "<group>"; };
 		B24BF6202200EA0A009C5C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B24BF6222200EA0B009C5C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B24BF6252200EA0B009C5C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		B24BF6372200EA0B009C5C51 /* Road CaptureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Road CaptureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road_CaptureUITests.swift; sourceTree = "<group>"; };
 		B24BF63D2200EA0B009C5C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2A52B4F2207FD160079F120 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		B5F2A2C1BC7C772C4FA4CEB7 /* Pods-Road CaptureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureUITests/Pods-Road CaptureUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B6DCB327D447DECDEE7D32C6 /* Pods_Road_Capture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Road_Capture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F4AA7FCBEC371218716680 /* Pods-Road Capture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road Capture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Road Capture/Pods-Road Capture.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,11 +130,12 @@
 			isa = PBXGroup;
 			children = (
 				B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */,
-				B24BF61D2200EA0A009C5C51 /* ViewController.swift */,
+				B24BF61D2200EA0A009C5C51 /* ImageCaptureViewController.swift */,
 				B24BF61F2200EA0A009C5C51 /* Main.storyboard */,
 				B24BF6222200EA0B009C5C51 /* Assets.xcassets */,
 				B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */,
 				B24BF6272200EA0B009C5C51 /* Info.plist */,
+				B2A52B4F2207FD160079F120 /* Marker.swift */,
 			);
 			path = "Road Capture";
 			sourceTree = "<group>";
@@ -377,8 +380,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B24BF61E2200EA0A009C5C51 /* ViewController.swift in Sources */,
+				B24BF61E2200EA0A009C5C51 /* ImageCaptureViewController.swift in Sources */,
 				B24BF61C2200EA0A009C5C51 /* AppDelegate.swift in Sources */,
+				B2A52B502207FD160079F120 /* Marker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,13 +559,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2GW5263Z6C;
+				DEVELOPMENT_TEAM = PN7664863P;
 				INFOPLIST_FILE = "Road Capture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -574,13 +578,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2GW5263Z6C;
+				DEVELOPMENT_TEAM = PN7664863P;
 				INFOPLIST_FILE = "Road Capture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

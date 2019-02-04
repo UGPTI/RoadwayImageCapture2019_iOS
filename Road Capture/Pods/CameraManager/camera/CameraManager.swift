@@ -1373,7 +1373,7 @@ open class CameraManager: NSObject, AVCaptureFileOutputRecordingDelegate, UIGest
     }
     
     fileprivate func _checkIfCameraIsAvailable() -> CameraState {
-        let deviceHasCamera = UIImagePickerController.isCameraDeviceAvailable(UIImagePickerController.CameraDevice.rear) || UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.front)
+        let deviceHasCamera = UIImagePickerController.isCameraDeviceAvailable(UIImagePickerController.CameraDevice.rear) || UIImagePickerController.isCameraDeviceAvailable(UIImagePickerController.CameraDevice.front)
         if deviceHasCamera {
             let authorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
             let userAgreedToUseIt = authorizationStatus == .authorized

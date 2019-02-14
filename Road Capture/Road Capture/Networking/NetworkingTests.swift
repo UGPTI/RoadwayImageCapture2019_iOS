@@ -18,7 +18,6 @@ class NetworkingTests{
                 completion: @escaping (_ tags: [String]?, _ colors: [UIColor]?) -> Void) {
         
         
-        
         // 1
         guard let imageData = image.jpegData(compressionQuality: 0.5) else {
             print("Could not get JPEG representation of UIImage")
@@ -32,7 +31,7 @@ class NetworkingTests{
                                      fileName: "image.jpg",
                                      mimeType: "image/jpeg")
         },
-                         to: "http://api.imagga.com/v1/content",
+                         to: "http://dotsc-data.ugpti.ndsu.nodak.edu",
                          headers: ["Authorization": "Basic xxx"],
                          encodingCompletion: { encodingResult in
                             switch encodingResult {

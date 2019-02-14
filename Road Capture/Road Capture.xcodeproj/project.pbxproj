@@ -17,6 +17,7 @@
 		B24BF6262200EA0B009C5C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */; };
 		B24BF6312200EA0B009C5C51 /* Road_CaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF6302200EA0B009C5C51 /* Road_CaptureTests.swift */; };
 		B24BF63C2200EA0B009C5C51 /* Road_CaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */; };
+		B26B8B5A2215E27D00EF533F /* IMG_0055.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B26B8B592215E27D00EF533F /* IMG_0055.JPG */; };
 		B2A52B502207FD160079F120 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A52B4F2207FD160079F120 /* Marker.swift */; };
 		C12380D222010410DD8B498F /* Pods_Road_Capture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DCB327D447DECDEE7D32C6 /* Pods_Road_Capture.framework */; };
 		C35F6AC520B04C744BFC1CDB /* Pods_Road_CaptureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217BD9146AC12AF8A0C8306B /* Pods_Road_CaptureTests.framework */; };
@@ -61,6 +62,7 @@
 		B24BF6372200EA0B009C5C51 /* Road CaptureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Road CaptureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road_CaptureUITests.swift; sourceTree = "<group>"; };
 		B24BF63D2200EA0B009C5C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B26B8B592215E27D00EF533F /* IMG_0055.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0055.JPG; sourceTree = "<group>"; };
 		B2A52B4F2207FD160079F120 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		B5F2A2C1BC7C772C4FA4CEB7 /* Pods-Road CaptureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureUITests/Pods-Road CaptureUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B6DCB327D447DECDEE7D32C6 /* Pods_Road_Capture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Road_Capture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,10 +152,11 @@
 		B24BF61A2200EA0A009C5C51 /* Road Capture */ = {
 			isa = PBXGroup;
 			children = (
+				B26B8B5B2215E28C00EF533F /* Images */,
 				B238C14F221116BD00DB9017 /* Networking */,
 				B238C14A2210CD4000DB9017 /* Mapping */,
+				B26B8B5C2215E2B900EF533F /* ViewController */,
 				B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */,
-				B24BF61D2200EA0A009C5C51 /* ImageCaptureViewController.swift */,
 				B24BF61F2200EA0A009C5C51 /* Main.storyboard */,
 				B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */,
 				B24BF6272200EA0B009C5C51 /* Info.plist */,
@@ -178,6 +181,22 @@
 				B24BF63D2200EA0B009C5C51 /* Info.plist */,
 			);
 			path = "Road CaptureUITests";
+			sourceTree = "<group>";
+		};
+		B26B8B5B2215E28C00EF533F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B26B8B592215E27D00EF533F /* IMG_0055.JPG */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		B26B8B5C2215E2B900EF533F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B24BF61D2200EA0A009C5C51 /* ImageCaptureViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		F7348E0AECB39123E4E04E61 /* Frameworks */ = {
@@ -299,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B24BF6262200EA0B009C5C51 /* LaunchScreen.storyboard in Resources */,
+				B26B8B5A2215E27D00EF533F /* IMG_0055.JPG in Resources */,
 				B24BF6232200EA0B009C5C51 /* Assets.xcassets in Resources */,
 				B24BF6212200EA0A009C5C51 /* Main.storyboard in Resources */,
 			);

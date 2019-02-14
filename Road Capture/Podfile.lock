@@ -9,6 +9,7 @@ DEPENDENCIES:
   - CameraManager (~> 4.3)
   - SwiftLint
   - SwiftyJSON
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -23,6 +24,6 @@ SPEC CHECKSUMS:
   SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 812a6fcd44a0ef1d420f02f383b5ea2dfec39760
+PODFILE CHECKSUM: b63745b7ee6b6bb1706afc1520275ca1a3b02355
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.5.3

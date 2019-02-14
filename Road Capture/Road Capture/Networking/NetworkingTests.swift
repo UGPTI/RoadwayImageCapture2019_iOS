@@ -8,7 +8,7 @@
 
 import Foundation
 import Alamofire
-import SwiftlyJSON
+import SwiftyJSON
 
 class NetworkingTests{
     

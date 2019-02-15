@@ -24,6 +24,8 @@ class ImageCaptureViewController: UIViewController {
         self.view.bringSubviewToFront(distanceLabel)
         self.view.bringSubviewToFront(totalDistanceLabel)
         self.view.bringSubviewToFront(straightDistanceLabel)
+        
+        NetworkingTests.postTest()
     }
 }
 

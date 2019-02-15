@@ -12,54 +12,50 @@ import SwiftyJSON
 
 class NetworkingTests{
     
-    
-    func upload(image: UIImage,
-                progressCompletion: @escaping (_ percent: Float) -> Void,
-                completion: @escaping (_ tags: [String]?, _ colors: [UIColor]?) -> Void) {
+    static func postTest(){
+        //Get image
+        let image = UIImage(named: "Test.JPG")
         
-        
-        // 1
-        guard let imageData = image.jpegData(compressionQuality: 0.5) else {
+        //Create image data
+        guard let imageData = image!.jpegData(compressionQuality: 0.5) else {
             print("Could not get JPEG representation of UIImage")
             return
         }
         
-        // 2
-        Alamofire.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(imageData,
-                                     withName: "imagefile",
-                                     fileName: "image.jpg",
-                                     mimeType: "image/jpeg")
-        },
-                         to: "http://dotsc-data.ugpti.ndsu.nodak.edu",
-                         headers: ["Authorization": "Basic xxx"],
-                         encodingCompletion: { encodingResult in
-                            switch encodingResult {
-                            case .success(let upload, _, _):
-                                upload.uploadProgress { progress in
-                                    progressCompletion(Float(progress.fractionCompleted))
-                                }
-                                upload.validate()
-                                upload.responseJSON { response in
-                                    // 1
-                                    guard response.result.isSuccess,
-                                        let value = response.result.value else {
-                                            print("Error while uploading file: \(String(describing: response.result.error))")
-                                            completion(nil, nil)
-                                            return
-                                    }
-                                    
-                                    // 2
-                                    let firstFileID = JSON(value)["uploaded"][0]["id"].stringValue
-                                    print("Content uploaded with ID: \(firstFileID)")
-                                    
-                                    //3
-                                    completion(nil, nil)
-
-                                }
-                            case .failure(let encodingError):
-                                print(encodingError)
-                            }
-        })
+        //Create date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let date = Date()
+        let dateString = dateFormatter.string(from: date)
+        
+        //Create parameter list
+        let parameters : [String: Any] = [
+            "username" : "RIC",
+            "password" : "@RICsdP4T",
+            "id" : dateString,
+            "latitude" : 46.8872,
+            "longitude" : -96.8054,
+            "quality" : 1,
+            "agency" : "Capstone Test",
+            "image" : imageData.base64EncodedString(),
+            "filename" : "Aarons_First_Test_1.jpg"
+        ]
+        
+        Alamofire.request("https://dotsc.ugpti.ndsu.nodak.edu/RIC/upload1.php", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON { response in
+//            print("Request: \(String(describing: response.request))\n")   // original url request
+//            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)\n")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+            }
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+        }
+        
+        print(imageData.base64EncodedString())
     }
 }

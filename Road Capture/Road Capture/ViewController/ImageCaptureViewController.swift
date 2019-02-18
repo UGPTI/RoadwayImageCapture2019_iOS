@@ -26,7 +26,7 @@ class ImageCaptureViewController: UIViewController {
         self.view.bringSubviewToFront(straightDistanceLabel)
         
         //NetworkingTests.postTest()
-        NetworkingTests.uploadTest()
+//        NetworkingTests.uploadTest()
     }
 }
 

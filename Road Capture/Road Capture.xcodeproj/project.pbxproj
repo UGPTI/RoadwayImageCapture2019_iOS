@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F44DAD3221B47DE000E91CF /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD0221B47DD000E91CF /* CameraViewController.swift */; };
 		3F44DAD4221B47DE000E91CF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD1221B47DE000E91CF /* GalleryViewController.swift */; };
-		3F44DAD5221B47DE000E91CF /* HelpViewController copy 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD2221B47DE000E91CF /* HelpViewController copy 3.swift */; };
 		3F44DAD7221B4A55000E91CF /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD6221B4A55000E91CF /* SettingsTableViewController.swift */; };
+		3F44DAD9221B51EB000E91CF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD8221B51EB000E91CF /* HelpViewController.swift */; };
 		7C532BDC42CEBE4116639420 /* Pods_Road_CaptureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D39BCC8358248401532C608 /* Pods_Road_CaptureUITests.framework */; };
 		B238C14C2210CD6700DB9017 /* LocationTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C14B2210CD6700DB9017 /* LocationTracking.swift */; };
 		B238C14E2211165000DB9017 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C14D2211165000DB9017 /* NetworkingTests.swift */; };
@@ -51,8 +51,8 @@
 		2D39BCC8358248401532C608 /* Pods_Road_CaptureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Road_CaptureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F44DAD0221B47DD000E91CF /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3F44DAD1221B47DE000E91CF /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
-		3F44DAD2221B47DE000E91CF /* HelpViewController copy 3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HelpViewController copy 3.swift"; sourceTree = "<group>"; };
 		3F44DAD6221B4A55000E91CF /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		3F44DAD8221B51EB000E91CF /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		3F69C4792DA82D32C689969B /* Pods-Road CaptureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureTests/Pods-Road CaptureTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E6DEC569D52F0E638783533 /* Pods-Road CaptureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureUITests/Pods-Road CaptureUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		79C713802C0EBD84E8B60048 /* Pods-Road CaptureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureTests/Pods-Road CaptureTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,8 +207,8 @@
 			children = (
 				B24BF61D2200EA0A009C5C51 /* ImageCaptureViewController.swift */,
 				3F44DAD0221B47DD000E91CF /* CameraViewController.swift */,
+				3F44DAD8221B51EB000E91CF /* HelpViewController.swift */,
 				3F44DAD1221B47DE000E91CF /* GalleryViewController.swift */,
-				3F44DAD2221B47DE000E91CF /* HelpViewController copy 3.swift */,
 				3F44DAD6221B4A55000E91CF /* SettingsTableViewController.swift */,
 			);
 			path = ViewController;
@@ -447,8 +447,8 @@
 				3F44DAD3221B47DE000E91CF /* CameraViewController.swift in Sources */,
 				3F44DAD4221B47DE000E91CF /* GalleryViewController.swift in Sources */,
 				B2A52B502207FD160079F120 /* Marker.swift in Sources */,
-				3F44DAD5221B47DE000E91CF /* HelpViewController copy 3.swift in Sources */,
 				3F44DAD7221B4A55000E91CF /* SettingsTableViewController.swift in Sources */,
+				3F44DAD9221B51EB000E91CF /* HelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

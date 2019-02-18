@@ -91,7 +91,7 @@ class NetworkingTests{
                 multipartFormData.append(value.data(using: .utf8)!, withName: key)
             }
             //Add image
-            multipartFormData.append(imgData, withName: "file", fileName: "file.png", mimeType: "image/jpg")
+            multipartFormData.append(imgData, withName: "file", fileName: "file.jpg", mimeType: "image/jpg")
             
         }, to: "https://dotsc.ugpti.ndsu.nodak.edu/RIC/upload1.php") { (result) in
             switch result {

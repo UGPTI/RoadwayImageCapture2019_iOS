@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkingTests{
-    
+
     static func postTest(){
         //Get image
         let image = UIImage(named: "Test.JPG")
@@ -41,6 +41,8 @@ class NetworkingTests{
             "filename" : "Aarons_First_Test_1.jpg"
         ]
         
+        //Alamofire.
+        
         Alamofire.request("https://dotsc.ugpti.ndsu.nodak.edu/RIC/upload1.php", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { response in
 //            print("Request: \(String(describing: response.request))\n")   // original url request
@@ -57,5 +59,55 @@ class NetworkingTests{
         }
         
         print(imageData.base64EncodedString())
+    }
+
+    static func uploadTest(){
+        //Create image
+        let image = UIImage.init(named: "Test.JPG")
+        //let imgData = UIImageJPEGRepresentation(image!, 0.2)!
+        let imgData = image!.jpegData(compressionQuality: 0.2)!
+
+        //Get datetime
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let date = Date()
+        let dateString = dateFormatter.string(from: date)
+        
+        //Create Parameters
+        let parameters : [String: String] = [
+            "username" : "RIC",
+            "password" : "@RICsdP4T",
+            "id" : dateString,
+            "latitude" : "46.8872",
+            "longitude" : "-96.8054",
+            "quality" : "1",
+            "agency" : "Capstone Test",
+        ]
+        
+        //Upload
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            //Add parameters
+            for (key, value) in parameters {
+                multipartFormData.append(value.data(using: .utf8)!, withName: key)
+            }
+            //Add image
+            multipartFormData.append(imgData, withName: "file", fileName: "file.png", mimeType: "image/jpg")
+            
+        }, to: "https://dotsc.ugpti.ndsu.nodak.edu/RIC/upload1.php") { (result) in
+            switch result {
+            case .success(let upload, _, _):
+                
+                upload.uploadProgress(closure: { (progress) in
+                    print("Upload Progress: \(progress.fractionCompleted)")
+                })
+                
+                upload.responseJSON { response in
+                    print(response.result.value)
+                }
+                
+            case .failure(let encodingError):
+                print(encodingError)
+            }
+        }
     }
 }

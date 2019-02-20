@@ -11,14 +11,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     @IBOutlet var collectionView: UICollectionView!
     
-    let itemsPerRow : CGFloat = 4
+    let itemsPerRow : CGFloat = 3
     private let sectionInsets = UIEdgeInsets(top: 50.0,
                                              left: 20.0,
                                              bottom: 50.0,
                                              right: 20.0)
     
     //Image array
-    let images = [UIImage(named: "1.jpg"),UIImage(named: "2.jpg"),UIImage(named: "3.jpg"),UIImage(named: "4.jpg"),UIImage(named: "5.jpg")]
+    let images = [UIImage(named: "1.JPG"),UIImage(named: "2.JPG"),UIImage(named: "3.JPG"),UIImage(named: "4.JPG"),UIImage(named: "5.JPG")]
 
     let reuseIdentifier = "imageCell"
     
@@ -30,12 +30,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return images.count*10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath)
-        cell.backgroundColor = .green
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ImageCollectionViewCell
+//        cell.backgroundColor = .white
+        cell.imageView.image = images[indexPath.row % 5]
         return cell
     }
     

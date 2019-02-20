@@ -17,6 +17,7 @@
 		B21FD1AD221B630B00916DC6 /* 2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B21FD1A8221B630B00916DC6 /* 2.JPG */; };
 		B21FD1AE221B630B00916DC6 /* 1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B21FD1A9221B630B00916DC6 /* 1.JPG */; };
 		B21FD1AF221B630B00916DC6 /* 4.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B21FD1AA221B630B00916DC6 /* 4.JPG */; };
+		B2DFEDC0221CE9DD00358E49 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DFEDBF221CE9DD00358E49 /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B21FD1A8221B630B00916DC6 /* 2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.JPG; sourceTree = "<group>"; };
 		B21FD1A9221B630B00916DC6 /* 1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.JPG; sourceTree = "<group>"; };
 		B21FD1AA221B630B00916DC6 /* 4.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.JPG; sourceTree = "<group>"; };
+		B2DFEDBF221CE9DD00358E49 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				B21FD19B221B60C500916DC6 /* Assets.xcassets */,
 				B21FD19D221B60C500916DC6 /* LaunchScreen.storyboard */,
 				B21FD1A0221B60C500916DC6 /* Info.plist */,
+				B2DFEDBF221CE9DD00358E49 /* ImageCollectionViewCell.swift */,
 			);
 			path = "Collection View";
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DFEDC0221CE9DD00358E49 /* ImageCollectionViewCell.swift in Sources */,
 				B21FD197221B60C400916DC6 /* ViewController.swift in Sources */,
 				B21FD195221B60C400916DC6 /* AppDelegate.swift in Sources */,
 			);

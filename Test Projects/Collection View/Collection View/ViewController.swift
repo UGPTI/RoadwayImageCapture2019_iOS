@@ -35,7 +35,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ImageCollectionViewCell
-//        cell.backgroundColor = .white
+//        cell.backgroundColor = .whit7e
         cell.imageView.image = images[indexPath.row % 5]
         return cell
     }

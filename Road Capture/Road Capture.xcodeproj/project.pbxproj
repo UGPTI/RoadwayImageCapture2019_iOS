@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3F44DAD3221B47DE000E91CF /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD0221B47DD000E91CF /* CameraViewController.swift */; };
-		3F44DAD4221B47DE000E91CF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD1221B47DE000E91CF /* GalleryViewController.swift */; };
+		3F44DAD4221B47DE000E91CF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD1221B47DE000E91CF /* HelpViewController.swift */; };
 		3F44DAD7221B4A55000E91CF /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD6221B4A55000E91CF /* SettingsTableViewController.swift */; };
-		3F44DAD9221B51EB000E91CF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD8221B51EB000E91CF /* HelpViewController.swift */; };
+		3F44DAD9221B51EB000E91CF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD8221B51EB000E91CF /* GalleryViewController.swift */; };
 		7C532BDC42CEBE4116639420 /* Pods_Road_CaptureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D39BCC8358248401532C608 /* Pods_Road_CaptureUITests.framework */; };
 		B238C14C2210CD6700DB9017 /* LocationTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C14B2210CD6700DB9017 /* LocationTracking.swift */; };
 		B238C14E2211165000DB9017 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C14D2211165000DB9017 /* NetworkingTests.swift */; };
@@ -24,6 +24,12 @@
 		B26B8B5A2215E27D00EF533F /* LargeTest.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B26B8B592215E27D00EF533F /* LargeTest.JPG */; };
 		B273832422164F0A00BC1B0D /* Test.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B273832322164F0A00BC1B0D /* Test.JPG */; };
 		B2A52B502207FD160079F120 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A52B4F2207FD160079F120 /* Marker.swift */; };
+		B2AA6108221F411300AE8B4F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */; };
+		B2AA6124221F430000AE8B4F /* 1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B2AA611F221F42FF00AE8B4F /* 1.JPG */; };
+		B2AA6125221F430000AE8B4F /* 2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B2AA6120221F430000AE8B4F /* 2.JPG */; };
+		B2AA6126221F430000AE8B4F /* 3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B2AA6121221F430000AE8B4F /* 3.JPG */; };
+		B2AA6127221F430000AE8B4F /* 4.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B2AA6122221F430000AE8B4F /* 4.JPG */; };
+		B2AA6128221F430000AE8B4F /* 5.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B2AA6123221F430000AE8B4F /* 5.JPG */; };
 		C12380D222010410DD8B498F /* Pods_Road_Capture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DCB327D447DECDEE7D32C6 /* Pods_Road_Capture.framework */; };
 		C35F6AC520B04C744BFC1CDB /* Pods_Road_CaptureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217BD9146AC12AF8A0C8306B /* Pods_Road_CaptureTests.framework */; };
 /* End PBXBuildFile section */
@@ -50,9 +56,9 @@
 		23C1FF0130F0060E453980BD /* Pods-Road Capture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road Capture.release.xcconfig"; path = "Pods/Target Support Files/Pods-Road Capture/Pods-Road Capture.release.xcconfig"; sourceTree = "<group>"; };
 		2D39BCC8358248401532C608 /* Pods_Road_CaptureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Road_CaptureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F44DAD0221B47DD000E91CF /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		3F44DAD1221B47DE000E91CF /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		3F44DAD1221B47DE000E91CF /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		3F44DAD6221B4A55000E91CF /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		3F44DAD8221B51EB000E91CF /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		3F44DAD8221B51EB000E91CF /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		3F69C4792DA82D32C689969B /* Pods-Road CaptureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureTests/Pods-Road CaptureTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E6DEC569D52F0E638783533 /* Pods-Road CaptureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureUITests/Pods-Road CaptureUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		79C713802C0EBD84E8B60048 /* Pods-Road CaptureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureTests/Pods-Road CaptureTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +80,12 @@
 		B26B8B592215E27D00EF533F /* LargeTest.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LargeTest.JPG; sourceTree = "<group>"; };
 		B273832322164F0A00BC1B0D /* Test.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Test.JPG; sourceTree = "<group>"; };
 		B2A52B4F2207FD160079F120 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B2AA611F221F42FF00AE8B4F /* 1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.JPG; sourceTree = "<group>"; };
+		B2AA6120221F430000AE8B4F /* 2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.JPG; sourceTree = "<group>"; };
+		B2AA6121221F430000AE8B4F /* 3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.JPG; sourceTree = "<group>"; };
+		B2AA6122221F430000AE8B4F /* 4.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.JPG; sourceTree = "<group>"; };
+		B2AA6123221F430000AE8B4F /* 5.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.JPG; sourceTree = "<group>"; };
 		B5F2A2C1BC7C772C4FA4CEB7 /* Pods-Road CaptureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureUITests/Pods-Road CaptureUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B6DCB327D447DECDEE7D32C6 /* Pods_Road_Capture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Road_Capture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F4AA7FCBEC371218716680 /* Pods-Road Capture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road Capture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Road Capture/Pods-Road Capture.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +144,7 @@
 		B238C14F221116BD00DB9017 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B26B8B5B2215E28C00EF533F /* Test Images */,
 				B238C14D2211165000DB9017 /* NetworkingTests.swift */,
 			);
 			path = Networking;
@@ -162,13 +175,13 @@
 		B24BF61A2200EA0A009C5C51 /* Road Capture */ = {
 			isa = PBXGroup;
 			children = (
-				B26B8B5B2215E28C00EF533F /* Images */,
-				B238C14F221116BD00DB9017 /* Networking */,
+				B2AA6109221F411C00AE8B4F /* Gallery */,
 				B238C14A2210CD4000DB9017 /* Mapping */,
+				B238C14F221116BD00DB9017 /* Networking */,
 				B26B8B5C2215E2B900EF533F /* ViewController */,
-				B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */,
 				B24BF61F2200EA0A009C5C51 /* Main.storyboard */,
 				B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */,
+				B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */,
 				B24BF6272200EA0B009C5C51 /* Info.plist */,
 				B24BF6222200EA0B009C5C51 /* Assets.xcassets */,
 			);
@@ -193,13 +206,13 @@
 			path = "Road CaptureUITests";
 			sourceTree = "<group>";
 		};
-		B26B8B5B2215E28C00EF533F /* Images */ = {
+		B26B8B5B2215E28C00EF533F /* Test Images */ = {
 			isa = PBXGroup;
 			children = (
 				B26B8B592215E27D00EF533F /* LargeTest.JPG */,
 				B273832322164F0A00BC1B0D /* Test.JPG */,
 			);
-			path = Images;
+			path = "Test Images";
 			sourceTree = "<group>";
 		};
 		B26B8B5C2215E2B900EF533F /* ViewController */ = {
@@ -207,11 +220,32 @@
 			children = (
 				B24BF61D2200EA0A009C5C51 /* ImageCaptureViewController.swift */,
 				3F44DAD0221B47DD000E91CF /* CameraViewController.swift */,
-				3F44DAD8221B51EB000E91CF /* HelpViewController.swift */,
-				3F44DAD1221B47DE000E91CF /* GalleryViewController.swift */,
+				3F44DAD8221B51EB000E91CF /* GalleryViewController.swift */,
+				3F44DAD1221B47DE000E91CF /* HelpViewController.swift */,
 				3F44DAD6221B4A55000E91CF /* SettingsTableViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2AA6109221F411C00AE8B4F /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA610A221F412E00AE8B4F /* Images */,
+				B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		B2AA610A221F412E00AE8B4F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B2AA611F221F42FF00AE8B4F /* 1.JPG */,
+				B2AA6120221F430000AE8B4F /* 2.JPG */,
+				B2AA6121221F430000AE8B4F /* 3.JPG */,
+				B2AA6122221F430000AE8B4F /* 4.JPG */,
+				B2AA6123221F430000AE8B4F /* 5.JPG */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		F7348E0AECB39123E4E04E61 /* Frameworks */ = {
@@ -335,8 +369,13 @@
 				B24BF6262200EA0B009C5C51 /* LaunchScreen.storyboard in Resources */,
 				B26B8B5A2215E27D00EF533F /* LargeTest.JPG in Resources */,
 				B24BF6232200EA0B009C5C51 /* Assets.xcassets in Resources */,
+				B2AA6127221F430000AE8B4F /* 4.JPG in Resources */,
+				B2AA6124221F430000AE8B4F /* 1.JPG in Resources */,
 				B24BF6212200EA0A009C5C51 /* Main.storyboard in Resources */,
+				B2AA6125221F430000AE8B4F /* 2.JPG in Resources */,
 				B273832422164F0A00BC1B0D /* Test.JPG in Resources */,
+				B2AA6126221F430000AE8B4F /* 3.JPG in Resources */,
+				B2AA6128221F430000AE8B4F /* 5.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +438,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Road Capture/Pods-Road Capture-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Road Capture/Pods-Road Capture-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CameraManager/CameraManager.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -412,7 +451,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Road Capture/Pods-Road Capture-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Road Capture/Pods-Road Capture-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC3F07E97A42A5115D211BC3 /* [CP] Check Pods Manifest.lock */ = {
@@ -445,10 +484,11 @@
 				B24BF61C2200EA0A009C5C51 /* AppDelegate.swift in Sources */,
 				B238C14E2211165000DB9017 /* NetworkingTests.swift in Sources */,
 				3F44DAD3221B47DE000E91CF /* CameraViewController.swift in Sources */,
-				3F44DAD4221B47DE000E91CF /* GalleryViewController.swift in Sources */,
+				3F44DAD4221B47DE000E91CF /* HelpViewController.swift in Sources */,
+				B2AA6108221F411300AE8B4F /* ImageCollectionViewCell.swift in Sources */,
 				B2A52B502207FD160079F120 /* Marker.swift in Sources */,
 				3F44DAD7221B4A55000E91CF /* SettingsTableViewController.swift in Sources */,
-				3F44DAD9221B51EB000E91CF /* HelpViewController.swift in Sources */,
+				3F44DAD9221B51EB000E91CF /* GalleryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

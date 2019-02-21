@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import MapKit
 
 class LocationTracking : NSObject, CLLocationManagerDelegate {
     
@@ -15,17 +16,18 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
     //https://stackoverflow.com/questions/28952747/calculate-total-traveled-distance-ios-swift
     
     let locationManager = CLLocationManager()
+    //Locations
     var startLocation: CLLocation!
     var lastLocation: CLLocation!
     var startDate: Date!
-    var traveledDistance: Double = 0
+    //Distances
+    var deltaDistance : Double = 0
     var totalDistance: Double = 0
     var straightDistance: Double = 0
+    var traveledSinceLastCaptureDistance: Double = 0 //Variable to hold distance since last trigger
     
     //Distance to set off trigger
     var triggerDistance: Double = 100
-    //Variable to hold distance since last trigger
-    var triggerDistanceBuffer: Double = 0
     
     override init() {
         super.init()
@@ -58,21 +60,23 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
             //Calculate distance traveled
         } else if let location = locations.last {
             //Set distances
-            traveledDistance += lastLocation.distance(from: location)
-            totalDistance += traveledDistance
-            triggerDistanceBuffer += traveledDistance;
+            deltaDistance = lastLocation.distance(from: location)
+            
+            traveledSinceLastCaptureDistance += deltaDistance
+            totalDistance += deltaDistance
             straightDistance = startLocation.distance(from: locations.last!)
             
-            //Add placemarkers
-            if(triggerDistanceBuffer >= triggerDistance){
-                //Reset buffer
-                triggerDistanceBuffer = 0
+            //Check if over threshold
+            if(traveledSinceLastCaptureDistance >= triggerDistance){
+                //Reset
+                traveledSinceLastCaptureDistance = 0
                 
-//                addMarker(coordinate: location.coordinate, mapView: mapView, title: nil)
+                //Add placemarkers
+//              addMarker(coordinate: location.coordinate, mapView: mapView, title: nil)
             }
             
             //Print
-            print("Traveled Distance:",  traveledDistance)
+            print("Traveled Distance:",  traveledSinceLastCaptureDistance)
             print("Total Distance:",  totalDistance)
             print("Straight Distance:", straightDistance)
             

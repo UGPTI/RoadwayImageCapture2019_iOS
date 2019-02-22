@@ -24,23 +24,38 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
     var deltaDistance : Double = 0
     var totalDistance: Double = 0
     var straightDistance: Double = 0
-    var traveledSinceLastCaptureDistance: Double = 0 //Variable to hold distance since last trigger
+    var traveledSinceLastResetDistance: Double = 0 //Variable to hold distance since last photo capture
+    
+    //Function to execute once
+    var triggerFunction = {}
     
     //Distance to set off trigger
     var triggerDistance: Double = 100
     
-    override init() {
+    init(triggerDistance : Double?, triggerFunction : @escaping ()->Void) {
         super.init()
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
+        self.triggerDistance = triggerDistance ?? 100 //Default 100
+        self.triggerFunction = triggerFunction
+        
+        locationManager.delegate = self
+        
+        //Ask for premission to use location services
+        start()
+    }
+    
+    func start(){
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse{
+            locationManager.requestWhenInUseAuthorization();
+        }else{
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestWhenInUseAuthorization()
+            locationManager.distanceFilter = 10
             locationManager.startUpdatingLocation()
             locationManager.startMonitoringSignificantLocationChanges()
-            locationManager.distanceFilter = 10
-//            mapView.showsUserLocation = true
-//            mapView.userTrackingMode = .follow
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        start()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -49,41 +64,33 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
             startDate = Date()
             //Print difference in time
         } else {
-            print("elapsedTime:", String(format: "%.0fs", Date().timeIntervalSince(startDate)))
+//            print("elapsedTime:", String(format: "%.0fs", Date().timeIntervalSince(startDate)))
         }
         
         //Set location
         if startLocation == nil {
             startLocation = locations.first
-            
-//            addMarker(coordinate: startLocation.coordinate, mapView: mapView, title: "Start")
-            //Calculate distance traveled
+        //Calculate distance traveled
         } else if let location = locations.last {
             //Set distances
             deltaDistance = lastLocation.distance(from: location)
             
-            traveledSinceLastCaptureDistance += deltaDistance
+            traveledSinceLastResetDistance += deltaDistance
             totalDistance += deltaDistance
             straightDistance = startLocation.distance(from: locations.last!)
             
             //Check if over threshold
-            if(traveledSinceLastCaptureDistance >= triggerDistance){
+            if(traveledSinceLastResetDistance >= triggerDistance){
                 //Reset
-                traveledSinceLastCaptureDistance = 0
+                traveledSinceLastResetDistance = 0
                 
-                //Add placemarkers
-//              addMarker(coordinate: location.coordinate, mapView: mapView, title: nil)
+                //Call Take Picture
+                triggerFunction()
             }
             
             //Print
-            print("Traveled Distance:",  traveledSinceLastCaptureDistance)
-            print("Total Distance:",  totalDistance)
-            print("Straight Distance:", straightDistance)
-            
-//            //Update Labels
-//            distanceLabel.text = "Traveled Distance:\t\(traveledDistance)"
-//            totalDistanceLabel.text = "Total Distance:\t\t\t\(totalDistance)"
-//            straightDistanceLabel.text = "Straight Distance:\t\t\(straightDistance)"
+            print("Traveled Distance:\t",  traveledSinceLastResetDistance)
+            print("Total Distance:\t\t",  totalDistance)
         }
         lastLocation = locations.last
     }
@@ -94,16 +101,5 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
             manager.stopMonitoringSignificantLocationChanges()
         }
     }
-    
-//    //Create marker and add it to the map
-//    func addMarker(coordinate: CLLocationCoordinate2D, mapView: MKMapView, title: String?){
-//        //Create marker
-//        var tempMarker: Marker = Marker(coordinate: coordinate)
-//        tempMarker.title = title ?? "Title"
-//        
-//        //Add Annotation
-//        mapView.addAnnotation(tempMarker)
-//    }
-
 }
 

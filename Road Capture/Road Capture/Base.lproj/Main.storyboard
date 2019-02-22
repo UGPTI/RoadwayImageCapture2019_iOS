@@ -226,10 +226,38 @@
                     <view key="view" contentMode="scaleToFill" id="2kP-oq-oms">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzQ-UB-VBU">
+                                <rect key="frame" x="157.5" y="568" width="60" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.21106947949999999" blue="0.1665672708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6dw-ZY-Eqo"/>
+                                    <constraint firstAttribute="width" constant="60" id="Ohu-k9-jZD"/>
+                                </constraints>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButton_TouchUpInside:" destination="Al3-9I-E9z" eventType="touchUpInside" id="cpu-L8-JDW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="centerX" secondItem="2kP-oq-oms" secondAttribute="centerX" id="eBZ-zL-pUJ"/>
+                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="JzQ-UB-VBU" secondAttribute="bottom" constant="20" id="zDL-bo-bPK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="k8c-TV-nCY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ft5-H9-Kng"/>
+                    <connections>
+                        <outlet property="cameraView" destination="2kP-oq-oms" id="SUa-kB-hIw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J10-9n-5gx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -272,9 +300,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cameraTab" width="30" height="30"/>
-        <image name="galleryTab" width="30" height="30"/>
-        <image name="helpTab" width="30" height="30"/>
-        <image name="settingsTab" width="30" height="30"/>
+        <image name="cameraTab" width="45" height="45"/>
+        <image name="galleryTab" width="45" height="45"/>
+        <image name="helpTab" width="45" height="45"/>
+        <image name="settingsTab" width="45" height="45"/>
     </resources>
 </document>

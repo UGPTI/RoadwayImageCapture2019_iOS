@@ -23,8 +23,19 @@ class CameraViewController: UIViewController {
     
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     
+    var image: UIImage?
+    var imagesArray = [UIImage?]()
+    
     @IBAction func startButton_TouchUpInside(_ sender: Any) {
+        let settings = AVCapturePhotoSettings()
+        photoOutput?.capturePhoto(with: settings , delegate: self)
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showGallery_Segue" {
+            let galleryVC = segue.destination as! GalleryViewController
+            galleryVC.images = self.imagesArray
+        }
     }
     
     @IBOutlet var cameraView: UIView!
@@ -67,7 +78,11 @@ class CameraViewController: UIViewController {
         do {
             let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera!)
             captureSession.addInput(captureDeviceInput)
+            
+            photoOutput = AVCapturePhotoOutput()
+            
             photoOutput?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
+            captureSession.addOutput(photoOutput!)
         } catch {
             print(error)
         }
@@ -101,4 +116,17 @@ class CameraViewController: UIViewController {
     
 
 
+
+}
+
+extension CameraViewController: AVCapturePhotoCaptureDelegate {
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let imageData = photo.fileDataRepresentation() {
+            image = UIImage(data: imageData)
+            imagesArray = [image, UIImage(named: "Test.JPG"), UIImage(named: "LargeTest.JPG"), UIImage(named: "1.JPG"),UIImage(named: "2.JPG"),UIImage(named: "3.JPG"),UIImage(named: "4.JPG"),UIImage(named: "5.JPG")]
+            performSegue(withIdentifier: "showGallery_Segue", sender: nil)
+        }
+    }
+    
 }

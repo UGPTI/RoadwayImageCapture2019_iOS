@@ -19,6 +19,7 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
                                              right: 20.0)
     
     //Image array
+    
     var images = [UIImage(named: "Test.JPG"), UIImage(named: "LargeTest.JPG"), UIImage(named: "1.JPG"),UIImage(named: "2.JPG"),UIImage(named: "3.JPG"),UIImage(named: "4.JPG"),UIImage(named: "5.JPG")]
     var multiplier = 5
     

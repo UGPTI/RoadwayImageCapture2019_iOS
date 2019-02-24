@@ -29,28 +29,32 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Gn-nD-IWU">
-                                                    <rect key="frame" x="262" y="6" width="97" height="30"/>
+                                                    <rect key="frame" x="262" y="7.5" width="97" height="28.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="5Gn-nD-IWU" secondAttribute="height" multiplier="97:30" id="GIR-E5-ScT"/>
+                                                        <constraint firstAttribute="width" constant="97" id="4FD-cC-6N3"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agency Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOT-67-mlr">
-                                                    <rect key="frame" x="16" y="11.5" width="107" height="21"/>
+                                                    <rect key="frame" x="20" y="10.5" width="127" height="22.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="127" id="yN2-3q-tNu"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="UOT-67-mlr" firstAttribute="leading" secondItem="4MO-B9-Q8L" secondAttribute="leading" constant="16" id="4eO-pT-9ke"/>
-                                                <constraint firstAttribute="trailing" secondItem="5Gn-nD-IWU" secondAttribute="trailing" constant="16" id="FWq-1I-Zme"/>
-                                                <constraint firstAttribute="bottom" secondItem="5Gn-nD-IWU" secondAttribute="bottom" constant="7.5" id="Gm6-p6-KKA"/>
-                                                <constraint firstItem="5Gn-nD-IWU" firstAttribute="top" secondItem="4MO-B9-Q8L" secondAttribute="top" constant="6" id="W71-IG-jng"/>
-                                                <constraint firstAttribute="bottom" secondItem="UOT-67-mlr" secondAttribute="bottom" constant="11" id="a6G-GP-A9d"/>
-                                                <constraint firstItem="UOT-67-mlr" firstAttribute="top" secondItem="4MO-B9-Q8L" secondAttribute="top" constant="11.5" id="mB4-gb-lTd"/>
+                                                <constraint firstItem="5Gn-nD-IWU" firstAttribute="trailing" secondItem="4MO-B9-Q8L" secondAttribute="trailingMargin" id="Gxr-4L-YHL"/>
+                                                <constraint firstItem="UOT-67-mlr" firstAttribute="centerY" secondItem="5Gn-nD-IWU" secondAttribute="centerY" id="KI7-dL-EGb"/>
+                                                <constraint firstItem="UOT-67-mlr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4MO-B9-Q8L" secondAttribute="leadingMargin" id="KOL-EC-2Wg"/>
+                                                <constraint firstItem="UOT-67-mlr" firstAttribute="bottom" secondItem="4MO-B9-Q8L" secondAttribute="bottomMargin" id="fI9-h5-kzy"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5Gn-nD-IWU" secondAttribute="bottom" constant="-3" id="mVm-1l-pqU"/>
+                                                <constraint firstItem="5Gn-nD-IWU" firstAttribute="centerY" secondItem="4MO-B9-Q8L" secondAttribute="centerY" id="nhJ-pO-bFr"/>
+                                                <constraint firstItem="5Gn-nD-IWU" firstAttribute="leading" secondItem="UOT-67-mlr" secondAttribute="trailing" constant="115" id="njp-Vb-sQM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -62,7 +66,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Camera Resolution" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCq-da-GNh">
-                                                    <rect key="frame" x="262" y="6" width="97" height="30"/>
+                                                    <rect key="frame" x="245.5" y="6" width="113.5" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="qCq-da-GNh" secondAttribute="height" multiplier="97:30" id="Fd1-5a-R7s"/>
                                                     </constraints>
@@ -71,19 +75,20 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera Resolution" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfL-ZP-ha5">
-                                                    <rect key="frame" x="16" y="11" width="145" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="144.5" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="qCq-da-GNh" secondAttribute="trailing" constant="16" id="2c5-52-L7B"/>
                                                 <constraint firstAttribute="trailing" secondItem="qCq-da-GNh" secondAttribute="trailing" constant="16" id="5XK-jn-F7M"/>
-                                                <constraint firstAttribute="bottom" secondItem="qCq-da-GNh" secondAttribute="bottom" constant="7.5" id="Me1-Lr-ngl"/>
-                                                <constraint firstAttribute="bottom" secondItem="dfL-ZP-ha5" secondAttribute="bottom" constant="11.5" id="Q7V-9l-Peq"/>
-                                                <constraint firstItem="dfL-ZP-ha5" firstAttribute="leading" secondItem="zyn-Zy-pYV" secondAttribute="leading" constant="16" id="Vbh-0d-M0n"/>
-                                                <constraint firstItem="qCq-da-GNh" firstAttribute="top" secondItem="zyn-Zy-pYV" secondAttribute="top" constant="6" id="ZjU-RC-caU"/>
-                                                <constraint firstItem="dfL-ZP-ha5" firstAttribute="top" secondItem="zyn-Zy-pYV" secondAttribute="top" constant="11" id="vje-nL-9fz"/>
+                                                <constraint firstItem="qCq-da-GNh" firstAttribute="leading" secondItem="dfL-ZP-ha5" secondAttribute="trailing" constant="81" id="GPn-G3-PBn"/>
+                                                <constraint firstItem="qCq-da-GNh" firstAttribute="top" secondItem="zyn-Zy-pYV" secondAttribute="topMargin" constant="-5" id="TsH-gb-byq"/>
+                                                <constraint firstItem="dfL-ZP-ha5" firstAttribute="top" secondItem="zyn-Zy-pYV" secondAttribute="topMargin" id="UUS-FE-wCr"/>
+                                                <constraint firstItem="dfL-ZP-ha5" firstAttribute="centerY" secondItem="qCq-da-GNh" secondAttribute="centerY" id="UYn-2W-Zkv"/>
+                                                <constraint firstItem="dfL-ZP-ha5" firstAttribute="leading" secondItem="zyn-Zy-pYV" secondAttribute="leadingMargin" constant="4" id="Yfy-4o-vTv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -104,7 +109,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Between Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndR-Dg-7wE">
-                                                    <rect key="frame" x="16" y="11" width="196" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="192" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -116,7 +121,8 @@
                                                 <constraint firstItem="rLO-we-zfo" firstAttribute="top" secondItem="0Fn-7a-SiZ" secondAttribute="top" constant="6" id="amP-ba-htg"/>
                                                 <constraint firstItem="ndR-Dg-7wE" firstAttribute="top" secondItem="0Fn-7a-SiZ" secondAttribute="top" constant="11" id="deg-LI-vY5"/>
                                                 <constraint firstAttribute="bottom" secondItem="ndR-Dg-7wE" secondAttribute="bottom" constant="11.5" id="lJG-zR-luU"/>
-                                                <constraint firstItem="ndR-Dg-7wE" firstAttribute="leading" secondItem="0Fn-7a-SiZ" secondAttribute="leading" constant="16" id="vUr-KE-9iy"/>
+                                                <constraint firstItem="ndR-Dg-7wE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0Fn-7a-SiZ" secondAttribute="leading" constant="20" symbolic="YES" id="vUr-KE-9iy"/>
+                                                <constraint firstItem="rLO-we-zfo" firstAttribute="leading" secondItem="ndR-Dg-7wE" secondAttribute="trailing" constant="50" id="vep-89-3Wj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -136,7 +142,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xu4-ts-Df8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-871" y="411"/>
+            <point key="canvasLocation" x="-871.20000000000005" y="410.64467766116945"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="7Ke-hh-N8P">

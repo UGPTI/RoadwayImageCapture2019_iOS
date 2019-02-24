@@ -19,9 +19,10 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
                                              right: 20.0)
     
     //Image array
+    var captureedImage: UIImage!
     
-    var images = [UIImage(named: "Test.JPG"), UIImage(named: "LargeTest.JPG"), UIImage(named: "1.JPG"),UIImage(named: "2.JPG"),UIImage(named: "3.JPG"),UIImage(named: "4.JPG"),UIImage(named: "5.JPG")]
-    var multiplier = 5
+    var images:  [UIImage?] = []
+    //var multiplier = images.count
     
     let reuseIdentifier = "imageCell"
     
@@ -30,21 +31,26 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
 
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        
+        
+        
     }
     
     /*
      * MARK: - CollectionView
      */
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print(images.count)
-        return images.count*multiplier
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ImageCollectionViewCell
         
-        if let image = images[indexPath.row % multiplier] {
+        if let image = images[indexPath.row % images.count] {
             cell.imageView.image = image
         }else{
             cell.backgroundColor = .black

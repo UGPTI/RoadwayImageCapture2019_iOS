@@ -124,7 +124,7 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if let imageData = photo.fileDataRepresentation() {
             image = UIImage(data: imageData)
-            imagesArray = [image, UIImage(named: "Test.JPG"), UIImage(named: "LargeTest.JPG"), UIImage(named: "1.JPG"),UIImage(named: "2.JPG"),UIImage(named: "3.JPG"),UIImage(named: "4.JPG"),UIImage(named: "5.JPG")]
+            imagesArray.append(image)
             performSegue(withIdentifier: "showGallery_Segue", sender: nil)
         }
     }

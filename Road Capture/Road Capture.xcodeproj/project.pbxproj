@@ -12,10 +12,10 @@
 		3F44DAD7221B4A55000E91CF /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD6221B4A55000E91CF /* SettingsTableViewController.swift */; };
 		3F44DAD9221B51EB000E91CF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F44DAD8221B51EB000E91CF /* GalleryViewController.swift */; };
 		7C532BDC42CEBE4116639420 /* Pods_Road_CaptureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D39BCC8358248401532C608 /* Pods_Road_CaptureUITests.framework */; };
+		B22A2C5822276BFE005D3C5A /* PhotoCaptureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22A2C5722276BFE005D3C5A /* PhotoCaptureHelper.swift */; };
 		B238C14C2210CD6700DB9017 /* LocationTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C14B2210CD6700DB9017 /* LocationTracking.swift */; };
 		B238C14E2211165000DB9017 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B238C14D2211165000DB9017 /* NetworkingTests.swift */; };
 		B24BF61C2200EA0A009C5C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */; };
-		B24BF61E2200EA0A009C5C51 /* ImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF61D2200EA0A009C5C51 /* ImageCaptureViewController.swift */; };
 		B24BF6212200EA0A009C5C51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24BF61F2200EA0A009C5C51 /* Main.storyboard */; };
 		B24BF6232200EA0B009C5C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24BF6222200EA0B009C5C51 /* Assets.xcassets */; };
 		B24BF6262200EA0B009C5C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */; };
@@ -62,11 +62,11 @@
 		3F69C4792DA82D32C689969B /* Pods-Road CaptureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureTests/Pods-Road CaptureTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E6DEC569D52F0E638783533 /* Pods-Road CaptureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureUITests/Pods-Road CaptureUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		79C713802C0EBD84E8B60048 /* Pods-Road CaptureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureTests/Pods-Road CaptureTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B22A2C5722276BFE005D3C5A /* PhotoCaptureHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureHelper.swift; sourceTree = "<group>"; };
 		B238C14B2210CD6700DB9017 /* LocationTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTracking.swift; sourceTree = "<group>"; };
 		B238C14D2211165000DB9017 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		B24BF6182200EA0A009C5C51 /* Road Capture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Road Capture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B24BF61D2200EA0A009C5C51 /* ImageCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaptureViewController.swift; sourceTree = "<group>"; };
 		B24BF6202200EA0A009C5C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B24BF6222200EA0B009C5C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B24BF6252200EA0B009C5C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,6 +132,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B22A2C5622276B85005D3C5A /* Photo Capture */ = {
+			isa = PBXGroup;
+			children = (
+				B22A2C5722276BFE005D3C5A /* PhotoCaptureHelper.swift */,
+			);
+			path = "Photo Capture";
+			sourceTree = "<group>";
+		};
 		B238C14A2210CD4000DB9017 /* Mapping */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +183,7 @@
 		B24BF61A2200EA0A009C5C51 /* Road Capture */ = {
 			isa = PBXGroup;
 			children = (
+				B22A2C5622276B85005D3C5A /* Photo Capture */,
 				B2AA6109221F411C00AE8B4F /* Gallery */,
 				B238C14A2210CD4000DB9017 /* Mapping */,
 				B238C14F221116BD00DB9017 /* Networking */,
@@ -218,7 +227,6 @@
 		B26B8B5C2215E2B900EF533F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B24BF61D2200EA0A009C5C51 /* ImageCaptureViewController.swift */,
 				3F44DAD0221B47DD000E91CF /* CameraViewController.swift */,
 				3F44DAD8221B51EB000E91CF /* GalleryViewController.swift */,
 				3F44DAD1221B47DE000E91CF /* HelpViewController.swift */,
@@ -479,9 +487,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B24BF61E2200EA0A009C5C51 /* ImageCaptureViewController.swift in Sources */,
 				B238C14C2210CD6700DB9017 /* LocationTracking.swift in Sources */,
 				B24BF61C2200EA0A009C5C51 /* AppDelegate.swift in Sources */,
+				B22A2C5822276BFE005D3C5A /* PhotoCaptureHelper.swift in Sources */,
 				B238C14E2211165000DB9017 /* NetworkingTests.swift in Sources */,
 				3F44DAD3221B47DE000E91CF /* CameraViewController.swift in Sources */,
 				3F44DAD4221B47DE000E91CF /* HelpViewController.swift in Sources */,

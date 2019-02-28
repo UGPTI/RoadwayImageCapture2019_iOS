@@ -26,6 +26,9 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
     var straightDistance: Double = 0
     var traveledSinceLastResetDistance: Double = 0 //Variable to hold distance since last photo capture
     
+    //used to check when to update data
+    var isUpdating = false
+    
     //Function to execute once
     var triggerFunction = {}
     
@@ -38,12 +41,11 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
         self.triggerFunction = triggerFunction
         
         locationManager.delegate = self
-        
-        //Ask for premission to use location services
-        start()
+        startTracking()
     }
     
-    func start(){
+    func startTracking(){
+        //Ask for premission to use location services
         if CLLocationManager.authorizationStatus() != .authorizedWhenInUse{
             locationManager.requestWhenInUseAuthorization();
         }else{
@@ -54,45 +56,62 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
         }
     }
     
+    func start(){
+        isUpdating = true
+    }
+    
+    func stop(){
+        isUpdating = false
+        //reset
+        startLocation = nil
+        lastLocation = nil
+        startDate = nil
+        totalDistance = 0
+        straightDistance = 0
+        traveledSinceLastResetDistance = 0
+    }
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        start()
+        startTracking()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //Set Time
-        if startDate == nil {
-            startDate = Date()
-            //Print difference in time
-        } else {
-//            print("elapsedTime:", String(format: "%.0fs", Date().timeIntervalSince(startDate)))
-        }
-        
-        //Set location
-        if startLocation == nil {
-            startLocation = locations.first
-        //Calculate distance traveled
-        } else if let location = locations.last {
-            //Set distances
-            deltaDistance = lastLocation.distance(from: location)
-            
-            traveledSinceLastResetDistance += deltaDistance
-            totalDistance += deltaDistance
-            straightDistance = startLocation.distance(from: locations.last!)
-            
-            //Check if over threshold
-            if(traveledSinceLastResetDistance >= triggerDistance){
-                //Reset
-                traveledSinceLastResetDistance = 0
-                
-                //Call Take Picture
-                triggerFunction()
+        if isUpdating{
+            //Set Time
+            if startDate == nil {
+                startDate = Date()
+                //Print difference in time
+            } else {
+                //            print("elapsedTime:", String(format: "%.0fs", Date().timeIntervalSince(startDate)))
             }
             
-            //Print
-            print("Traveled Distance:\t",  traveledSinceLastResetDistance)
-            print("Total Distance:\t\t",  totalDistance)
+            //Set location
+            if startLocation == nil {
+                startLocation = locations.first
+                //Calculate distance traveled
+            } else if let location = locations.last {
+                //Set distances
+                deltaDistance = lastLocation.distance(from: location)
+                
+                traveledSinceLastResetDistance += deltaDistance
+                totalDistance += deltaDistance
+                straightDistance = startLocation.distance(from: locations.last!)
+                
+                //Check if over threshold
+                if(traveledSinceLastResetDistance >= triggerDistance){
+                    //Reset
+                    traveledSinceLastResetDistance = 0
+                    
+                    //Call Take Picture
+                    triggerFunction()
+                }
+                
+                //Print
+                print("Traveled Distance:\t",  traveledSinceLastResetDistance)
+                print("Total Distance:\t\t",  totalDistance)
+            }
+            lastLocation = locations.last
         }
-        lastLocation = locations.last
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

@@ -10,35 +10,50 @@ import UIKit
 import CoreLocation
 import AVFoundation
 
-
 class CameraViewController: UIViewController {
     
-    //Set Up Camera Session
-    var captureSession = AVCaptureSession()
-    var backCamera: AVCaptureDevice?
-    var frontCamera: AVCaptureDevice?
-    var currentCamera: AVCaptureDevice?
+    //photo capture helper
+    var photoCaptureHelper : PhotoCaptureHelper?
+    //location tracking helper
+    var locationTracker : LocationTracking?
+    var isTakingPicutres = false
     
-    var photoOutput: AVCapturePhotoOutput?
+    @IBOutlet var startButton: UIButton!
+    @IBOutlet var endButton: UIButton!
     
-    var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
-    
-    var image: UIImage?
-    var imagesArray = [UIImage?]()
-    
-    func takePhoto(){
-        let settings = AVCapturePhotoSettings()
-        photoOutput?.capturePhoto(with: settings , delegate: self)
-    }
-    
-    @IBAction func startButton_TouchUpInside(_ sender: Any) {
+    @IBAction func startButton(_ sender: Any) {
+        //check if taking pictures
+        if !isTakingPicutres{
+            endButton.isHidden = false
+            endButton.isEnabled = true
+            isTakingPicutres = true
+            
+            //start tracking location
+            locationTracker?.start()
+        }
+        
+        //take photo
         takePhoto()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showGallery_Segue" {
-            let galleryVC = segue.destination as! GalleryViewController
-            galleryVC.images = self.imagesArray
+    @IBAction func endButton(_ sender: Any) {
+        if isTakingPicutres{
+            //disable button
+            endButton.isHidden = true
+            endButton.isEnabled = false
+            isTakingPicutres = false
+            
+            //stop tracking location
+            locationTracker!.stop()
+            
+            //switch to gallery view
+            let galleryViewController = self.tabBarController?.customizableViewControllers?[1] as! GalleryViewController
+            //add images to gallery view
+            galleryViewController.addImages(images: self.photoCaptureHelper!.imagesArray)
+            //reset photo caputure helper
+            photoCaptureHelper?.imagesArray = []
+            //navigate to gallery view controller
+            self.tabBarController?.selectedIndex = 1
         }
     }
     
@@ -47,98 +62,30 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setudCaptureSession()
-        setupDevice()
-        setupInputOutput()
-        setupPreviewLayer()
-        startRunningCaptureSession()
+        //disable button
+        endButton.isHidden = true
+        endButton.isEnabled = false
         
-        
-
-        // Do any additional setup after loading the view.
+        //init helpers
+        photoCaptureHelper = PhotoCaptureHelper.init(view: self.view, cameraView: cameraView)
+        locationTracker = LocationTracking.init(triggerDistance: 100, triggerFunction: takePhoto)
     }
     
-    func setudCaptureSession() {
-        captureSession.sessionPreset = AVCaptureSession.Preset.photo
-    }
-    
-    func setupDevice() {
-        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
+    func takePhoto(){
+        endButton.isEnabled = false
+        endButton.backgroundColor = UIColor.gray
+        self.photoCaptureHelper?.takePhoto(triggerFunction: {
+            self.endButton.isEnabled = true
+            self.endButton.backgroundColor = UIColor.red
+        })
         
-        let devices = deviceDiscoverySession.devices
-        
-        for device in devices{
-            if device.position == AVCaptureDevice.Position.back {
-                backCamera =  device
-            } else if device.position == AVCaptureDevice.Position.front {
-                frontCamera = device
-            }
-        }
-        
-        currentCamera = backCamera
+        automaticButtonPress(button: startButton)
     }
     
-    func setupInputOutput() {
-        do {
-            let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera!)
-            captureSession.addInput(captureDeviceInput)
-            
-            photoOutput = AVCapturePhotoOutput()
-            
-            photoOutput?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
-            captureSession.addOutput(photoOutput!)
-        } catch {
-            print(error)
-        }
-        
-        
+    //button animation
+    func automaticButtonPress(button : UIButton){
+        UIView.animate(withDuration: 0.15,
+                       animations: {button.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)},
+                       completion: { _ in UIView.animate(withDuration: 0.15) {button.transform = CGAffineTransform.identity}})
     }
-    
-    func setupPreviewLayer() {
-        cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
-        
-        cameraPreviewLayer?.frame = self.view.frame
-        self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
-    }
-    
-    func startRunningCaptureSession() {
-        captureSession.startRunning()
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-
-
-
-}
-
-extension CameraViewController: AVCapturePhotoCaptureDelegate {
-    
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        if let imageData = photo.fileDataRepresentation() {
-            image = UIImage(data: imageData)
-            imagesArray.append(image)
-
-            //get gallery view controller
-            let galleryViewController = self.tabBarController?.customizableViewControllers?[1] as! GalleryViewController
-            
-            //add images to gallery view
-            galleryViewController.addImages(images: image!)
-            
-            //navigate to gallery view controller
-            self.tabBarController?.selectedIndex = 1
-        }
-    }
-    
 }

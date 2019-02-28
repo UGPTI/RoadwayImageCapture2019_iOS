@@ -81,6 +81,10 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         return sectionInsets.left
     }
     
+    func addImages(images: UIImage...){
+        self.images.append(contentsOf: images)
+        self.collectionView?.reloadData()
+    }
 
     /*
     // MARK: - Navigation

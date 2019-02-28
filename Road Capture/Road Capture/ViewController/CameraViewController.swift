@@ -26,11 +26,15 @@ class CameraViewController: UIViewController {
     var image: UIImage?
     var imagesArray = [UIImage?]()
     
-    @IBAction func startButton_TouchUpInside(_ sender: Any) {
+    func takePhoto(){
         let settings = AVCapturePhotoSettings()
         photoOutput?.capturePhoto(with: settings , delegate: self)
-        
     }
+    
+    @IBAction func startButton_TouchUpInside(_ sender: Any) {
+        takePhoto()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showGallery_Segue" {
             let galleryVC = segue.destination as! GalleryViewController
@@ -125,7 +129,15 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         if let imageData = photo.fileDataRepresentation() {
             image = UIImage(data: imageData)
             imagesArray.append(image)
-            performSegue(withIdentifier: "showGallery_Segue", sender: nil)
+
+            //get gallery view controller
+            let galleryViewController = self.tabBarController?.customizableViewControllers?[1] as! GalleryViewController
+            
+            //add images to gallery view
+            galleryViewController.addImages(images: image!)
+            
+            //navigate to gallery view controller
+            self.tabBarController?.selectedIndex = 1
         }
     }
     

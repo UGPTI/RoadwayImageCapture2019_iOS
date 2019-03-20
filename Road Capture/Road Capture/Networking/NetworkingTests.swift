@@ -8,46 +8,43 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
 
 class NetworkingTests{
 
     static func postTest(){
         //Get image
-        let image = UIImage(named: "Test.JPG")
+        let imageFile = UIImage(named: "Test.jpg")
         
         //Create image data
-        guard let imageData = image!.jpegData(compressionQuality: 0.5) else {
+        guard let imageData = imageFile!.jpegData(compressionQuality: 1) else {
             print("Could not get JPEG representation of UIImage")
             return
         }
         
         //Create date
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let date = Date()
-        let dateString = dateFormatter.string(from: date)
+        let id = getDateString()
+        
+        //Create imageData string
+        let image = imageData.base64EncodedString()
         
         //Create parameter list
         let parameters : [String: Any] = [
             "username" : "RIC",
             "password" : "@RICsdP4T",
-            "id" : dateString,
+            "id" : id,
             "latitude" : 46.8872,
             "longitude" : -96.8054,
             "quality" : 1,
-            "agency" : "Capstone Test",
-            "image" : imageData.base64EncodedString(),
-            "filename" : "Aarons_First_Test_1.jpg"
+            "agency" : "Capstone_Test",
+            "image" : image,
+            "filename" : "\(id).jpg"
         ]
-        
-        //Alamofire.
         
         Alamofire.request("https://dotsc.ugpti.ndsu.nodak.edu/RIC/upload1.php", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { response in
-//            print("Request: \(String(describing: response.request))\n")   // original url request
-//            print("Response: \(String(describing: response.response))") // http url response
-            print("Result: \(response.result)\n")                         // response serialization result
+            print("Request: \(String(describing: response.request))\n")     // original url request
+            print("Response: \(String(describing: response.response))\n")     // http url response
+            print("Result: \(response.result)\n")                           // response serialization result
             
             if let json = response.result.value {
                 print("JSON: \(json)") // serialized json response
@@ -57,21 +54,21 @@ class NetworkingTests{
                 print("Data: \(utf8Text)") // original server data as UTF8 string
             }
         }
-        
-        print(imageData.base64EncodedString())
     }
 
     static func uploadTest(){
         //Create image
         let image = UIImage.init(named: "Test.JPG")
         //let imgData = UIImageJPEGRepresentation(image!, 0.2)!
-        let imgData = image!.jpegData(compressionQuality: 0.2)!
-
+        let imgData = image!.jpegData(compressionQuality: 100)!
+        //print(imgData.base64EncodedString())
+        
         //Get datetime
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let date = Date()
-        let dateString = dateFormatter.string(from: date)
+//        let date = Date().timeIntervalSince1970 //This is a Double
+//        var dateString = "\(Int(date*1000))"
+        let dateString = getDateString()
+        //1430337023781 - reference
+        //1553047842925 - actual
         
         //Create Parameters
         let parameters : [String: String] = [
@@ -80,18 +77,18 @@ class NetworkingTests{
             "id" : dateString,
             "latitude" : "46.8872",
             "longitude" : "-96.8054",
-            "quality" : "1",
-            "agency" : "Capstone Test",
+            "quality" : "100",
+            "agency" : "Capstone_Test",
         ]
         
         //Upload
         Alamofire.upload(multipartFormData: { multipartFormData in
             //Add parameters
             for (key, value) in parameters {
-                multipartFormData.append(value.data(using: .utf8)!, withName: key)
+                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
             }
             //Add image
-            multipartFormData.append(imgData, withName: "file", fileName: "file.jpg", mimeType: "image/jpg")
+            multipartFormData.append(imgData.base64EncodedData(options: Data.Base64EncodingOptions.endLineWithCarriageReturn), withName: "bitmap", fileName: "\(dateString).jpg", mimeType: "image/jpg")
             
         }, to: "https://dotsc.ugpti.ndsu.nodak.edu/RIC/upload1.php") { (result) in
             switch result {
@@ -102,12 +99,20 @@ class NetworkingTests{
                 })
                 
                 upload.responseJSON { response in
+                    print(response)
                     print(response.result.value)
+                    print()
+                    print(result)
                 }
                 
             case .failure(let encodingError):
                 print(encodingError)
             }
         }
+    }
+    
+    static func getDateString() -> String {
+        let date = Date().timeIntervalSince1970 //This is a Double
+        return "\(Int(date*1000))"
     }
 }

@@ -49,7 +49,7 @@ class CameraViewController: UIViewController {
             //switch to gallery view
             let galleryViewController = self.tabBarController?.customizableViewControllers?[1] as! GalleryViewController
             //add images to gallery view
-            galleryViewController.addImages(images: self.photoCaptureHelper!.imagesArray)
+            //galleryViewController.addImages(images: self.photoCaptureHelper!.imagesArray)
             //reset photo caputure helper
             photoCaptureHelper?.imagesArray = []
             //navigate to gallery view controller
@@ -72,8 +72,10 @@ class CameraViewController: UIViewController {
     }
     
     func takePhoto(){
+        
         endButton.isEnabled = false
         endButton.backgroundColor = UIColor.gray
+        
         self.photoCaptureHelper?.takePhoto(triggerFunction: {
             self.endButton.isEnabled = true
             self.endButton.backgroundColor = UIColor.red

@@ -21,8 +21,8 @@
 		B24BF6262200EA0B009C5C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */; };
 		B24BF6312200EA0B009C5C51 /* Road_CaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF6302200EA0B009C5C51 /* Road_CaptureTests.swift */; };
 		B24BF63C2200EA0B009C5C51 /* Road_CaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */; };
-		B26B8B5A2215E27D00EF533F /* LargeTest.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B26B8B592215E27D00EF533F /* LargeTest.JPG */; };
-		B273832422164F0A00BC1B0D /* Test.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B273832322164F0A00BC1B0D /* Test.JPG */; };
+		B28CFF682244183F00E30A14 /* StoreImagesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28CFF672244183F00E30A14 /* StoreImagesHelper.swift */; };
+		B28CFF6B224418FA00E30A14 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B28CFF69224418FA00E30A14 /* Model.xcdatamodeld */; };
 		B2A52B502207FD160079F120 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A52B4F2207FD160079F120 /* Marker.swift */; };
 		B2AA6108221F411300AE8B4F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */; };
 		B2AA6124221F430000AE8B4F /* 1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B2AA611F221F42FF00AE8B4F /* 1.JPG */; };
@@ -77,8 +77,8 @@
 		B24BF6372200EA0B009C5C51 /* Road CaptureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Road CaptureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road_CaptureUITests.swift; sourceTree = "<group>"; };
 		B24BF63D2200EA0B009C5C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B26B8B592215E27D00EF533F /* LargeTest.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LargeTest.JPG; sourceTree = "<group>"; };
-		B273832322164F0A00BC1B0D /* Test.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Test.JPG; sourceTree = "<group>"; };
+		B28CFF672244183F00E30A14 /* StoreImagesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreImagesHelper.swift; sourceTree = "<group>"; };
+		B28CFF6A224418FA00E30A14 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		B2A52B4F2207FD160079F120 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2AA611F221F42FF00AE8B4F /* 1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.JPG; sourceTree = "<group>"; };
@@ -152,7 +152,6 @@
 		B238C14F221116BD00DB9017 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				B26B8B5B2215E28C00EF533F /* Test Images */,
 				B238C14D2211165000DB9017 /* NetworkingTests.swift */,
 			);
 			path = Networking;
@@ -191,6 +190,7 @@
 				B24BF61F2200EA0A009C5C51 /* Main.storyboard */,
 				B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */,
 				B24BF61B2200EA0A009C5C51 /* AppDelegate.swift */,
+				B28CFF69224418FA00E30A14 /* Model.xcdatamodeld */,
 				B24BF6272200EA0B009C5C51 /* Info.plist */,
 				B24BF6222200EA0B009C5C51 /* Assets.xcassets */,
 			);
@@ -215,15 +215,6 @@
 			path = "Road CaptureUITests";
 			sourceTree = "<group>";
 		};
-		B26B8B5B2215E28C00EF533F /* Test Images */ = {
-			isa = PBXGroup;
-			children = (
-				B26B8B592215E27D00EF533F /* LargeTest.JPG */,
-				B273832322164F0A00BC1B0D /* Test.JPG */,
-			);
-			path = "Test Images";
-			sourceTree = "<group>";
-		};
 		B26B8B5C2215E2B900EF533F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +231,7 @@
 			children = (
 				B2AA610A221F412E00AE8B4F /* Images */,
 				B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */,
+				B28CFF672244183F00E30A14 /* StoreImagesHelper.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -375,13 +367,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B24BF6262200EA0B009C5C51 /* LaunchScreen.storyboard in Resources */,
-				B26B8B5A2215E27D00EF533F /* LargeTest.JPG in Resources */,
 				B24BF6232200EA0B009C5C51 /* Assets.xcassets in Resources */,
 				B2AA6127221F430000AE8B4F /* 4.JPG in Resources */,
 				B2AA6124221F430000AE8B4F /* 1.JPG in Resources */,
 				B24BF6212200EA0A009C5C51 /* Main.storyboard in Resources */,
 				B2AA6125221F430000AE8B4F /* 2.JPG in Resources */,
-				B273832422164F0A00BC1B0D /* Test.JPG in Resources */,
 				B2AA6126221F430000AE8B4F /* 3.JPG in Resources */,
 				B2AA6128221F430000AE8B4F /* 5.JPG in Resources */,
 			);
@@ -446,7 +436,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Road Capture/Pods-Road Capture-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Road Capture/Pods-Road Capture-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CameraManager/CameraManager.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -459,7 +449,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Road Capture/Pods-Road Capture-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Road Capture/Pods-Road Capture-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC3F07E97A42A5115D211BC3 /* [CP] Check Pods Manifest.lock */ = {
@@ -497,6 +487,8 @@
 				B2A52B502207FD160079F120 /* Marker.swift in Sources */,
 				3F44DAD7221B4A55000E91CF /* SettingsTableViewController.swift in Sources */,
 				3F44DAD9221B51EB000E91CF /* GalleryViewController.swift in Sources */,
+				B28CFF682244183F00E30A14 /* StoreImagesHelper.swift in Sources */,
+				B28CFF6B224418FA00E30A14 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,7 +671,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -698,7 +690,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -827,6 +819,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B28CFF69224418FA00E30A14 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B28CFF6A224418FA00E30A14 /* Model.xcdatamodel */,
+			);
+			currentVersion = B28CFF6A224418FA00E30A14 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B24BF6102200EA0A009C5C51 /* Project object */;
 }

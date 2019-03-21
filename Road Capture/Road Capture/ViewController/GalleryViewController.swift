@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class GalleryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -22,6 +23,8 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
     var captureedImage: UIImage!
     
     var images:  [UIImage?] = []
+    var imageCaptures : [ImageCapture] = []
+    
     //var multiplier = images.count
     
     let reuseIdentifier = "imageCell"
@@ -32,8 +35,8 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        
-        
+        imageCaptures = StoreImagesHelper.getAllImages()
+        //self.collectionView?.reloadData()
         
     }
     
@@ -43,14 +46,14 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(images.count)
-        return images.count
+        print(imageCaptures.count)
+        return imageCaptures.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ImageCollectionViewCell
         
-        if let image = images[indexPath.row % images.count] {
+        if let image = UIImage.init(data: imageCaptures[indexPath.row].image!) {
             cell.imageView.image = image
         }else{
             cell.backgroundColor = .black
@@ -81,10 +84,10 @@ class GalleryViewController: UIViewController, UICollectionViewDataSource, UICol
         return sectionInsets.left
     }
     
-    func addImages(images: [UIImage?]){
-        self.images.append(contentsOf: images)
-        self.collectionView?.reloadData()
-    }
+//    func addImages(images: [UIImage?]){
+//        self.images.append(contentsOf: images)
+//        self.collectionView?.reloadData()
+//    }
 
     /*
     // MARK: - Navigation

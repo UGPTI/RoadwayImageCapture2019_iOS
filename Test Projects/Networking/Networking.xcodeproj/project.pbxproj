@@ -13,7 +13,6 @@
 		B2C31C142241C90200185114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C31C132241C90200185114 /* Assets.xcassets */; };
 		B2C31C172241C90200185114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C31C152241C90200185114 /* LaunchScreen.storyboard */; };
 		B2C31C202241CB4B00185114 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C31C1E2241CB4B00185114 /* NetworkingTests.swift */; };
-		B2C31C212241CB4B00185114 /* Test Images in Resources */ = {isa = PBXBuildFile; fileRef = B2C31C1F2241CB4B00185114 /* Test Images */; };
 		B2C31C252241CDFD00185114 /* Test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2C31C242241CDFD00185114 /* Test.jpg */; };
 		D32BF95C373CCAB896F80279 /* libPods-Networking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF38EE94D2C32F101EABE6B /* libPods-Networking.a */; };
 /* End PBXBuildFile section */
@@ -22,6 +21,7 @@
 		05BEA914F6924C1CF773FB96 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		1CF38EE94D2C32F101EABE6B /* libPods-Networking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Networking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4707634A884A76EF504E2B40 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
+		A488E35937D4FF419F6924B7 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		B2C31C092241C90100185114 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C31C0C2241C90100185114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C31C0E2241C90100185114 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,9 +30,9 @@
 		B2C31C162241C90200185114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2C31C182241C90200185114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2C31C1E2241CB4B00185114 /* NetworkingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkingTests.swift; path = "../../../Road Capture/Road Capture/Networking/NetworkingTests.swift"; sourceTree = "<group>"; };
-		B2C31C1F2241CB4B00185114 /* Test Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Test Images"; path = "../../../Road Capture/Road Capture/Networking/Test Images"; sourceTree = "<group>"; };
 		B2C31C232241CDDC00185114 /* LargeTest.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LargeTest.JPG; sourceTree = "<group>"; };
 		B2C31C242241CDFD00185114 /* Test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Test.jpg; sourceTree = "<group>"; };
+		E4830E92F431C6E2B5E497BD /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +52,8 @@
 			children = (
 				05BEA914F6924C1CF773FB96 /* Pods-Networking.debug.xcconfig */,
 				4707634A884A76EF504E2B40 /* Pods-Networking.release.xcconfig */,
+				A488E35937D4FF419F6924B7 /* Pods-Networking.debug.xcconfig */,
+				E4830E92F431C6E2B5E497BD /* Pods-Networking.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -88,7 +90,6 @@
 				B2C31C1E2241CB4B00185114 /* NetworkingTests.swift */,
 				B2C31C232241CDDC00185114 /* LargeTest.JPG */,
 				B2C31C242241CDFD00185114 /* Test.jpg */,
-				B2C31C1F2241CB4B00185114 /* Test Images */,
 				B2C31C0C2241C90100185114 /* AppDelegate.swift */,
 				B2C31C0E2241C90100185114 /* ViewController.swift */,
 				B2C31C102241C90100185114 /* Main.storyboard */,
@@ -159,7 +160,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C31C172241C90200185114 /* LaunchScreen.storyboard in Resources */,
-				B2C31C212241CB4B00185114 /* Test Images in Resources */,
 				B2C31C142241C90200185114 /* Assets.xcassets in Resources */,
 				B2C31C122241C90100185114 /* Main.storyboard in Resources */,
 				B2C31C252241CDFD00185114 /* Test.jpg in Resources */,
@@ -344,7 +344,7 @@
 		};
 		B2C31C1C2241C90200185114 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05BEA914F6924C1CF773FB96 /* Pods-Networking.debug.xcconfig */;
+			baseConfigurationReference = A488E35937D4FF419F6924B7 /* Pods-Networking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -354,7 +354,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Networking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Networking1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -363,7 +363,7 @@
 		};
 		B2C31C1D2241C90200185114 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4707634A884A76EF504E2B40 /* Pods-Networking.release.xcconfig */;
+			baseConfigurationReference = E4830E92F431C6E2B5E497BD /* Pods-Networking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -373,7 +373,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Networking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Networking1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

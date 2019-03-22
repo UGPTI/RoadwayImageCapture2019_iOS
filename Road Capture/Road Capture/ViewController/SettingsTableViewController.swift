@@ -8,47 +8,48 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController {
+class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var resolutionTextField: UITextField!
-    @IBOutlet weak var distanceTextField: UITextField!
+
+
+    @IBOutlet weak var resolutionTextfield: UITextField!
+    @IBOutlet weak var distanceTextfield: UITextField!
     
     let resolution = ["High",
                       "Medium",
                       "Low"
-    ]
-    var selectedResolution: String?
-    var selectedDistance: Int?
+                    ]
+
     
-    let distance = [100,
-                    200,
-                    300,
-                    400,
-                    500,
-                    600,
-                    700,
-                    800,
-                    900,
-                    1000
-    ]
+    let distance = ["100ft",
+                    "200ft",
+                    "300ft",
+                    "400ft",
+                    "500ft",
+                    "600ft",
+                    "700ft",
+                    "800ft",
+                    "900ft",
+                    "1000ft"
+                    ]
     
-    func createResolutionPicker() {
-        let resolutionPicker = UIPickerView()
-        resolutionPicker.delegate = self
-        
-        resolutionTextField.inputView = resolutionPicker
-    }
-    
-    func createDistancePicker() {
-        let distancePicker = UIPickerView()
-        distancePicker.delegate = self
-        
-        distanceTextField.inputView = distancePicker
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createResolutionPicker()
+        
+        let resolutionPickerView = UIPickerView()
+        resolutionPickerView.delegate = self
+        resolutionPickerView.tag = 1
+        resolutionTextfield.inputView = resolutionPickerView
+        
+        
+        let distancePickerView = UIPickerView()
+        distancePickerView.delegate = self
+        distancePickerView.tag = 2
+        distanceTextfield.inputView = distancePickerView
+        
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -68,26 +69,46 @@ class SettingsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 3
     }
-
-
-}
-extension SettingsTableViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    //PickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        
         return 1
     }
     
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return resolution.count
+        
+        if pickerView.tag == 1 {
+            return resolution.count
+        }
+        else if pickerView.tag == 2 {
+            return distance.count
+        }
+        
+        return 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return resolution[row]
+        if pickerView.tag == 1 {
+            return resolution[row]
+        }
+        else if pickerView.tag == 2 {
+            return distance[row]
+        }
         
+        return nil
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedResolution = resolution[row]
-        resolutionTextField.text = selectedResolution
+        if pickerView.tag == 1 {
+            return resolutionTextfield.text = resolution[row]
+        }
+        else if pickerView.tag == 2 {
+            return distanceTextfield.text =  distance[row]
+        }
+        
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }

@@ -21,8 +21,6 @@
 		B24BF6262200EA0B009C5C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24BF6242200EA0B009C5C51 /* LaunchScreen.storyboard */; };
 		B24BF6312200EA0B009C5C51 /* Road_CaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF6302200EA0B009C5C51 /* Road_CaptureTests.swift */; };
 		B24BF63C2200EA0B009C5C51 /* Road_CaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */; };
-		B26B8B5A2215E27D00EF533F /* LargeTest.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B26B8B592215E27D00EF533F /* LargeTest.JPG */; };
-		B273832422164F0A00BC1B0D /* Test.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B273832322164F0A00BC1B0D /* Test.JPG */; };
 		B2A52B502207FD160079F120 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A52B4F2207FD160079F120 /* Marker.swift */; };
 		B2AA6108221F411300AE8B4F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */; };
 		B2AA6124221F430000AE8B4F /* 1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B2AA611F221F42FF00AE8B4F /* 1.JPG */; };
@@ -77,8 +75,6 @@
 		B24BF6372200EA0B009C5C51 /* Road CaptureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Road CaptureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road_CaptureUITests.swift; sourceTree = "<group>"; };
 		B24BF63D2200EA0B009C5C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B26B8B592215E27D00EF533F /* LargeTest.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LargeTest.JPG; sourceTree = "<group>"; };
-		B273832322164F0A00BC1B0D /* Test.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Test.JPG; sourceTree = "<group>"; };
 		B2A52B4F2207FD160079F120 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2AA611F221F42FF00AE8B4F /* 1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.JPG; sourceTree = "<group>"; };
@@ -152,7 +148,6 @@
 		B238C14F221116BD00DB9017 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				B26B8B5B2215E28C00EF533F /* Test Images */,
 				B238C14D2211165000DB9017 /* NetworkingTests.swift */,
 			);
 			path = Networking;
@@ -213,15 +208,6 @@
 				B24BF63D2200EA0B009C5C51 /* Info.plist */,
 			);
 			path = "Road CaptureUITests";
-			sourceTree = "<group>";
-		};
-		B26B8B5B2215E28C00EF533F /* Test Images */ = {
-			isa = PBXGroup;
-			children = (
-				B26B8B592215E27D00EF533F /* LargeTest.JPG */,
-				B273832322164F0A00BC1B0D /* Test.JPG */,
-			);
-			path = "Test Images";
 			sourceTree = "<group>";
 		};
 		B26B8B5C2215E2B900EF533F /* ViewController */ = {
@@ -375,13 +361,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B24BF6262200EA0B009C5C51 /* LaunchScreen.storyboard in Resources */,
-				B26B8B5A2215E27D00EF533F /* LargeTest.JPG in Resources */,
 				B24BF6232200EA0B009C5C51 /* Assets.xcassets in Resources */,
 				B2AA6127221F430000AE8B4F /* 4.JPG in Resources */,
 				B2AA6124221F430000AE8B4F /* 1.JPG in Resources */,
 				B24BF6212200EA0A009C5C51 /* Main.storyboard in Resources */,
 				B2AA6125221F430000AE8B4F /* 2.JPG in Resources */,
-				B273832422164F0A00BC1B0D /* Test.JPG in Resources */,
 				B2AA6126221F430000AE8B4F /* 3.JPG in Resources */,
 				B2AA6128221F430000AE8B4F /* 5.JPG in Resources */,
 			);
@@ -673,7 +657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PN7664863P;
+				DEVELOPMENT_TEAM = 2GW5263Z6C;
 				INFOPLIST_FILE = "Road Capture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -692,7 +676,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PN7664863P;
+				DEVELOPMENT_TEAM = 2GW5263Z6C;
 				INFOPLIST_FILE = "Road Capture/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

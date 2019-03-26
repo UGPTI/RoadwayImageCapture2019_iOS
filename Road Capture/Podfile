@@ -3,10 +3,9 @@ platform :ios, '9.0'
 
 target 'Road Capture' do
   use_frameworks!
-pod 'Alamofire'
-pod 'SwiftyJSON'
+pod 'Alamofire',
 pod 'CameraManager', '~> 4.3'
-pod 'SwiftLint'
+pod 'SwiftLint',
 pod 'SwiftyJSON', '~> 4.0'
 
   # Pods for Road Capture

@@ -169,7 +169,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1l-Si-Ev2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1l-Si-Ev2">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                 </imageView>
                                             </subviews>
@@ -311,10 +311,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cameraTab" width="45" height="45"/>
-        <image name="galleryTab" width="45" height="45"/>
-        <image name="helpTab" width="45" height="45"/>
-        <image name="settingsTab" width="45" height="45"/>
+        <image name="cameraTab" width="30" height="30"/>
+        <image name="galleryTab" width="30" height="30"/>
+        <image name="helpTab" width="30" height="30"/>
+        <image name="settingsTab" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JzF-IY-gsQ"/>

@@ -57,7 +57,6 @@ class CustomDataSource: NSObject, UICollectionViewDataSource, NSFetchedResultsCo
 
         fetchedResultsController = (NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil) as! NSFetchedResultsController<NSFetchRequestResult>)
         fetchedResultsController.delegate = self
-
         do {
             try fetchedResultsController.performFetch()
         } catch {

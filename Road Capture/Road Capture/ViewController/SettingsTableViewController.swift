@@ -14,6 +14,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
 
     @IBOutlet weak var resolutionTextfield: UITextField!
     @IBOutlet weak var distanceTextfield: UITextField!
+    @IBOutlet weak var mileBeforeSpaceLabel: UILabel!
     
     let resolution = ["High",
                       "Medium",
@@ -32,8 +33,6 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
                     "900ft",
                     "1000ft"
                     ]
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,17 +56,23 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 3
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let fileURL = URL(fileURLWithPath: NSHomeDirectory() as String)
+        do {
+            let values = try fileURL.resourceValues(forKeys: [.volumeAvailableCapacityForOpportunisticUsageKey])
+            if let capacity = values.volumeAvailableCapacityForOpportunisticUsage {
+                let numPictures = Double(capacity)/1000000.0
+                let feetBetweenPhotos = 100.0
+                let picturesInMile = 5280 / feetBetweenPhotos
+                let totalMilesLeft = Int(numPictures/picturesInMile)
+                mileBeforeSpaceLabel.text = totalMilesLeft.description
+            } else {
+                mileBeforeSpaceLabel.text = "Capacity is unavailable"
+            }
+        } catch {
+            mileBeforeSpaceLabel.text = "Error retrieving capacity"
+        }
     }
     
     //PickerView

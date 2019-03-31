@@ -12,6 +12,9 @@ import CoreData
 class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet var editButton: UIBarButtonItem!
+    //edit button toggle
+    var editToggle = true
     
     //Layout Stuff
     let itemsPerRow : CGFloat = 3
@@ -21,6 +24,19 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
     //Image view stuff
     var imageCaptures : [Data] = []
     var dataSource : CustomDataSource!
+    
+    @IBAction func uploadButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func editButton(_ sender: Any) {
+//        if (!editToggle) {
+//            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: "editButton:")
+//        }else{
+//            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action:"editButton:")
+//        }
+//        editToggle = !editToggle
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -210,6 +210,7 @@
 		B26B8B5C2215E2B900EF533F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3F44DAD8221B51EB000E91CF /* GalleryViewController.swift */,
 				3F44DAD0221B47DD000E91CF /* CameraViewController.swift */,
 				3F44DAD1221B47DE000E91CF /* HelpViewController.swift */,
 				3F44DAD6221B4A55000E91CF /* SettingsTableViewController.swift */,
@@ -222,7 +223,6 @@
 			children = (
 				B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */,
 				B28CFF672244183F00E30A14 /* StoreImagesHelper.swift */,
-				3F44DAD8221B51EB000E91CF /* GalleryViewController.swift */,
 				B2684A282246DBAF003EA2DF /* CustomDataSource.swift */,
 			);
 			path = Gallery;

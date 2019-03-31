@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Qe-Ee-HpC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Qe-Ee-HpC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -130,7 +130,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vC7-78-wjX">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="veu-f3-icv">
                                     <size key="itemSize" width="200" height="200"/>
@@ -146,7 +146,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c1l-Si-Ev2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1l-Si-Ev2">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                 </imageView>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkBubble" translatesAutoresizingMaskIntoConstraints="NO" id="eoa-8v-O5r">
@@ -159,10 +159,14 @@
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="c1l-Si-Ev2" firstAttribute="leading" secondItem="D97-62-ZGG" secondAttribute="leading" id="ERE-uh-qTw"/>
+                                            <constraint firstAttribute="bottom" secondItem="c1l-Si-Ev2" secondAttribute="bottom" id="Wjv-mZ-MI0"/>
                                             <constraint firstItem="c1l-Si-Ev2" firstAttribute="leading" secondItem="eoa-8v-O5r" secondAttribute="trailing" constant="-31" id="Xpc-i2-9WQ"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="eoa-8v-O5r" secondAttribute="bottom" constant="-2" id="Ywi-Gr-72f"/>
+                                            <constraint firstAttribute="trailing" secondItem="c1l-Si-Ev2" secondAttribute="trailing" id="lnW-yN-xLE"/>
                                             <constraint firstItem="eoa-8v-O5r" firstAttribute="leading" secondItem="D97-62-ZGG" secondAttribute="leadingMargin" constant="-2" id="oV3-sg-TAn"/>
                                             <constraint firstItem="eoa-8v-O5r" firstAttribute="top" secondItem="c1l-Si-Ev2" secondAttribute="bottom" constant="-31" id="qyq-sP-PyT"/>
+                                            <constraint firstItem="c1l-Si-Ev2" firstAttribute="top" secondItem="D97-62-ZGG" secondAttribute="top" id="zLI-gN-q7d"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="c1l-Si-Ev2" id="7PR-0f-yaE"/>
@@ -171,24 +175,46 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0p-Im-xP5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="Uxo-ru-CBx">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="prT-j6-aR3">
+                                            <connections>
+                                                <action selector="editButton:" destination="WOH-wg-Efl" id="eaN-Ec-h9z"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Upload" id="aQF-rR-pJh">
+                                            <connections>
+                                                <action selector="uploadButton:" destination="WOH-wg-Efl" id="z9z-qS-DgY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vC7-78-wjX" firstAttribute="top" secondItem="gGU-Rb-SOl" secondAttribute="top" id="cEr-Tl-r6h"/>
-                            <constraint firstItem="vC7-78-wjX" firstAttribute="leading" secondItem="gGU-Rb-SOl" secondAttribute="leading" id="lnd-x8-2g3"/>
-                            <constraint firstItem="vC7-78-wjX" firstAttribute="bottom" secondItem="gGU-Rb-SOl" secondAttribute="bottom" id="vxt-qz-WvV"/>
-                            <constraint firstItem="vC7-78-wjX" firstAttribute="trailing" secondItem="gGU-Rb-SOl" secondAttribute="trailing" id="xiu-3Q-c36"/>
+                            <constraint firstAttribute="trailing" secondItem="vC7-78-wjX" secondAttribute="trailing" id="00h-tK-vbu"/>
+                            <constraint firstItem="vC7-78-wjX" firstAttribute="top" secondItem="c0p-Im-xP5" secondAttribute="bottom" id="21C-AX-99T"/>
+                            <constraint firstItem="vC7-78-wjX" firstAttribute="leading" secondItem="eZV-Nl-Mft" secondAttribute="leading" id="EJF-hX-zQI"/>
+                            <constraint firstItem="vC7-78-wjX" firstAttribute="leading" secondItem="c0p-Im-xP5" secondAttribute="leading" id="KH1-fk-cUe"/>
+                            <constraint firstItem="vC7-78-wjX" firstAttribute="trailing" secondItem="c0p-Im-xP5" secondAttribute="trailing" id="VBd-qk-pL0"/>
+                            <constraint firstItem="c0p-Im-xP5" firstAttribute="top" secondItem="gGU-Rb-SOl" secondAttribute="top" id="kLS-6R-tal"/>
+                            <constraint firstItem="vC7-78-wjX" firstAttribute="bottom" secondItem="gGU-Rb-SOl" secondAttribute="bottom" id="vNx-V9-uAH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gGU-Rb-SOl"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Gallery" image="galleryTab" id="v7h-FM-MTG"/>
                     <connections>
                         <outlet property="collectionView" destination="vC7-78-wjX" id="jac-XC-IgK"/>
+                        <outlet property="editButton" destination="prT-j6-aR3" id="KdJ-oj-Llj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHQ-hF-oqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71.200000000000003" y="410.64467766116945"/>
+            <point key="canvasLocation" x="-71" y="411"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NKt-nu-Xay">
@@ -292,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3x-8v-X3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1639" y="411"/>
+            <point key="canvasLocation" x="-1746" y="411"/>
         </scene>
     </scenes>
     <resources>

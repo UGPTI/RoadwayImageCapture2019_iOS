@@ -9,60 +9,73 @@
 import UIKit
 import CoreData
 
-class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayout {
+class GalleryViewController: UIViewController {
 
+    @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet var editButton: UIBarButtonItem!
-    //edit button toggle
-    var editToggle = true
     
-    //Layout Stuff
-    let itemsPerRow : CGFloat = 3
-    private let sectionInsets = UIEdgeInsets(top: 50.0,left: 20.0,bottom: 50.0,right: 20.0)
-    let reuseIdentifier = "imageCell"
-    
-    //Image view stuff
-    var imageCaptures : [Data] = []
-    var dataSource : CustomDataSource!
-    
-    @IBAction func uploadButton(_ sender: Any) {
-        
-    }
-    
-    @IBAction func editButton(_ sender: Any) {
-//        if (!editToggle) {
-//            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: "editButton:")
-//        }else{
-//            self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action:"editButton:")
-//        }
-//        editToggle = !editToggle
-    }
+    //navigation bar stuff
+    var editButton: UIBarButtonItem!
+    var trashButton: UIBarButtonItem!
+    var uploadButton: UIBarButtonItem!
+    var cancleEditButton : UIBarButtonItem!
+
+    //Collection view stuff
+    var datasource : CustomDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dataSource = CustomDataSource(collectionView: collectionView)
+        //set up nav bar buttons
+        trashButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.trash, target: self, action: #selector(deleteSelectedAction(sender:)))
+        editButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.edit, target: self, action: #selector(editAction(sender:)))
+        uploadButton = UIBarButtonItem(title: "Upload", style: UIBarButtonItem.Style.plain, target: self, action: #selector(uploadAction(sender:)))
+        cancleEditButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel, target: self, action: #selector(cancleEditAction(sender:)))
+        navigationBar.topItem?.leftBarButtonItem = editButton
+        navigationBar.topItem?.rightBarButtonItem = uploadButton
         
-        collectionView.delegate = self
-        collectionView.dataSource = dataSource
+        //set up collection view
+        datasource = CustomDataSource(collectionView: collectionView)
+        collectionView.delegate = datasource
+        collectionView.dataSource = datasource
+        collectionView.allowsMultipleSelection = false
+        collectionView.allowsSelection = false
     }
     
-    //Layout
-    func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / itemsPerRow
+    
+    //bar button actions
+    @objc func editAction(sender: UIBarButtonItem){
+        print("edit")
+        navigationBar.topItem?.leftBarButtonItem = trashButton
+        navigationBar.topItem?.rightBarButtonItem = cancleEditButton
         
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        collectionView.allowsMultipleSelection = true
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
+    @objc func deleteSelectedAction(sender: UIBarButtonItem){
+        print("delete")
+        navigationBar.topItem?.leftBarButtonItem = editButton
+        navigationBar.topItem?.rightBarButtonItem = uploadButton
+        
+        collectionView.allowsMultipleSelection = false
+        collectionView.allowsSelection = false
+        
+        //delete action
+        datasource.deleteSelected()
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return sectionInsets.left
+    @objc func uploadAction(sender: UIBarButtonItem){
+        print("upload")
+    }
+    
+    @objc func cancleEditAction(sender: UIBarButtonItem){
+        print("cancle")
+        navigationBar.topItem?.leftBarButtonItem = editButton
+        navigationBar.topItem?.rightBarButtonItem = uploadButton
+        collectionView.allowsMultipleSelection = false
+        collectionView.allowsSelection = false
+        
+        //clear items from selection in data source
+        datasource.clearSelected()
     }
 }
-    
-

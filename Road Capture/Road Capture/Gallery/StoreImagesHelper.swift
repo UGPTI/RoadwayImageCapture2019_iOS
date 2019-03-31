@@ -63,6 +63,21 @@ class StoreImagesHelper: NSObject {
         return UIImage()
     }
     
+    static func deleteImage(imageNameWithExtention : String) {
+        //get path
+        let imageURL = getImagePath(imageNameWithExtention: imageNameWithExtention)
+        
+        // Create a FileManager instance
+        let fileManager = FileManager.default
+
+        do {
+            try fileManager.removeItem(atPath: imageURL.relativePath)
+        }
+        catch let error as NSError {
+            print("Image couldn't be deleted : \(error)")
+        }
+    }
+    
     private static func getImagePath(imageNameWithExtention : String) -> URL {
         //create image path
         let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(imageNameWithExtention)"

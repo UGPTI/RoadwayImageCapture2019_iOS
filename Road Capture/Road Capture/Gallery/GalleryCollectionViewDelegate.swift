@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension CustomDataSource2 : UICollectionViewDelegateFlowLayout {
+extension CustomDataSource : UICollectionViewDelegateFlowLayout {
     //Collection view
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //get image capture object

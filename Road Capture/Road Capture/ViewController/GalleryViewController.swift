@@ -22,8 +22,8 @@ class GalleryViewController: UIViewController {
 
     //Collection view stuff
 //    var datasource : CustomDataSource!
-    var datasource : CustomDataSource2!
-    var test : CustomDataSource2!
+    var datasource : CustomDataSource!
+    var test : CustomDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ class GalleryViewController: UIViewController {
         collectionView.allowsMultipleSelection = false
         collectionView.allowsSelection = false
         
-        datasource = CustomDataSource2(collectionView: collectionView)
+        datasource = CustomDataSource(collectionView: collectionView)
         collectionView.dataSource = datasource
         collectionView.delegate = datasource
     }

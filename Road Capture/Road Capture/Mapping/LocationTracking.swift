@@ -51,7 +51,7 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
         }else{
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.distanceFilter = 10
-            locationManager.startUpdatingLocation()
+//            locationManager.startUpdatingLocation()
             locationManager.startMonitoringSignificantLocationChanges()
         }
     }

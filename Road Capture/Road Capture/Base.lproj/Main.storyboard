@@ -119,7 +119,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dwv-3Q-z7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-903.20000000000005" y="410.64467766116945"/>
+            <point key="canvasLocation" x="-903" y="400"/>
         </scene>
         <!--Gallery-->
         <scene sceneID="7Ke-hh-N8P">
@@ -203,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHQ-hF-oqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71" y="411"/>
+            <point key="canvasLocation" x="-71" y="400"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NKt-nu-Xay">
@@ -217,7 +217,7 @@
                     <connections>
                         <segue destination="Al3-9I-E9z" kind="relationship" relationship="viewControllers" id="cFF-jW-LeE"/>
                         <segue destination="WOH-wg-Efl" kind="relationship" relationship="viewControllers" id="cha-8O-nIJ"/>
-                        <segue destination="8Jr-GZ-jXz" kind="relationship" relationship="viewControllers" id="Iud-bD-e2o"/>
+                        <segue destination="JVJ-G0-sxI" kind="relationship" relationship="viewControllers" id="fiW-db-ys0"/>
                         <segue destination="o9C-ff-4pI" kind="relationship" relationship="viewControllers" id="vWj-MF-bS2"/>
                     </connections>
                 </tabBarController>
@@ -233,33 +233,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzQ-UB-VBU">
-                                <rect key="frame" x="157.5" y="568" width="60" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="6dw-ZY-Eqo"/>
-                                    <constraint firstAttribute="width" constant="60" id="Ohu-k9-jZD"/>
-                                </constraints>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startButton:" destination="Al3-9I-E9z" eventType="touchUpInside" id="GBc-EN-3Id"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-55-Lus">
-                                <rect key="frame" x="298.5" y="568" width="60.5" height="30"/>
+                                <rect key="frame" x="289" y="529" width="70" height="70"/>
                                 <color key="backgroundColor" red="1" green="0.21106947949999999" blue="0.1665672708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60.5" id="Xsh-cK-NfC"/>
+                                    <constraint firstAttribute="width" secondItem="ZGW-55-Lus" secondAttribute="height" multiplier="1:1" id="ciE-EA-c4u"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="End">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -270,13 +252,35 @@
                                     <action selector="endButton:" destination="Al3-9I-E9z" eventType="touchUpInside" id="fBw-da-Urm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzQ-UB-VBU">
+                                <rect key="frame" x="152" y="529" width="70" height="70"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JzQ-UB-VBU" secondAttribute="height" multiplier="1:1" id="2e9-qL-muS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButton:" destination="Al3-9I-E9z" eventType="touchUpInside" id="GBc-EN-3Id"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="centerX" secondItem="2kP-oq-oms" secondAttribute="centerX" id="eBZ-zL-pUJ"/>
-                            <constraint firstItem="k8c-TV-nCY" firstAttribute="trailing" secondItem="ZGW-55-Lus" secondAttribute="trailing" constant="16" id="fzG-vq-JgH"/>
-                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="ZGW-55-Lus" secondAttribute="bottom" constant="20" id="nyP-2k-6Ip"/>
-                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="JzQ-UB-VBU" secondAttribute="bottom" constant="20" id="zDL-bo-bPK"/>
+                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="top" secondItem="ZGW-55-Lus" secondAttribute="top" id="5qB-DL-tAp"/>
+                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="centerX" secondItem="2kP-oq-oms" secondAttribute="centerX" id="K1j-0B-gRe"/>
+                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="leading" secondItem="k8c-TV-nCY" secondAttribute="leading" constant="152" id="gNo-X0-0p5"/>
+                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="JzQ-UB-VBU" secondAttribute="bottom" constant="19" id="iLc-3u-YWP"/>
+                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="top" secondItem="k8c-TV-nCY" secondAttribute="top" constant="509" id="rLt-K8-cLn"/>
+                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="baseline" secondItem="ZGW-55-Lus" secondAttribute="firstBaseline" id="u7o-Zh-beB"/>
+                            <constraint firstItem="ZGW-55-Lus" firstAttribute="trailing" secondItem="2kP-oq-oms" secondAttribute="trailingMargin" id="zay-m4-NWD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k8c-TV-nCY"/>
                     </view>
@@ -293,28 +297,21 @@
             </objects>
             <point key="canvasLocation" x="-71.200000000000003" y="-412.44377811094455"/>
         </scene>
-        <!--Help-->
-        <scene sceneID="7uC-Jp-3OT">
+        <!--Item-->
+        <scene sceneID="jM0-Kf-b0P">
             <objects>
-                <viewController id="8Jr-GZ-jXz" customClass="HelpViewController" customModule="Road_Capture" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FM0-3a-XNg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="zXL-Ji-OJj"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Help" image="helpTab" id="J40-RT-2cd"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P3x-8v-X3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="JVJ-G0-sxI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="E7A-uU-7Kp"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Djt-b6-CD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1746" y="411"/>
+            <point key="canvasLocation" x="-1746" y="400"/>
         </scene>
     </scenes>
     <resources>
         <image name="cameraTab" width="30" height="30"/>
         <image name="checkBubble" width="30" height="30"/>
         <image name="galleryTab" width="30" height="30"/>
-        <image name="helpTab" width="30" height="30"/>
         <image name="settingsTab" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>

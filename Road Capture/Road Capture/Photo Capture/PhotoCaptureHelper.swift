@@ -20,13 +20,13 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
     var photoOutput: AVCapturePhotoOutput?
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     var cameraView: UIView?
+    var currentImage : UIImage?
     
     //structure to hold images
 //    var imagesArray = [UIImage?]()
     
     //var triggerFunction : (_ : UIImage)->Void = {}
     var triggerFunction : () -> Void = {}
-    
     
     //init
     init(view: UIView, cameraView: UIView) {
@@ -95,13 +95,10 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
         
         if let imageData = photo.fileDataRepresentation() {
             //create image
-            let image = UIImage(data: imageData)
+            currentImage = UIImage(data: imageData)
             
             //Trigger function
             triggerFunction()
-            
-            //Save photo using core data - protect against FAILURES!!!! dont use !
-            StoreImagesHelper.storeImageCapture(id: getDateInt(), latitude: 46.8872, longitude: -96.8054, quality: 1, agency: "test agency", image: image!, thumbnail: image!.resizeImageUsingVImage(size: CGSize(width: 300, height: 300))!)
         }
     }
     
@@ -118,12 +115,7 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
         
         photoOutput?.capturePhoto(with: settings , delegate: self)
     }
-    
-    //MOVE LATER!!!!!!
-    func getDateInt() -> Int {
-        let date = Date().timeIntervalSince1970 //This is a Double
-        return Int(date*1000)
-    }
+  
 }
 
 extension UIImage{

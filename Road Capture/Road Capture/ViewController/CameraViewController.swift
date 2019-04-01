@@ -13,9 +13,9 @@ import AVFoundation
 class CameraViewController: UIViewController {
     
     //photo capture helper
-    var photoCaptureHelper : PhotoCaptureHelper?
+    var photoCaptureHelper : PhotoCaptureHelper!
     //location tracking helper
-    var locationTracker : LocationTracking?
+    var locationTracker : LocationTracking!
     var isTakingPicutres = false
     
     @IBOutlet var startButton: UIButton!
@@ -29,7 +29,7 @@ class CameraViewController: UIViewController {
             isTakingPicutres = true
             
             //start tracking location
-            locationTracker?.start()
+            locationTracker.start()
         }
         
         //take photo
@@ -47,12 +47,6 @@ class CameraViewController: UIViewController {
             locationTracker!.stop()
             
             //switch to gallery view
-            //self.tabBarController?.customizableViewControllers?[1] as! GalleryViewController
-            //add images to gallery view
-            //galleryViewController.addImages(images: self.photoCaptureHelper!.imagesArray)
-            //reset photo caputure helper
-            //photoCaptureHelper?.imagesArray = []
-            //navigate to gallery view controller
             self.tabBarController?.selectedIndex = 1
         }
     }
@@ -61,6 +55,12 @@ class CameraViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //make round buttons
+        startButton.layer.cornerRadius = 0.5 * startButton.bounds.size.width
+        startButton.clipsToBounds = true
+        endButton.layer.cornerRadius = 0.5 * endButton.bounds.size.width
+        endButton.clipsToBounds = true
         
         //disable button
         endButton.isHidden = true
@@ -76,12 +76,33 @@ class CameraViewController: UIViewController {
         endButton.isEnabled = false
         endButton.backgroundColor = UIColor.gray
         
-        self.photoCaptureHelper?.takePhoto(triggerFunction: {
+        self.photoCaptureHelper?.takePhoto(triggerFunction : {
+            
+            //get image
+            guard let image = self.photoCaptureHelper?.currentImage else {
+                print("could not get image")
+                return
+            }
+            
+            //get latitude and longitude
+            let lat = Float(exactly: (self.locationTracker?.lastLocation?.coordinate.latitude) ?? 0.0) ?? 0.0
+            let long = Float(exactly: (self.locationTracker?.lastLocation?.coordinate.longitude) ?? 0.0) ?? 0.0
+            
+            //Save photo using core data - protect against FAILURES!!!! dont use !
+            StoreImagesHelper.storeImageCapture(id: self.getDateInt(), latitude: lat, longitude: long, quality: 1, agency: "test agency", image: image, thumbnail: image.resizeImageUsingVImage(size: CGSize(width: 300, height: 300))!)
+        
+            //enable button
             self.endButton.isEnabled = true
             self.endButton.backgroundColor = UIColor.red
         })
         
         automaticButtonPress(button: startButton)
+    }
+    
+    //MOVE LATER!!!!!!
+    func getDateInt() -> Int {
+        let date = Date().timeIntervalSince1970 //This is a Double
+        return Int(date*1000)
     }
     
     //button animation

@@ -24,6 +24,9 @@
 		B2684A292246DBAF003EA2DF /* CustomDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2684A282246DBAF003EA2DF /* CustomDataSource.swift */; };
 		B28CFF682244183F00E30A14 /* StoreImagesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28CFF672244183F00E30A14 /* StoreImagesHelper.swift */; };
 		B28CFF6B224418FA00E30A14 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B28CFF69224418FA00E30A14 /* Model.xcdatamodeld */; };
+		B294FB3A2251864B0098BF1D /* FetchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B294FB392251864B0098BF1D /* FetchController.swift */; };
+		B294FB3C22518EC70098BF1D /* CustomDataSource2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B294FB3B22518EC70098BF1D /* CustomDataSource2.swift */; };
+		B294FB3E225191F50098BF1D /* GalleryCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B294FB3D225191F50098BF1D /* GalleryCollectionViewDelegate.swift */; };
 		B2A52B502207FD160079F120 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A52B4F2207FD160079F120 /* Marker.swift */; };
 		B2AA6108221F411300AE8B4F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */; };
 		C12380D222010410DD8B498F /* Pods_Road_Capture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DCB327D447DECDEE7D32C6 /* Pods_Road_Capture.framework */; };
@@ -76,6 +79,9 @@
 		B2684A282246DBAF003EA2DF /* CustomDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSource.swift; sourceTree = "<group>"; };
 		B28CFF672244183F00E30A14 /* StoreImagesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreImagesHelper.swift; sourceTree = "<group>"; };
 		B28CFF6A224418FA00E30A14 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B294FB392251864B0098BF1D /* FetchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchController.swift; sourceTree = "<group>"; };
+		B294FB3B22518EC70098BF1D /* CustomDataSource2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSource2.swift; sourceTree = "<group>"; };
+		B294FB3D225191F50098BF1D /* GalleryCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		B2A52B4F2207FD160079F120 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B5F2A2C1BC7C772C4FA4CEB7 /* Pods-Road CaptureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Road CaptureUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Road CaptureUITests/Pods-Road CaptureUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +230,9 @@
 				B2AA6107221F411300AE8B4F /* ImageCollectionViewCell.swift */,
 				B28CFF672244183F00E30A14 /* StoreImagesHelper.swift */,
 				B2684A282246DBAF003EA2DF /* CustomDataSource.swift */,
+				B294FB3B22518EC70098BF1D /* CustomDataSource2.swift */,
+				B294FB392251864B0098BF1D /* FetchController.swift */,
+				B294FB3D225191F50098BF1D /* GalleryCollectionViewDelegate.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -452,17 +461,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B294FB3E225191F50098BF1D /* GalleryCollectionViewDelegate.swift in Sources */,
 				B2684A292246DBAF003EA2DF /* CustomDataSource.swift in Sources */,
 				B238C14C2210CD6700DB9017 /* LocationTracking.swift in Sources */,
 				B24BF61C2200EA0A009C5C51 /* AppDelegate.swift in Sources */,
 				B22A2C5822276BFE005D3C5A /* PhotoCaptureHelper.swift in Sources */,
 				B238C14E2211165000DB9017 /* NetworkingTests.swift in Sources */,
 				3F44DAD3221B47DE000E91CF /* CameraViewController.swift in Sources */,
+				B294FB3A2251864B0098BF1D /* FetchController.swift in Sources */,
 				3F44DAD4221B47DE000E91CF /* HelpViewController.swift in Sources */,
 				B2AA6108221F411300AE8B4F /* ImageCollectionViewCell.swift in Sources */,
 				B2A52B502207FD160079F120 /* Marker.swift in Sources */,
 				3F44DAD7221B4A55000E91CF /* SettingsTableViewController.swift in Sources */,
 				3F44DAD9221B51EB000E91CF /* GalleryViewController.swift in Sources */,
+				B294FB3C22518EC70098BF1D /* CustomDataSource2.swift in Sources */,
 				B28CFF682244183F00E30A14 /* StoreImagesHelper.swift in Sources */,
 				B28CFF6B224418FA00E30A14 /* Model.xcdatamodeld in Sources */,
 			);

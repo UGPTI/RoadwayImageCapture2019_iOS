@@ -17,7 +17,6 @@ class CustomDataSource: NSObject, UICollectionViewDataSource, NSFetchedResultsCo
         super.init()
         self.collectionView = collectionView
         initializeFetchedResultsController()
-        itemCount = fetchedResultsController.sections![0].numberOfObjects
     }
 
     //Data Source

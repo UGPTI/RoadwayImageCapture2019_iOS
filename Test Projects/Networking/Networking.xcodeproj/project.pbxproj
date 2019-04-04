@@ -14,14 +14,14 @@
 		B2C31C172241C90200185114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C31C152241C90200185114 /* LaunchScreen.storyboard */; };
 		B2C31C202241CB4B00185114 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C31C1E2241CB4B00185114 /* NetworkingTests.swift */; };
 		B2C31C252241CDFD00185114 /* Test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2C31C242241CDFD00185114 /* Test.jpg */; };
-		D32BF95C373CCAB896F80279 /* libPods-Networking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF38EE94D2C32F101EABE6B /* libPods-Networking.a */; };
+		CC86014C067093D6314AA0AC /* libPods-Networking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA037D22F120FB49172058FB /* libPods-Networking.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05BEA914F6924C1CF773FB96 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
-		1CF38EE94D2C32F101EABE6B /* libPods-Networking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Networking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4707634A884A76EF504E2B40 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
 		A488E35937D4FF419F6924B7 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
+		AA037D22F120FB49172058FB /* libPods-Networking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Networking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C31C092241C90100185114 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C31C0C2241C90100185114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C31C0E2241C90100185114 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D32BF95C373CCAB896F80279 /* libPods-Networking.a in Frameworks */,
+				CC86014C067093D6314AA0AC /* libPods-Networking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 		7344EAC89AE8B7BEFFD49502 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1CF38EE94D2C32F101EABE6B /* libPods-Networking.a */,
+				AA037D22F120FB49172058FB /* libPods-Networking.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

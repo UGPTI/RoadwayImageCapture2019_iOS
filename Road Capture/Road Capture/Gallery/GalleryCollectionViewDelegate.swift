@@ -33,11 +33,15 @@ extension CustomDataSource : UICollectionViewDelegateFlowLayout {
         
         //create request to get all image captures
         let fetchRequest = NSFetchRequest<ImageCapture>(entityName: "ImageCapture")
-        
         do {
+            //get all image captures
             let imageCaptures = try context.fetch(fetchRequest)
+            
+            //upload each image captures
             for imageCapture in imageCaptures {
-                print("\(imageCapture.id) : lat:\(imageCapture.latitude) long:\(imageCapture.longitude) qual:\(imageCapture.quality)")
+
+                NetworkingTests.uploadImage(imageCapture: imageCapture)
+         
             }
         } catch {
             print("Failed to upload image captures")

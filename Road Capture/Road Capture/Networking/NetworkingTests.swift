@@ -50,7 +50,7 @@ class NetworkingTests{
         }
     }
     
-    static func uploadImage(imageCapture : ImageCapture) {
+    static func uploadImage(imageCapture : ImageCapture, deleteAfter : Bool) {
         //get image file name
         let imageNameWithExtention = "\(imageCapture.id).jpg"
         //load image
@@ -79,23 +79,27 @@ class NetworkingTests{
             //check if true in response
             if let responseValue = response.result.value {
                 if responseValue.contains("TRUE") {
-                    //get app delegate
-                    let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
-                    //get context
-                    let context = appDelegate.persistentContainer.viewContext
+                     print("\(imageCapture.id) : lat:\(imageCapture.latitude) long:\(imageCapture.longitude) was uploaded")
                     
-                    print("\(imageCapture.id) : lat:\(imageCapture.latitude) long:\(imageCapture.longitude) was uploaded")
-                    
-                    //delete images from file system
-                    StoreImagesHelper.deleteImage(imageNameWithExtention: "\(imageCapture.id).jpg")
-                    StoreImagesHelper.deleteImage(imageNameWithExtention: "\(imageCapture.id)_thumbnail.jpg")
-                    context.delete(imageCapture)
-                    //save context
-                    do {
-                        try context.save()
-                    }
-                    catch {
-                        print("couldnt save after delete")
+                    if deleteAfter {
+                        //get app delegate
+                        let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                        //get context
+                        let context = appDelegate.persistentContainer.viewContext
+                        
+                        
+                        
+                        //delete images from file system
+                        StoreImagesHelper.deleteImage(imageNameWithExtention: "\(imageCapture.id).jpg")
+                        StoreImagesHelper.deleteImage(imageNameWithExtention: "\(imageCapture.id)_thumbnail.jpg")
+                        context.delete(imageCapture)
+                        //save context
+                        do {
+                            try context.save()
+                        }
+                        catch {
+                            print("couldnt save after delete")
+                        }
                     }
                 }
             }

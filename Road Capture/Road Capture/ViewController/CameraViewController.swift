@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import AVFoundation
+import Foundation
 
 class CameraViewController: UIViewController {
     
@@ -66,9 +67,11 @@ class CameraViewController: UIViewController {
         endButton.isHidden = true
         endButton.isEnabled = false
         
+        var distanceInFeet = Measurement(value: 100, unit: UnitLength.feet)
+        
         //init helpers
         photoCaptureHelper = PhotoCaptureHelper.init(view: self.view, cameraView: cameraView)
-        locationTracker = LocationTracking.init(triggerDistance: 100, triggerFunction: takePhoto)
+        locationTracker = LocationTracking.init(triggerDistance: distanceInFeet.converted(to: UnitLength.meters), triggerFunction: takePhoto)
     }
     
     func takePhoto(){
@@ -85,11 +88,11 @@ class CameraViewController: UIViewController {
             }
             
             //get latitude and longitude
-            let lat = Float(exactly: (self.locationTracker?.lastLocation?.coordinate.latitude) ?? 0.0) ?? 0.0
-            let long = Float(exactly: (self.locationTracker?.lastLocation?.coordinate.longitude) ?? 0.0) ?? 0.0
+            let lat = Float(exactly: self.locationTracker!.lastLocation!.coordinate.latitude )
+            let long = Float(exactly: self.locationTracker!.lastLocation!.coordinate.longitude)
             
             //Save photo using core data - protect against FAILURES!!!! dont use !
-            StoreImagesHelper.storeImageCapture(id: self.getDateInt(), latitude: lat, longitude: long, quality: 1, agency: "test agency", image: image, thumbnail: image.resizeImageUsingVImage(size: CGSize(width: 300, height: 300))!)
+            StoreImagesHelper.storeImageCapture(id: self.getDateInt(), latitude: lat!, longitude: long!, quality: 1, agency: "test agency", image: image, thumbnail: image.resizeImageUsingVImage(size: CGSize(width: 300, height: 300))!)
         
             //enable button
             self.endButton.isEnabled = true

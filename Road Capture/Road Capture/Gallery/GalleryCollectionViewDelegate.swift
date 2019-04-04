@@ -39,9 +39,8 @@ extension CustomDataSource : UICollectionViewDelegateFlowLayout {
             
             //upload each image captures
             for imageCapture in imageCaptures {
-
-                NetworkingTests.uploadImage(imageCapture: imageCapture)
-         
+                //call upload
+                NetworkingTests.uploadImage(imageCapture: imageCapture, deleteAfter: true)
             }
         } catch {
             print("Failed to upload image captures")

@@ -17,8 +17,8 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     //Locations
-    var startLocation: CLLocation!
-    var lastLocation: CLLocation!
+    var startLocation: CLLocation?
+    var lastLocation: CLLocation?
     var startDate: Date!
     //Distances
     var deltaDistance : Double = 0
@@ -33,11 +33,11 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
     var triggerFunction = {}
     
     //Distance to set off trigger
-    var triggerDistance: Double = 100
+    var triggerDistance: Measurement<UnitLength>!
     
-    init(triggerDistance : Double?, triggerFunction : @escaping ()->Void) {
+    init(triggerDistance : Measurement<UnitLength>, triggerFunction : @escaping ()->Void) {
         super.init()
-        self.triggerDistance = triggerDistance ?? 100 //Default 100
+        self.triggerDistance = triggerDistance
         self.triggerFunction = triggerFunction
         
         locationManager.delegate = self
@@ -51,7 +51,8 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
         }else{
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.distanceFilter = 10
-//            locationManager.startUpdatingLocation()
+            locationManager.requestLocation()
+            locationManager.startUpdatingLocation()
             locationManager.startMonitoringSignificantLocationChanges()
         }
     }
@@ -62,13 +63,6 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
     
     func stop(){
         isUpdating = false
-        //reset
-        startLocation = nil
-        lastLocation = nil
-        startDate = nil
-        totalDistance = 0
-        straightDistance = 0
-        traveledSinceLastResetDistance = 0
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -76,29 +70,26 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("updated location")
         if isUpdating{
-            //Set Time
-            if startDate == nil {
-                startDate = Date()
-                //Print difference in time
-            } else {
-                //            print("elapsedTime:", String(format: "%.0fs", Date().timeIntervalSince(startDate)))
-            }
-            
             //Set location
             if startLocation == nil {
-                startLocation = locations.first
-                //Calculate distance traveled
-            } else if let location = locations.last {
+                startLocation = locations.last
+            }
+            if lastLocation == nil {
+                lastLocation = locations.last
+            }
+            
+            if let location = locations.last {
                 //Set distances
-                deltaDistance = lastLocation.distance(from: location)
+                deltaDistance = lastLocation!.distance(from: location)
                 
                 traveledSinceLastResetDistance += deltaDistance
                 totalDistance += deltaDistance
-                straightDistance = startLocation.distance(from: locations.last!)
+                straightDistance = startLocation!.distance(from: locations.last!)
                 
                 //Check if over threshold
-                if(traveledSinceLastResetDistance >= triggerDistance){
+                if(traveledSinceLastResetDistance >= triggerDistance.value){
                     //Reset
                     traveledSinceLastResetDistance = 0
                     
@@ -111,6 +102,15 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
                 print("Total Distance:\t\t",  totalDistance)
             }
             lastLocation = locations.last
+        }else {
+            startDate = Date()
+            startLocation = locations.last
+            lastLocation = startLocation
+            
+            deltaDistance = 0
+            totalDistance = 0
+            straightDistance = 0
+            traveledSinceLastResetDistance = 0
         }
     }
     

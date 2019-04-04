@@ -45,7 +45,7 @@ class StoreImagesHelper: NSObject {
         let imageURL = getImagePath(imageNameWithExtention: imageNameWithExtention)
         
         //save image
-        try? image.jpegData(compressionQuality: 0.2)?.write(to: imageURL)
+        try? image.jpegData(compressionQuality: 1)?.write(to: imageURL)
     }
     
     static func loadImage(imageNameWithExtention : String) -> UIImage {

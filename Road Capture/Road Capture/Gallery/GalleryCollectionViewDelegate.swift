@@ -19,9 +19,6 @@ extension CustomDataSource : UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        //get image capture object
-//        let object = self.fetchController.fetchedResultController.object(at: indexPath)
-        
         selectedImageCaptures.removeValue(forKey: indexPath)
     }
     

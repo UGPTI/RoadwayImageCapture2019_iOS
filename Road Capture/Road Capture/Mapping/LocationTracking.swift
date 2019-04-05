@@ -33,15 +33,27 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
     var triggerFunction = {}
     
     //Distance to set off trigger
-    var triggerDistance: Measurement<UnitLength>!
+    var triggerDistance: Double!
     
-    init(triggerDistance : Measurement<UnitLength>, triggerFunction : @escaping ()->Void) {
+    init(triggerFunction : @escaping ()->Void) {
         super.init()
-        self.triggerDistance = triggerDistance
+        
+        self.triggerDistance = getTriggerDistace()
         self.triggerFunction = triggerFunction
         
         locationManager.delegate = self
         startTracking()
+    }
+    
+    func getTriggerDistace() -> Double{
+//        UserDefaults.standard.set(100, forKey: "distance")
+        var distanceInFeet = UserDefaults.standard.double(forKey: "distance")
+        
+        if distanceInFeet == 0 {
+            distanceInFeet = 100
+        }
+        
+        return (Measurement(value: distanceInFeet, unit: UnitLength.feet)).converted(to: .meters).value
     }
     
     func startTracking(){
@@ -71,6 +83,9 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("updated location")
+        //set trigger distance - do this every time location is updated so you can change distance on the fly
+        triggerDistance = getTriggerDistace()
+        
         if isUpdating{
             //Set location
             if startLocation == nil {
@@ -89,7 +104,7 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
                 straightDistance = startLocation!.distance(from: locations.last!)
                 
                 //Check if over threshold
-                if(traveledSinceLastResetDistance >= triggerDistance.value){
+                if(traveledSinceLastResetDistance >= triggerDistance){
                     //Reset
                     traveledSinceLastResetDistance = 0
                     

@@ -21,10 +21,6 @@ class StoreImagesHelper: NSObject {
         let entity = NSEntityDescription.entity(forEntityName: "ImageCapture", in: context)
         let newImageCapture = NSManagedObject(entity: entity!, insertInto: context)
         
-        //save image
-        saveImage(imageNameWithExtention: "\(id).jpg", image: image)
-        saveImage(imageNameWithExtention: "\(id)_thumbnail.jpg", image: thumbnail)
-        
         //populate entity
         newImageCapture.setValue(id, forKey: "id")
         newImageCapture.setValue(latitude, forKey: "latitude")
@@ -38,14 +34,27 @@ class StoreImagesHelper: NSObject {
         } catch {
             print("Failed saving entity")
         }
+        
+        //save image
+        saveImage(imageNameWithExtention: "\(id).jpg", image: image, quality:  0.3)
+        saveImage(imageNameWithExtention: "\(id)_thumbnail.jpg", image: thumbnail, quality: Float(quality)/100.0)
     }
     
-    static func saveImage(imageNameWithExtention : String, image : UIImage){
+    static func saveImage(imageNameWithExtention : String, image : UIImage, quality : Float){
         //get path
         let imageURL = getImagePath(imageNameWithExtention: imageNameWithExtention)
         
+        
+        //sanitate quality
+        var qual = quality
+        if qual > 1 {
+            qual = 1.0
+        }else if qual < 0 {
+            qual = 0.0
+        }
+        
         //save image
-        try? image.jpegData(compressionQuality: 1)?.write(to: imageURL)
+        try? image.jpegData(compressionQuality: CGFloat(qual))?.write(to: imageURL)
     }
     
     static func loadImage(imageNameWithExtention : String) -> UIImage {

@@ -11,64 +11,27 @@ import Alamofire
 import CoreData
 
 class NetworkingTests{
-
-    private static func postTest(imageData : Data){
-        //Create date
-        let id = getDateString()
-        
-        //Create imageData string
-        let image = imageData.base64EncodedString(options: .lineLength64Characters)
-        
-        //Create parameter list
-        let parameters : [String: Any] = [
-            "username" : "RIC",
-            "password" : "@RICsdP4T",
-            "id" : id,
-            "latitude" : 46.8876,
-            "longitude" : -96.8054,
-            "quality" : 1,
-            "agency" : "Capstone_Test",
-            "image" : image,
-            "filename" : "\(id).jpg"
-        ]
-        
-        
-        Alamofire.request("https://dotsc.ugpti.ndsu.nodak.edu/RIC/upload1.php", method: .post, parameters: parameters, encoding: URLEncoding.default).responseString { response in
-            
-//            print("Request: \(String(describing: response.request))\n")     // original url request
-//            print("Response: \(String(describing: response.response))\n")     // http url response
-//            print("Result: \(response.result)\n")                           // response serialization result
-            
-            print(response.result.value as? String)
-//            if let json = response.result.value {
-//                print("JSON: \(json)") // serialized json response
-//            }
-//
-//            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//                print("Data: \(utf8Text)") // original server data as UTF8 string
-//            }
-        }
-    }
     
     static func uploadImage(imageCapture : ImageCapture, deleteAfter : Bool) {
         //get image file name
         let imageNameWithExtention = "\(imageCapture.id).jpg"
         //load image
         let image = StoreImagesHelper.loadImage(imageNameWithExtention: imageNameWithExtention)
-        //convert to data
+        //convert to data - this compresses the image twice 😬
         let imageData = image.jpegData(compressionQuality: CGFloat(imageCapture.quality) / 100.0)
         //create base 64 string
         guard let imageBase64String = imageData?.base64EncodedString(options: .lineLength64Characters) else {
             return
         }
         
+        //46.8876, -96.8054,
         //Create parameter list
         let parameters : [String: Any] = [
             "username" : "RIC",
             "password" : "@RICsdP4T",
             "id" : imageCapture.id,
-            "latitude" : 46.8876,
-            "longitude" : -96.8054,
+            "latitude" : imageCapture.latitude,
+            "longitude" : imageCapture.longitude,
             "quality" : imageCapture.quality,
             "agency" : imageCapture.agency ?? "",
             "image" : imageBase64String,

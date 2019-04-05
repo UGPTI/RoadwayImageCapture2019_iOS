@@ -67,11 +67,9 @@ class CameraViewController: UIViewController {
         endButton.isHidden = true
         endButton.isEnabled = false
         
-        var distanceInFeet = Measurement(value: 100, unit: UnitLength.feet)
-        
         //init helpers
         photoCaptureHelper = PhotoCaptureHelper.init(view: self.view, cameraView: cameraView)
-        locationTracker = LocationTracking.init(triggerDistance: distanceInFeet.converted(to: UnitLength.meters), triggerFunction: takePhoto)
+        locationTracker = LocationTracking.init(triggerFunction: takePhoto)
     }
     
     func takePhoto(){
@@ -79,7 +77,7 @@ class CameraViewController: UIViewController {
         endButton.isEnabled = false
         endButton.backgroundColor = UIColor.gray
         
-        self.photoCaptureHelper?.takePhoto(triggerFunction : {
+        photoCaptureHelper?.takePhoto(triggerFunction : {
             
             //get image
             guard let image = self.photoCaptureHelper?.currentImage else {
@@ -87,12 +85,22 @@ class CameraViewController: UIViewController {
                 return
             }
             
+            let location = self.locationTracker.lastLocation!
             //get latitude and longitude
-            let lat = Float(exactly: self.locationTracker!.lastLocation!.coordinate.latitude )
-            let long = Float(exactly: self.locationTracker!.lastLocation!.coordinate.longitude)
+            let lat = Float(location.coordinate.latitude)
+            let long = Float(location.coordinate.longitude)
             
+            //get quality agency
+//            UserDefaults.standard.set("aarons agency", forKey: "agency")
+//            UserDefaults.standard.set(60, forKey: "quality")
+            let agency = UserDefaults.standard.string(forKey: "agency") ?? ""
+            var quality = UserDefaults.standard.integer(forKey: "quality")
+            if quality == 0 {
+                quality = 30 //set to low
+            }
+//
             //Save photo using core data - protect against FAILURES!!!! dont use !
-            StoreImagesHelper.storeImageCapture(id: self.getDateInt(), latitude: lat!, longitude: long!, quality: 1, agency: "test agency", image: image, thumbnail: image.resizeImageUsingVImage(size: CGSize(width: 300, height: 300))!)
+            StoreImagesHelper.storeImageCapture(id: self.getDateInt(), latitude: lat, longitude: long, quality: quality, agency: agency, image: image, thumbnail: image.resizeImageUsingVImage(size: CGSize(width: 300, height: 300))!)
         
             //enable button
             self.endButton.isEnabled = true

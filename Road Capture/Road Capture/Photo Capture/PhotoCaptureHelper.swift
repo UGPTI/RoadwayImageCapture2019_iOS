@@ -21,11 +21,7 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     var cameraView: UIView?
     var currentImage : UIImage?
-    
-    //structure to hold images
-//    var imagesArray = [UIImage?]()
-    
-    //var triggerFunction : (_ : UIImage)->Void = {}
+
     var triggerFunction : () -> Void = {}
     
     //init

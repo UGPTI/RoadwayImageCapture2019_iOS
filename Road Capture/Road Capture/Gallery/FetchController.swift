@@ -31,9 +31,7 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
         let fetchRequest: NSFetchRequest<ImageCapture> = ImageCapture.fetchRequest()
         
         let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-//        fetchRequest.predicate = NSPredicate(format: "...")
-        
+
         // sort by item text
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: false)]
         let resultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)

@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 import CoreData
 
-class NetworkingTests{
-    
+class NetworkingHelper{
+    //upload image to server
     static func uploadImage(imageCapture : ImageCapture, deleteAfter : Bool) {
         //get image file name
         let imageNameWithExtention = "\(imageCapture.id).jpg"

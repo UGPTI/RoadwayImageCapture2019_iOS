@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
+//Was used to show on a map
 class Marker: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var title: String?

@@ -10,8 +10,6 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-
-
     @IBOutlet weak var resolutionTextfield: UITextField!
     @IBOutlet weak var distanceTextfield: UITextField!
     @IBOutlet weak var mileBeforeSpaceLabel: UILabel!

@@ -21,7 +21,6 @@ class GalleryViewController: UIViewController {
     var cancleEditButton : UIBarButtonItem!
 
     //Collection view stuff
-//    var datasource : CustomDataSource!
     var datasource : CustomDataSource!
     var test : CustomDataSource!
     
@@ -36,14 +35,12 @@ class GalleryViewController: UIViewController {
         navigationBar.topItem?.leftBarButtonItem = editButton
         navigationBar.topItem?.rightBarButtonItem = uploadButton
         
+        //set up datasource
+        datasource = CustomDataSource(collectionView: collectionView)
+        
         //set up collection view
-//        datasource = CustomDataSource(collectionView: collectionView)
-//        collectionView.delegate = datasource
-//        collectionView.dataSource = datasource
         collectionView.allowsMultipleSelection = false
         collectionView.allowsSelection = false
-        
-        datasource = CustomDataSource(collectionView: collectionView)
         collectionView.dataSource = datasource
         collectionView.delegate = datasource
     }

@@ -22,6 +22,7 @@ extension CustomDataSource : UICollectionViewDelegateFlowLayout {
         selectedImageCaptures.removeValue(forKey: indexPath)
     }
     
+    //upload all images in gallery
     func uploadAll(){
         //get app delegate
         let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -37,17 +38,19 @@ extension CustomDataSource : UICollectionViewDelegateFlowLayout {
             //upload each image captures
             for imageCapture in imageCaptures {
                 //call upload
-                NetworkingTests.uploadImage(imageCapture: imageCapture, deleteAfter: true)
+                NetworkingHelper.uploadImage(imageCapture: imageCapture, deleteAfter: true)
             }
         } catch {
             print("Failed to upload image captures")
         }
     }
     
+    //Unselect all seleted cells
     func clearSelected(){
         selectedImageCaptures.removeAll()
     }
     
+    //Delete selected cells
     func deleteSelected(){
         //get app delegate
         let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate

@@ -16,6 +16,7 @@ class StoreImagesHelper: NSObject {
     //get context
     static var context = appDelegate.persistentContainer.viewContext
 
+    //Stores an Image Capture entity with Core Data : saves a thumbnail and fulls size image to app documents
     static func storeImageCapture(id : Int, latitude : Float, longitude : Float, quality : Int, agency : String, image : UIImage, thumbnail : UIImage){
         //create entity
         let entity = NSEntityDescription.entity(forEntityName: "ImageCapture", in: context)
@@ -40,6 +41,7 @@ class StoreImagesHelper: NSObject {
         saveImage(imageNameWithExtention: "\(id)_thumbnail.jpg", image: thumbnail, quality: Float(quality)/100.0)
     }
     
+    //Saves image to app documents
     static func saveImage(imageNameWithExtention : String, image : UIImage, quality : Float){
         //get path
         let imageURL = getImagePath(imageNameWithExtention: imageNameWithExtention)
@@ -57,6 +59,7 @@ class StoreImagesHelper: NSObject {
         try? image.jpegData(compressionQuality: CGFloat(qual))?.write(to: imageURL)
     }
     
+    //Loads image from app documents
     static func loadImage(imageNameWithExtention : String) -> UIImage {
         //get path
         let imageURL = getImagePath(imageNameWithExtention: imageNameWithExtention)
@@ -72,6 +75,7 @@ class StoreImagesHelper: NSObject {
         return UIImage()
     }
     
+    //Deletes image from app documents
     static func deleteImage(imageNameWithExtention : String) {
         //get path
         let imageURL = getImagePath(imageNameWithExtention: imageNameWithExtention)
@@ -87,6 +91,7 @@ class StoreImagesHelper: NSObject {
         }
     }
     
+    //Gets image path from app documents using the name and extention
     private static func getImagePath(imageNameWithExtention : String) -> URL {
         //create image path
         let imagePath: String = "\(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])/\(imageNameWithExtention)"

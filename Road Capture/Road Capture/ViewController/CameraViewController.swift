@@ -90,15 +90,17 @@ class CameraViewController: UIViewController {
             let lat = Float(location.coordinate.latitude)
             let long = Float(location.coordinate.longitude)
             
+            //set user defaults
+            //            UserDefaults.standard.set("aarons agency", forKey: "agency")
+            //            UserDefaults.standard.set(60, forKey: "quality")
+            
             //get quality agency
-//            UserDefaults.standard.set("aarons agency", forKey: "agency")
-//            UserDefaults.standard.set(60, forKey: "quality")
             let agency = UserDefaults.standard.string(forKey: "agency") ?? ""
             var quality = UserDefaults.standard.integer(forKey: "quality")
             if quality == 0 {
                 quality = 30 //set to low
             }
-//
+
             //Save photo using core data - protect against FAILURES!!!! dont use !
             StoreImagesHelper.storeImageCapture(id: self.getDateInt(), latitude: lat, longitude: long, quality: quality, agency: agency, image: image, thumbnail: image.resizeImageUsingVImage(size: CGSize(width: 300, height: 300))!)
         

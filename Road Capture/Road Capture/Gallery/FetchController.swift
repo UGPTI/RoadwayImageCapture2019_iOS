@@ -10,19 +10,19 @@ import UIKit
 import CoreData
 
 class FetchController: NSObject, NSFetchedResultsControllerDelegate {
+    //Collection view stuff
     var collectionView : UICollectionView!
     var shouldReloadCollectionView = true
-    
-    init(collectionView : UICollectionView){
-        super.init()
-        self.collectionView = collectionView
-//        initializeFetchedResultsController()
-    }
     
     //fetched results controller stuff
     var _fetchedResultsController: NSFetchedResultsController<ImageCapture>? = nil
     var blockOperations: [BlockOperation] = []
     
+    init(collectionView : UICollectionView){
+        super.init()
+        self.collectionView = collectionView
+    }
+
     public var fetchedResultController: NSFetchedResultsController<ImageCapture> {
         if _fetchedResultsController != nil {
             return _fetchedResultsController!

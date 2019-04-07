@@ -136,4 +136,3 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
         }
     }
 }
-

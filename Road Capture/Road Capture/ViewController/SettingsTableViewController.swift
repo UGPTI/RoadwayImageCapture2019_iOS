@@ -13,6 +13,14 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
     @IBOutlet weak var resolutionTextfield: UITextField!
     @IBOutlet weak var distanceTextfield: UITextField!
     @IBOutlet weak var mileBeforeSpaceLabel: UILabel!
+    @IBOutlet weak var agencyNameTextfield: UITextField!
+    
+    var selectedResolution = ""
+    var selectedDisatannce = ""
+//    guard let selectedAgencyName = String(agencyNameTextfield.text!) else {
+//
+//    }
+    
     
     let resolution = ["High",
                       "Medium",
@@ -35,16 +43,10 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let resolutionPickerView = UIPickerView()
-        resolutionPickerView.delegate = self
-        resolutionPickerView.tag = 1
-        resolutionTextfield.inputView = resolutionPickerView
+        configureTextFields()
+        configureTapGesture()
         
-        
-        let distancePickerView = UIPickerView()
-        distancePickerView.delegate = self
-        distancePickerView.tag = 2
-        distanceTextfield.inputView = distancePickerView
+
         
 
 
@@ -71,6 +73,33 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
         } catch {
             mileBeforeSpaceLabel.text = "Error retrieving capacity"
         }
+    }
+    
+    private func configureTextFields() {
+        resolutionTextfield.delegate = self
+        distanceTextfield.delegate = self
+        agencyNameTextfield.delegate = self
+        
+        let resolutionPickerView = UIPickerView()
+        resolutionPickerView.delegate = self
+        resolutionPickerView.tag = 1
+        resolutionTextfield.inputView = resolutionPickerView
+        
+        
+        let distancePickerView = UIPickerView()
+        distancePickerView.delegate = self
+        distancePickerView.tag = 2
+        distanceTextfield.inputView = distancePickerView
+    }
+    
+    private func configureTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SettingsTableViewController.handleTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
+        
     }
     
     //PickerView
@@ -104,14 +133,24 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
+            selectedResolution = resolution[row]
             return resolutionTextfield.text = resolution[row]
         }
         else if pickerView.tag == 2 {
+            selectedDisatannce = distance[row]
             return distanceTextfield.text =  distance[row]
         }
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+}
+
+extension SettingsTableViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

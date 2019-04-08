@@ -57,6 +57,16 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let value = UserDefaults.standard.string(forKey: "distance") {} else {
+            UserDefaults.standard.set(100, forKey: "distance")
+        }
+        if let value = UserDefaults.standard.string(forKey: "quality") {} else {
+            UserDefaults.standard.set(90, forKey: "quality")
+        }
+        if let value = UserDefaults.standard.string(forKey: "agency") {} else {
+            UserDefaults.standard.set("default agency", forKey: "agency")
+        }
+        
         //make round buttons
         startButton.layer.cornerRadius = 0.5 * startButton.bounds.size.width
         startButton.clipsToBounds = true

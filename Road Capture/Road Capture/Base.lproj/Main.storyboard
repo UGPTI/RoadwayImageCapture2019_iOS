@@ -313,11 +313,11 @@
             </objects>
             <point key="canvasLocation" x="-2423" y="1238"/>
         </scene>
-        <!--Help View Controller-->
+        <!--Help-->
         <scene sceneID="jM0-Kf-b0P">
             <objects>
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="JVJ-G0-sxI" customClass="HelpViewController" customModule="Road_Capture" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" image="helpTab" selectedImage="helpTab" id="E7A-uU-7Kp"/>
+                    <tabBarItem key="tabBarItem" title="Help" image="helpTab" selectedImage="helpTab" id="E7A-uU-7Kp"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Djt-b6-CD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

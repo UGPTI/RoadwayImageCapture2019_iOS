@@ -234,30 +234,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-55-Lus">
-                                <rect key="frame" x="289" y="529" width="70" height="70"/>
-                                <color key="backgroundColor" red="1" green="0.21106947949999999" blue="0.1665672708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZGW-55-Lus" secondAttribute="height" multiplier="1:1" id="ciE-EA-c4u"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="End">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="endButton:" destination="Al3-9I-E9z" eventType="touchUpInside" id="fBw-da-Urm"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzQ-UB-VBU">
-                                <rect key="frame" x="152" y="529" width="70" height="70"/>
+                                <rect key="frame" x="157.5" y="538" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JzQ-UB-VBU" secondAttribute="height" multiplier="1:1" id="2e9-qL-muS"/>
+                                    <constraint firstAttribute="width" constant="60" id="Orc-cb-Gah"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="bty-LK-VT2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Start">
@@ -272,16 +255,34 @@
                                     <action selector="startButton:" destination="Al3-9I-E9z" eventType="touchUpInside" id="GBc-EN-3Id"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-55-Lus">
+                                <rect key="frame" x="285.5" y="538" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.21106947949999999" blue="0.1665672708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZGW-55-Lus" secondAttribute="height" multiplier="1:1" id="ciE-EA-c4u"/>
+                                    <constraint firstAttribute="height" constant="60" id="ckg-ME-qaA"/>
+                                    <constraint firstAttribute="width" constant="60" id="obW-oO-i3s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="End">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="endButton:" destination="Al3-9I-E9z" eventType="touchUpInside" id="fBw-da-Urm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="top" secondItem="ZGW-55-Lus" secondAttribute="top" id="5qB-DL-tAp"/>
-                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="centerX" secondItem="2kP-oq-oms" secondAttribute="centerX" id="K1j-0B-gRe"/>
-                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="leading" secondItem="k8c-TV-nCY" secondAttribute="leading" constant="152" id="gNo-X0-0p5"/>
-                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="JzQ-UB-VBU" secondAttribute="bottom" constant="19" id="iLc-3u-YWP"/>
-                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="top" secondItem="k8c-TV-nCY" secondAttribute="top" constant="509" id="rLt-K8-cLn"/>
-                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="baseline" secondItem="ZGW-55-Lus" secondAttribute="firstBaseline" id="u7o-Zh-beB"/>
-                            <constraint firstItem="ZGW-55-Lus" firstAttribute="trailing" secondItem="2kP-oq-oms" secondAttribute="trailingMargin" id="zay-m4-NWD"/>
+                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="centerX" secondItem="2kP-oq-oms" secondAttribute="centerX" id="BZa-DY-ga3"/>
+                            <constraint firstItem="ZGW-55-Lus" firstAttribute="leading" secondItem="JzQ-UB-VBU" secondAttribute="trailing" constant="68" id="SC7-Mu-a4r"/>
+                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="JzQ-UB-VBU" secondAttribute="bottom" constant="20" id="fH2-Nt-xqA"/>
+                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="ZGW-55-Lus" secondAttribute="bottom" constant="20" id="kfF-CD-I2E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k8c-TV-nCY"/>
                     </view>

@@ -111,6 +111,9 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
         
         photoOutput?.capturePhoto(with: settings , delegate: self)
     }
+    
+    
+    
   
 }
 

@@ -101,6 +101,43 @@ class CustomDataSource: NSObject, UICollectionViewDataSource {
         })
     }
     
+    func uploadAll1(){
+        var appDelegate : AppDelegate!
+        DispatchQueue.main.sync {
+            //get app delegate
+            appDelegate = UIApplication.shared.delegate as! AppDelegate
+        }
+        //get context
+        let context = appDelegate.persistentContainer.viewContext
+        //create request to get all image captures
+        let fetchRequest = NSFetchRequest<ImageCapture>(entityName: "ImageCapture")
+    
+        let uploadGroup = DispatchGroup()
+        
+        do {
+            //get all image captures
+            let imageCaptures = try context.fetch(fetchRequest)
+    
+            for (index, imageCapture) in imageCaptures.enumerated() {
+                //get cell
+                var progressBar : UIProgressView?
+
+                uploadGroup.enter()
+                DispatchQueue.main.sync {
+                    progressBar = (self.myCollectionView.cellForItem(at: IndexPath(item: myCollectionView.numberOfItems(inSection: 0)-1, section: 0)) as? ImageCollectionViewCell)?.progressBar
+                    progressBar?.isHidden = false
+                    myCollectionView.numberOfItems(inSection: 0)
+                }
+                NetworkingHelper.uploadImageUseingUpload(imageCapture: imageCapture, deleteAfter: true, progressBar: progressBar, completion: {uploadGroup.leave()})
+                uploadGroup.wait()
+                
+            }
+            
+        } catch {
+            print("Failed to upload image captures")
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let sections = fetchController._fetchedResultsController!.sections!
         let sectionInfo = sections[section]

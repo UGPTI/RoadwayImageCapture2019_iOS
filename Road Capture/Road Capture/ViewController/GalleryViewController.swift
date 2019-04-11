@@ -70,9 +70,9 @@ class GalleryViewController: UIViewController {
     @objc func uploadAction(sender: UIBarButtonItem){
         print("upload")
         
-        
-        self.datasource.uploadAll()
-
+        DispatchQueue.global(qos: .background).async {
+            self.datasource.uploadAll1()
+        }
     }
     
     @objc func cancleEditAction(sender: UIBarButtonItem){

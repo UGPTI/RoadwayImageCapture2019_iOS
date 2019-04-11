@@ -157,15 +157,11 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
-//            selectedResolution = resolution[row]
             //Save resolution
-            UserDefaults.standard.set(resolution[row], forKey: "quality")
-            
+            UserDefaults.standard.set(resolutionNumbers[row], forKey: "quality")
             return resolutionTextfield.text = resolution[row]
         }
         else if pickerView.tag == 2 {
-//            selectedDisatannce = distance[row]
-//            UserDefaults.standard.set("aarons agency", forKey: "agency")
             UserDefaults.standard.set(distance[row], forKey: "distance")
             return distanceTextfield.text =  "\(distance[row]) ft"
         }

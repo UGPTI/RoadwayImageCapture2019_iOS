@@ -57,6 +57,9 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Dont let the screen go to sleep
+        UIApplication.shared.isIdleTimerDisabled = true
+        
         if let value = UserDefaults.standard.string(forKey: "distance") {} else {
             UserDefaults.standard.set(100, forKey: "distance")
         }

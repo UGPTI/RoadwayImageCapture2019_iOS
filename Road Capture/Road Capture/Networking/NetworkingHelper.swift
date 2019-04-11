@@ -75,11 +75,11 @@ class NetworkingHelper{
     }
     
     //upload image to server
-    static func uploadImageUseingUpload(imageCapture : ImageCapture, deleteAfter : Bool, progressBar : UIProgressView, completion : @escaping () -> ()) {
+    static func uploadImageUseingUpload(imageCapture : ImageCapture, deleteAfter : Bool, progressBar : UIProgressView?, completion : @escaping () -> ()) {
         DispatchQueue.main.async {        
             //set progress bar to visible and set to 0
-            progressBar.progress = 0
-            progressBar.isHidden = false
+            progressBar?.progress = 0
+            progressBar?.isHidden = false
         }
         //get image file name
         let imageNameWithExtention = "\(imageCapture.id).jpg"
@@ -134,7 +134,6 @@ class NetworkingHelper{
                             //save context
                             do {
                                 try context.save()
-                                completion()
                             }
                             catch {
                                 print("couldnt save after delete")
@@ -143,19 +142,21 @@ class NetworkingHelper{
                         
                         //reset progress bar in case cell gets reused
                         DispatchQueue.main.async {
-                            progressBar.progress = 0
-                            progressBar.isHidden = true
+                            progressBar?.progress = 0
+                            progressBar?.isHidden = true
                         }
+                        
+                        completion()
                     }
                     upload.uploadProgress { progress in
                         DispatchQueue.main.async {
-                            progressBar.setProgress(Float(progress.fractionCompleted), animated: true)
+                            progressBar?.setProgress(Float(progress.fractionCompleted), animated: true)
                             print(progress.fractionCompleted)
                         }
-                        completion()
                     }
                 case .failure(let encodingError):
                     print(encodingError)
+                    completion()
                 }
         })
     }

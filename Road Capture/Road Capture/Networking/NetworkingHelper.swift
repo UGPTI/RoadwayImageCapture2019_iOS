@@ -75,7 +75,7 @@ class NetworkingHelper{
     }
     
     //upload image to server
-    static func uploadImageUseingUpload(imageCapture : ImageCapture, deleteAfter : Bool, progressBar : UIProgressView) {
+    static func uploadImageUseingUpload(imageCapture : ImageCapture, deleteAfter : Bool, progressBar : UIProgressView, completion : @escaping () -> ()) {
         DispatchQueue.main.async {        
             //set progress bar to visible and set to 0
             progressBar.progress = 0
@@ -134,6 +134,7 @@ class NetworkingHelper{
                             //save context
                             do {
                                 try context.save()
+                                completion()
                             }
                             catch {
                                 print("couldnt save after delete")
@@ -151,7 +152,7 @@ class NetworkingHelper{
                             progressBar.setProgress(Float(progress.fractionCompleted), animated: true)
                             print(progress.fractionCompleted)
                         }
-
+                        completion()
                     }
                 case .failure(let encodingError):
                     print(encodingError)

@@ -35,35 +35,70 @@ class CustomDataSource: NSObject, UICollectionViewDataSource {
         let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
         //get context
         let context = appDelegate.persistentContainer.viewContext
+        //create request to get all image captures
+        let fetchRequest = NSFetchRequest<ImageCapture>(entityName: "ImageCapture")
         
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            guard let self = self else {
-                return
-            }
-            
-            //create request to get all image captures
-            let fetchRequest = NSFetchRequest<ImageCapture>(entityName: "ImageCapture")
+        DispatchQueue.global().async {
             do {
                 //get all image captures
                 let imageCaptures = try context.fetch(fetchRequest)
+
+                self.uploadAllRecursive(imageCaptures: imageCaptures, deleteAfter: true, index: 0, completion: {})
                 
-                //upload each image captures
-                for (index, imageCapture) in imageCaptures.enumerated() {
-                    //call upload
-                    //                NetworkingHelper.uploadImage(imageCapture: imageCapture, deleteAfter: true)
-                    
-                    //get cell
-                    let progressBar = (self.myCollectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! ImageCollectionViewCell).progressBar
-                    
-                    DispatchQueue.global(qos: .background).sync {
-                        NetworkingHelper.uploadImageUseingUpload(imageCapture: imageCapture, deleteAfter: true, progressBar: progressBar!)
-                    }
-                }
+//                self.uploadAllRecursive(imageCapture: imageCaptures[index], deleteAfter: true, index: index, completion: {})
+//                var index = 0
+//                var complete = false
+//                repeat {
+//                    //get cell
+//                    var progressBar : UIProgressView!
+//                    DispatchQueue.main.sync {
+//                        progressBar = (self.myCollectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! ImageCollectionViewCell).progressBar
+//                    }
+//
+//                    complete = false
+//                    NetworkingHelper.uploadImageUseingUpload(imageCapture: imageCaptures[index], deleteAfter: true, progressBar: progressBar, completion: {
+//                        complete = true
+//                        index += 1
+//                    })
+//                } while index < imageCaptures.count && complete
                 
+                
+                
+                
+//                //upload each image captures
+//                for (index, imageCapture) in imageCaptures.enumerated() {
+//                    //get cell
+//                    var progressBar : UIProgressView!
+//                    DispatchQueue.main.sync {
+//                        progressBar = (self.myCollectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! ImageCollectionViewCell).progressBar
+//                    }
+//
+//                    var complete = false
+//
+//                    repeat {
+//                        complete = false
+//                        NetworkingHelper.uploadImageUseingUpload(imageCapture: imageCapture, deleteAfter: true, progressBar: progressBar, completion: {complete = true})
+//                    } while complete
+//                }
             } catch {
                 print("Failed to upload image captures")
             }
         }
+    }
+    
+    private func uploadAllRecursive(imageCaptures: [ImageCapture], deleteAfter: Bool, index : Int, completion: @escaping () -> ()){
+    
+        //get cell
+        var progressBar : UIProgressView!
+        DispatchQueue.main.sync {
+            progressBar = (self.myCollectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! ImageCollectionViewCell).progressBar
+        }
+
+        NetworkingHelper.uploadImageUseingUpload(imageCapture: imageCaptures[index], deleteAfter: true, progressBar: progressBar, completion: {
+            if index+1 < imageCaptures.count {
+                self.uploadAllRecursive(imageCaptures: imageCaptures, deleteAfter: deleteAfter, index: index+1, completion: {completion()})
+            }
+        })
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

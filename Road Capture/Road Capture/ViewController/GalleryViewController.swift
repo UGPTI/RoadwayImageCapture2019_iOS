@@ -70,6 +70,7 @@ class GalleryViewController: UIViewController {
     @objc func uploadAction(sender: UIBarButtonItem){
         print("upload")
         
+        
         self.datasource.uploadAll()
 
     }

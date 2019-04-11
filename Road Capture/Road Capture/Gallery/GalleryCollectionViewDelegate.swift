@@ -22,29 +22,6 @@ extension CustomDataSource : UICollectionViewDelegateFlowLayout {
         selectedImageCaptures.removeValue(forKey: indexPath)
     }
     
-    //upload all images in gallery
-    func uploadAll(){
-        //get app delegate
-        let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        //get context
-        let context = appDelegate.persistentContainer.viewContext
-        
-        //create request to get all image captures
-        let fetchRequest = NSFetchRequest<ImageCapture>(entityName: "ImageCapture")
-        do {
-            //get all image captures
-            let imageCaptures = try context.fetch(fetchRequest)
-            
-            //upload each image captures
-            for imageCapture in imageCaptures {
-                //call upload
-                NetworkingHelper.uploadImage(imageCapture: imageCapture, deleteAfter: true)
-            }
-        } catch {
-            print("Failed to upload image captures")
-        }
-    }
-    
     //Unselect all seleted cells
     func clearSelected(){
         selectedImageCaptures.removeAll()

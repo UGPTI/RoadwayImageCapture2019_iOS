@@ -69,7 +69,9 @@ class GalleryViewController: UIViewController {
     
     @objc func uploadAction(sender: UIBarButtonItem){
         print("upload")
-        datasource.uploadAll()
+        
+        self.datasource.uploadAll()
+
     }
     
     @objc func cancleEditAction(sender: UIBarButtonItem){

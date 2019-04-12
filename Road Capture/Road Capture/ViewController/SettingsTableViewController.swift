@@ -15,29 +15,30 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
     @IBOutlet weak var mileBeforeSpaceLabel: UILabel!
     @IBOutlet weak var agencyNameTextfield: UITextField!
     
-    var selectedResolution = ""
-    var selectedDisatannce = ""
-//    guard let selectedAgencyName = String(agencyNameTextfield.text!) else {
-//
-//    }
+//    var selectedResolution = ""
+//    var selectedDisatannce = ""
+////    guard let selectedAgencyName = String(agencyNameTextfield.text!) else {
+////
+////    }
     
     
     let resolution = ["High",
                       "Medium",
                       "Low"
                     ]
+    let resolutionNumbers = [90, 60, 30]
 
     
-    let distance = ["100ft",
-                    "200ft",
-                    "300ft",
-                    "400ft",
-                    "500ft",
-                    "600ft",
-                    "700ft",
-                    "800ft",
-                    "900ft",
-                    "1000ft"
+    let distance = [100,
+                    200,
+                    300,
+                    400,
+                    500,
+                    600,
+                    700,
+                    800,
+                    900,
+                    1000
                     ]
     
     override func viewDidLoad() {
@@ -45,10 +46,6 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
         
         configureTextFields()
         configureTapGesture()
-        
-
-        
-
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -58,6 +55,34 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setMilesLeft()
+        
+        //get agency
+        agencyNameTextfield.text = UserDefaults.standard.string(forKey: "agency") ?? ""
+        //get distance
+        distanceTextfield.text = "\(UserDefaults.standard.integer(forKey: "distance")) ft"
+        //get quality
+        var qualityString = "High"
+        let quality = UserDefaults.standard.integer(forKey: "quality")
+        if  quality >= 90{
+            qualityString = "High"
+        } else if quality >= 60 {
+            qualityString = "Medium"
+        } else {
+            qualityString = "Low"
+        }
+        resolutionTextfield.text = qualityString;
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if let text = agencyNameTextfield.text {
+            UserDefaults.standard.set(text, forKey: "agency")
+        }else{
+            UserDefaults.standard.set("", forKey: "agency")
+        }
+    }
+    
+    func setMilesLeft(){
         let fileURL = URL(fileURLWithPath: NSHomeDirectory() as String)
         do {
             let values = try fileURL.resourceValues(forKeys: [.volumeAvailableCapacityForOpportunisticUsageKey])
@@ -104,7 +129,6 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
     
     //PickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        
         return 1
     }
     
@@ -125,7 +149,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
             return resolution[row]
         }
         else if pickerView.tag == 2 {
-            return distance[row]
+            return "\(distance[row]) ft"
         }
         
         return nil
@@ -133,12 +157,13 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
-            selectedResolution = resolution[row]
+            //Save resolution
+            UserDefaults.standard.set(resolutionNumbers[row], forKey: "quality")
             return resolutionTextfield.text = resolution[row]
         }
         else if pickerView.tag == 2 {
-            selectedDisatannce = distance[row]
-            return distanceTextfield.text =  distance[row]
+            UserDefaults.standard.set(distance[row], forKey: "distance")
+            return distanceTextfield.text =  "\(distance[row]) ft"
         }
         
     }

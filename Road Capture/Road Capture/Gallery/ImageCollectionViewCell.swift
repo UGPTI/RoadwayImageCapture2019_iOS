@@ -11,6 +11,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var tickImageView: UIImageView!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     override var isSelected: Bool {
         didSet{

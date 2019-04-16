@@ -29,79 +29,26 @@ class CustomDataSource: NSObject, UICollectionViewDataSource {
         myCollectionView = collectionView
     }
     
-    //upload all images in gallery
+    
+    var backgroundTask: UIBackgroundTaskIdentifier = .invalid
+    
+    func registerBackgroundTask() {
+        backgroundTask = UIApplication.shared.beginBackgroundTask { [weak self] in
+            self?.endBackgroundTask()
+        }
+        assert(backgroundTask != .invalid)
+    }
+    
+    func endBackgroundTask() {
+        print("Background task ended.")
+        UIApplication.shared.endBackgroundTask(backgroundTask)
+        backgroundTask = .invalid
+    }
+
     func uploadAll(){
-        //get app delegate
-        let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        //get context
-        let context = appDelegate.persistentContainer.viewContext
-        //create request to get all image captures
-        let fetchRequest = NSFetchRequest<ImageCapture>(entityName: "ImageCapture")
+        //start background task
+        registerBackgroundTask()
         
-        DispatchQueue.global().async {
-            do {
-                //get all image captures
-                let imageCaptures = try context.fetch(fetchRequest)
-
-                self.uploadAllRecursive(imageCaptures: imageCaptures, deleteAfter: true, index: 0, completion: {})
-                
-//                self.uploadAllRecursive(imageCapture: imageCaptures[index], deleteAfter: true, index: index, completion: {})
-//                var index = 0
-//                var complete = false
-//                repeat {
-//                    //get cell
-//                    var progressBar : UIProgressView!
-//                    DispatchQueue.main.sync {
-//                        progressBar = (self.myCollectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! ImageCollectionViewCell).progressBar
-//                    }
-//
-//                    complete = false
-//                    NetworkingHelper.uploadImageUseingUpload(imageCapture: imageCaptures[index], deleteAfter: true, progressBar: progressBar, completion: {
-//                        complete = true
-//                        index += 1
-//                    })
-//                } while index < imageCaptures.count && complete
-                
-                
-                
-                
-//                //upload each image captures
-//                for (index, imageCapture) in imageCaptures.enumerated() {
-//                    //get cell
-//                    var progressBar : UIProgressView!
-//                    DispatchQueue.main.sync {
-//                        progressBar = (self.myCollectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! ImageCollectionViewCell).progressBar
-//                    }
-//
-//                    var complete = false
-//
-//                    repeat {
-//                        complete = false
-//                        NetworkingHelper.uploadImageUseingUpload(imageCapture: imageCapture, deleteAfter: true, progressBar: progressBar, completion: {complete = true})
-//                    } while complete
-//                }
-            } catch {
-                print("Failed to upload image captures")
-            }
-        }
-    }
-    
-    private func uploadAllRecursive(imageCaptures: [ImageCapture], deleteAfter: Bool, index : Int, completion: @escaping () -> ()){
-    
-        //get cell
-        var progressBar : UIProgressView!
-        DispatchQueue.main.sync {
-            progressBar = (self.myCollectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! ImageCollectionViewCell).progressBar
-        }
-
-        NetworkingHelper.uploadImageUseingUpload(imageCapture: imageCaptures[index], deleteAfter: true, progressBar: progressBar, completion: {
-            if index+1 < imageCaptures.count {
-                self.uploadAllRecursive(imageCaptures: imageCaptures, deleteAfter: deleteAfter, index: index+1, completion: {completion()})
-            }
-        })
-    }
-    
-    func uploadAll1(){
         var appDelegate : AppDelegate!
         DispatchQueue.main.sync {
             //get app delegate
@@ -132,9 +79,10 @@ class CustomDataSource: NSObject, UICollectionViewDataSource {
                 uploadGroup.wait()
                 
             }
-            
+            endBackgroundTask()
         } catch {
             print("Failed to upload image captures")
+            endBackgroundTask()
         }
     }
     

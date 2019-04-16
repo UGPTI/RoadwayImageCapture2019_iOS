@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Reachability
 
 class GalleryViewController: UIViewController {
 
@@ -68,10 +69,27 @@ class GalleryViewController: UIViewController {
     }
     
     @objc func uploadAction(sender: UIBarButtonItem){
-        print("upload")
+        print("upload button clicked")
         
-        DispatchQueue.global(qos: .background).async {
-            self.datasource.uploadAll1()
+        //check that network is reachable via WiFi
+        if (NetworkManager.sharedInstance.reachability).connection == .wifi {
+            //upload all
+            
+            DispatchQueue.global(qos: .background).async {
+                self.datasource.uploadAll()
+            }
+        }else{
+            let alert = UIAlertController(title: "Not connected to WiFi", message: "This application requires that you be connected to Wifi to upload.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+                switch action.style{
+                case .default:
+                    print("default")
+                case .cancel:
+                    print("cancel")
+                case .destructive:
+                    print("destructive")
+                }}))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     

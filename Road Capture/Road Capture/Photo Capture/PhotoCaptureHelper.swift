@@ -103,18 +103,9 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
         self.triggerFunction = triggerFunction
         //Embed thumnail image
         let settings = AVCapturePhotoSettings()
-        settings.embeddedThumbnailPhotoFormat = [
-            AVVideoCodecKey: AVVideoCodecType.jpeg,
-            AVVideoWidthKey: 512,
-            AVVideoHeightKey: 512,
-        ]
         
         photoOutput?.capturePhoto(with: settings , delegate: self)
     }
-    
-    
-    
-  
 }
 
 extension UIImage{

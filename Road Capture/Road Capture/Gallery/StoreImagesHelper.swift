@@ -37,7 +37,7 @@ class StoreImagesHelper: NSObject {
         }
         
         //save image
-        saveImage(imageNameWithExtention: "\(id).jpg", image: image, quality:  0.3)
+        saveImage(imageNameWithExtention: "\(id).jpg", image: image, quality:  Float(quality)/100.0)
         saveImage(imageNameWithExtention: "\(id)_thumbnail.jpg", image: thumbnail, quality: Float(quality)/100.0)
     }
     

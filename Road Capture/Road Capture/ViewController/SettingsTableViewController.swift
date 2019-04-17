@@ -87,14 +87,34 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
         do {
             let values = try fileURL.resourceValues(forKeys: [.volumeAvailableCapacityForOpportunisticUsageKey])
             if let capacity = values.volumeAvailableCapacityForOpportunisticUsage {
-                let numPictures = Double(capacity)/1000000.0
-                let feetBetweenPhotos = 100.0
-                let picturesInMile = 5280 / feetBetweenPhotos
+                let compressionQuality = UserDefaults.standard.integer(forKey: "quality")
+                var sizeOfPhoto = 1500000.0 //set default to 1.5MB
+                
+                //set to constants : should probably be changed in the future
+                //I took a picuture of colored noise to try to get the largest sized photos and then
+                //used the sizes of those images as the sizeOfPhoto constants
+                if  compressionQuality >= 90{
+                    sizeOfPhoto = 5000000.0
+                } else if compressionQuality >= 60 {
+                    sizeOfPhoto = 3500000.0
+                } else {
+                    sizeOfPhoto = 1500000.0
+                }
+                
+                let numPictures = Double(capacity)/sizeOfPhoto
+                //get distance
+                let feetBetweenPhotos = Double(UserDefaults.standard.integer(forKey: "distance"))
+                let picturesInMile = 5280.0 / feetBetweenPhotos
                 let totalMilesLeft = Int(numPictures/picturesInMile)
                 mileBeforeSpaceLabel.text = totalMilesLeft.description
             } else {
                 mileBeforeSpaceLabel.text = "Capacity is unavailable"
             }
+            
+            UserDefaults.standard.integer(forKey: "quality")
+            
+            UserDefaults.standard.integer(forKey: "distance")
+            
         } catch {
             mileBeforeSpaceLabel.text = "Error retrieving capacity"
         }
@@ -159,10 +179,12 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
         if pickerView.tag == 1 {
             //Save resolution
             UserDefaults.standard.set(resolutionNumbers[row], forKey: "quality")
+            setMilesLeft()
             return resolutionTextfield.text = resolution[row]
         }
         else if pickerView.tag == 2 {
             UserDefaults.standard.set(distance[row], forKey: "distance")
+            setMilesLeft()
             return distanceTextfield.text =  "\(distance[row]) ft"
         }
         

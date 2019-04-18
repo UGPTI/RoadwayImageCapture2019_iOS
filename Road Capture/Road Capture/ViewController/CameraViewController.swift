@@ -71,9 +71,9 @@ class CameraViewController: UIViewController {
         }
         
         //make round buttons
-        startButton.layer.cornerRadius = 0.5 * startButton.bounds.size.width
+//        startButton.layer.cornerRadius = 0.5 * startButton.bounds.size.width
         startButton.clipsToBounds = true
-        endButton.layer.cornerRadius = 0.5 * endButton.bounds.size.width
+//        endButton.layer.cornerRadius = 0.5 * endButton.bounds.size.width
         endButton.clipsToBounds = true
         
         //disable button
@@ -86,9 +86,13 @@ class CameraViewController: UIViewController {
     }
     
     func takePhoto() {
+        automaticButtonPress(button: startButton)
+        startButton.isEnabled = false
+        startButton.imageView?.alpha = 0.5
         
         endButton.isEnabled = false
-        endButton.backgroundColor = UIColor.gray
+        endButton.imageView?.alpha = 0.5
+//        endButton.backgroundColor = UIColor.gray
         
         photoCaptureHelper?.takePhoto(triggerFunction : {
             
@@ -117,12 +121,13 @@ class CameraViewController: UIViewController {
             //Save photo using core data - protect against FAILURES!!!! dont use !
             StoreImagesHelper.storeImageCapture(id: self.getDateInt(), latitude: lat, longitude: long, quality: quality, agency: agency, image: image, thumbnail: image.resizeImageUsingVImage(size: CGSize(width: 300, height: 300))!)
         
-            //enable button
+            //enable buttons
+            self.startButton.isEnabled = true
+            self.startButton.imageView?.alpha = 1
             self.endButton.isEnabled = true
-            self.endButton.backgroundColor = UIColor.red
+            self.endButton.imageView?.alpha = 1
+            
         })
-        
-        automaticButtonPress(button: startButton)
     }
     
     //MOVE LATER!!!!!!

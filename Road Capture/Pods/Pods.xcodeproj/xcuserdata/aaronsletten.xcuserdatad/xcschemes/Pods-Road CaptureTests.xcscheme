@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DD3F4568945F0D69254064C43E7B3844"
+               BlueprintIdentifier = "0068364B71D59FFC860E953E6C2BF4A0"
                BuildableName = "Pods_Road_CaptureTests.framework"
                BlueprintName = "Pods-Road CaptureTests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DD3F4568945F0D69254064C43E7B3844"
+            BlueprintIdentifier = "0068364B71D59FFC860E953E6C2BF4A0"
             BuildableName = "Pods_Road_CaptureTests.framework"
             BlueprintName = "Pods-Road CaptureTests"
             ReferencedContainer = "container:Pods.xcodeproj">

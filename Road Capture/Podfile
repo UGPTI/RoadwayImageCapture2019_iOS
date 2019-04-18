@@ -4,14 +4,10 @@ platform :ios, '9.0'
 target 'Road Capture' do
   use_frameworks!
 pod 'Alamofire'
-pod 'ReachabilitySwift'
+pod 'ReachabilitySwift', '~> 4.3.0'
 pod 'SwiftLint'
-#pod 'CameraManager', '~> 4.3'
-#pod 'SwiftLint',
-#pod 'SwiftyJSON', '~> 4.0'
 
   # Pods for Road Capture
-
   target 'Road CaptureTests' do
     inherit! :search_paths
     # Pods for testing

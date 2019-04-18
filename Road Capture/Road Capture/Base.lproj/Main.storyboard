@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Qe-Ee-HpC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Qe-Ee-HpC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -365,7 +365,7 @@
         <!--View Controller-->
         <scene sceneID="iVk-bt-YXb">
             <objects>
-                <viewController storyboardIdentifier="Help Page 3" id="esl-ED-XjQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Help Page 2" id="esl-ED-XjQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3bM-ky-aTm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -390,7 +390,7 @@
         <!--View Controller-->
         <scene sceneID="GzS-OM-p3W">
             <objects>
-                <viewController storyboardIdentifier="Help Page 4" id="VSv-li-dsi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Help Page 3" id="VSv-li-dsi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="40v-Hz-hTI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -415,7 +415,7 @@
         <!--View Controller-->
         <scene sceneID="GFL-iG-0bO">
             <objects>
-                <viewController storyboardIdentifier="Help Page 5" id="NJZ-O4-pQ2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Help Page 4" id="NJZ-O4-pQ2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4GG-Yd-pgq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -460,7 +460,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FH4-9T-nJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2386" y="1890"/>
+            <point key="canvasLocation" x="-1751" y="1891"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="C5W-AZ-ZGY">
@@ -485,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFa-7h-EX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1106" y="1890"/>
+            <point key="canvasLocation" x="-471" y="1891"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="z3t-dI-6FG">
@@ -510,7 +510,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CD2-Gf-T2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1746" y="1890"/>
+            <point key="canvasLocation" x="-1111" y="1891"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="X48-XX-Q1g">
@@ -535,7 +535,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaP-9i-E0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-463" y="1890"/>
+            <point key="canvasLocation" x="172" y="1891"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zE6-TK-Cda">
@@ -560,32 +560,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOU-Hn-jEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="1890"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="sdG-76-V4d">
-            <objects>
-                <viewController storyboardIdentifier="Help Page 15" id="for-8D-INM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wM9-yy-Xcy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="OFH-4a-Dsm">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="OFH-4a-Dsm" firstAttribute="leading" secondItem="wM9-yy-Xcy" secondAttribute="leading" id="evd-xp-FuW"/>
-                            <constraint firstItem="OFH-4a-Dsm" firstAttribute="top" secondItem="KXO-Iz-dto" secondAttribute="top" id="fYq-B6-DYf"/>
-                            <constraint firstItem="OFH-4a-Dsm" firstAttribute="bottom" secondItem="KXO-Iz-dto" secondAttribute="bottom" id="pqF-zM-6qu"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="KXO-Iz-dto"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Lf-hG-bnk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="172" y="2549"/>
+            <point key="canvasLocation" x="-2386" y="2543"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VQ0-a1-Kyw">
@@ -610,7 +585,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35h-Zl-zn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-463" y="2549"/>
+            <point key="canvasLocation" x="172" y="2545"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Fi4-EU-pSX">
@@ -635,7 +610,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5mq-MT-qmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1106" y="2549"/>
+            <point key="canvasLocation" x="-471" y="2545"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cfm-St-rxq">
@@ -660,7 +635,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zup-oJ-Qpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1746" y="2548"/>
+            <point key="canvasLocation" x="-1111" y="2544"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="117-45-vq5">
@@ -685,20 +660,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RzY-fD-HKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2386" y="2549"/>
+            <point key="canvasLocation" x="-1751" y="2545"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4mv-zJ-Org">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 5" id="mp7-H6-Wob" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tMK-Pz-D78">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="ioT-lO-REs">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ioT-lO-REs" firstAttribute="top" secondItem="xhA-0g-0SX" secondAttribute="top" id="4Jy-Va-6TV"/>
+                            <constraint firstItem="ioT-lO-REs" firstAttribute="bottom" secondItem="xhA-0g-0SX" secondAttribute="bottom" id="GGT-1a-fpf"/>
+                            <constraint firstItem="ioT-lO-REs" firstAttribute="leading" secondItem="tMK-Pz-D78" secondAttribute="leading" id="mXj-ap-Bi0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xhA-0g-0SX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pc0-al-MFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2386" y="1890"/>
         </scene>
     </scenes>
     <resources>
         <image name="cameraTab" width="30" height="30"/>
         <image name="checkBubble" width="30" height="30"/>
-        <image name="endButton" width="333.66665649414062" height="333.33334350585938"/>
+        <image name="endButton" width="333" height="333"/>
         <image name="galleryTab" width="30" height="30"/>
-        <image name="helpPage_01" width="375.33334350585938" height="812"/>
-        <image name="helpPage_02" width="375.33334350585938" height="812.33331298828125"/>
-        <image name="helpPage_03" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_01" width="375" height="812"/>
+        <image name="helpPage_02" width="375" height="812"/>
+        <image name="helpPage_03" width="375" height="812"/>
         <image name="helpTab" width="30" height="30"/>
         <image name="settingsTab" width="30" height="30"/>
-        <image name="startButton" width="333.66665649414062" height="333.33334350585938"/>
+        <image name="startButton" width="333" height="333"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JzF-IY-gsQ"/>

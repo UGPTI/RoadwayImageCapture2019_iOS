@@ -26,8 +26,7 @@ class HelpViewController: UIPageViewController {
             newViewController(name: "Help Page 11"),
             newViewController(name: "Help Page 12"),
             newViewController(name: "Help Page 13"),
-            newViewController(name: "Help Page 14"),
-            newViewController(name: "Help Page 15")
+            newViewController(name: "Help Page 14")
         ]
     }()
     

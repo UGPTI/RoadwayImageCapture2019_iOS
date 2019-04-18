@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 import CoreData
 
-class NetworkingHelper{
+class NetworkingHelper {
     //upload image to server
-    static func uploadImage(imageCapture : ImageCapture, deleteAfter : Bool) {
+    static func uploadImage(imageCapture: ImageCapture, deleteAfter: Bool) {
         //get image file name
         let imageNameWithExtention = "\(imageCapture.id).jpg"
         //load image
@@ -26,16 +26,16 @@ class NetworkingHelper{
         
         //46.8876, -96.8054,
         //Create parameter list
-        let parameters : [String: Any] = [
-            "username" : "RIC",
-            "password" : "@RICsdP4T",
-            "id" : imageCapture.id,
-            "latitude" : imageCapture.latitude,
-            "longitude" : imageCapture.longitude,
-            "quality" : imageCapture.quality,
-            "agency" : imageCapture.agency ?? "",
-            "image" : imageBase64String,
-            "filename" : imageNameWithExtention
+        let parameters: [String: Any] = [
+            "username": "RIC",
+            "password": "@RICsdP4T",
+            "id": imageCapture.id,
+            "latitude": imageCapture.latitude,
+            "longitude": imageCapture.longitude,
+            "quality": imageCapture.quality,
+            "agency": imageCapture.agency ?? "",
+            "image": imageBase64String,
+            "filename": imageNameWithExtention
         ]
         
         Alamofire.request("https://dotsc.ugpti.ndsu.nodak.edu/RIC/upload1.php", method: .post, parameters: parameters, encoding: URLEncoding.default)
@@ -50,21 +50,18 @@ class NetworkingHelper{
                         
                         if deleteAfter {
                             //get app delegate
-                            let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                            let appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
                             //get context
-                            let context = appDelegate.persistentContainer.viewContext
-                            
-                            
+                            let context = appDelegate?.persistentContainer.viewContext
                             
                             //delete images from file system
                             StoreImagesHelper.deleteImage(imageNameWithExtention: "\(imageCapture.id).jpg")
                             StoreImagesHelper.deleteImage(imageNameWithExtention: "\(imageCapture.id)_thumbnail.jpg")
-                            context.delete(imageCapture)
+                            context?.delete(imageCapture)
                             //save context
                             do {
-                                try context.save()
-                            }
-                            catch {
+                                try context?.save()
+                            } catch {
                                 print("couldnt save after delete")
                             }
                         }
@@ -75,7 +72,7 @@ class NetworkingHelper{
     }
     
     //upload image to server
-    static func uploadImageUseingUpload(imageCapture : ImageCapture, deleteAfter : Bool, progressBar : UIProgressView?, completion : @escaping () -> ()) {
+    static func uploadImageUseingUpload(imageCapture: ImageCapture, deleteAfter: Bool, progressBar: UIProgressView?, completion: @escaping () -> Void) {
         DispatchQueue.main.async {        
             //set progress bar to visible and set to 0
             progressBar?.progress = 0
@@ -94,16 +91,16 @@ class NetworkingHelper{
         
         //46.8876, -96.8054,
         //Create parameter list
-        let parameters : [String: String] = [
-            "username" : "RIC",
-            "password" : "@RICsdP4T",
-            "id" : "\(imageCapture.id)",
-            "latitude" : "\(imageCapture.latitude)",
-            "longitude" : "\(imageCapture.longitude)",
-            "quality" : "\(imageCapture.quality)",
-            "agency" : imageCapture.agency ?? "",
-            "image" : imageBase64String,
-            "filename" : imageNameWithExtention
+        let parameters: [String: String] = [
+            "username": "RIC",
+            "password": "@RICsdP4T",
+            "id": "\(imageCapture.id)",
+            "latitude": "\(imageCapture.latitude)",
+            "longitude": "\(imageCapture.longitude)",
+            "quality": "\(imageCapture.quality)",
+            "agency": imageCapture.agency ?? "",
+            "image": imageBase64String,
+            "filename": imageNameWithExtention
         ]
         
         Alamofire.upload(
@@ -117,25 +114,22 @@ class NetworkingHelper{
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseString { response in
-                        print(response.value)
+                        print(response.value ?? "")
                         
                         if deleteAfter {
                             //get app delegate
-                            let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                            let appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
                             //get context
-                            let context = appDelegate.persistentContainer.viewContext
-                            
-                            
-                            
+                            let context = appDelegate?.persistentContainer.viewContext
+
                             //delete images from file system
                             StoreImagesHelper.deleteImage(imageNameWithExtention: "\(imageCapture.id).jpg")
                             StoreImagesHelper.deleteImage(imageNameWithExtention: "\(imageCapture.id)_thumbnail.jpg")
-                            context.delete(imageCapture)
+                            context?.delete(imageCapture)
                             //save context
                             do {
-                                try context.save()
-                            }
-                            catch {
+                                try context?.save()
+                            } catch {
                                 print("couldnt save after delete")
                             }
                         }

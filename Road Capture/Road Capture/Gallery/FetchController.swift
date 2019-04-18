@@ -15,7 +15,7 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
     var shouldReloadCollectionView = true
     
     //fetched results controller stuff
-    var _fetchedResultsController: NSFetchedResultsController<ImageCapture>? = nil
+    var localFetchedResultsController: NSFetchedResultsController<ImageCapture>? = nil
     var blockOperations: [BlockOperation] = []
     
     init(collectionView : UICollectionView){
@@ -24,28 +24,30 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
     }
 
     public var fetchedResultController: NSFetchedResultsController<ImageCapture> {
-        if _fetchedResultsController != nil {
-            return _fetchedResultsController!
+        if localFetchedResultsController != nil {
+            return localFetchedResultsController!
         }
         
         let fetchRequest: NSFetchRequest<ImageCapture> = ImageCapture.fetchRequest()
         
-        let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        
+        guard let managedObjectContext = delegate?.persistentContainer.viewContext else { return NSFetchedResultsController<ImageCapture>() }
 
         // sort by item text
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: false)]
         let resultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
         resultsController.delegate = self;
-        _fetchedResultsController = resultsController
+        localFetchedResultsController = resultsController
         
         do {
-            try _fetchedResultsController!.performFetch()
+            try localFetchedResultsController!.performFetch()
         } catch {
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror)")
         }
-        return _fetchedResultsController!
+        return localFetchedResultsController!
     }
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {

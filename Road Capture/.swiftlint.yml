@@ -1,0 +1,11 @@
+disabled_rules: # rule identifiers to exclude from running
+  - line_length
+  - trailing_whitespace
+  - function_body_length
+opt_in_rules: # some rules are only opt-in
+included: # paths to include during linting. `--path` is ignored if present.
+  - Road Capture
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
+  - Road CaptureTests
+  - Road CaptureUITests

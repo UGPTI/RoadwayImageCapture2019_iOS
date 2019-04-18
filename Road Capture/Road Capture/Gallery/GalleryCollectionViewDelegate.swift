@@ -30,9 +30,9 @@ extension CustomDataSource : UICollectionViewDelegateFlowLayout {
     //Delete selected cells
     func deleteSelected(){
         //get app delegate
-        let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let appDelegate : AppDelegate? = UIApplication.shared.delegate as? AppDelegate
         //get context
-        let context = appDelegate.persistentContainer.viewContext
+        let context = appDelegate?.persistentContainer.viewContext
         
         for key in selectedImageCaptures.keys {
             //get ImageCapture object
@@ -43,12 +43,12 @@ extension CustomDataSource : UICollectionViewDelegateFlowLayout {
             StoreImagesHelper.deleteImage(imageNameWithExtention: "\(imageCapture.id)_thumbnail.jpg")
             
             //delete iamgeCapture from core data
-            context.delete(imageCapture)
+            context?.delete(imageCapture)
         }
         
         //save context
         do {
-            try context.save()
+            try context?.save()
         }
         catch {
             print("couldnt save after delete")

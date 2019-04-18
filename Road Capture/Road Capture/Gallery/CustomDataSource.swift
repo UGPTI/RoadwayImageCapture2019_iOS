@@ -52,7 +52,7 @@ class CustomDataSource: NSObject, UICollectionViewDataSource {
         var appDelegate : AppDelegate!
         DispatchQueue.main.sync {
             //get app delegate
-            appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate = UIApplication.shared.delegate as? AppDelegate
         }
         //get context
         let context = appDelegate.persistentContainer.viewContext
@@ -87,7 +87,7 @@ class CustomDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let sections = fetchController._fetchedResultsController!.sections!
+        let sections = fetchController.localFetchedResultsController!.sections!
         let sectionInfo = sections[section]
         return sectionInfo.numberOfObjects
     }
@@ -97,7 +97,7 @@ class CustomDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! ImageCollectionViewCell
+        let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as? ImageCollectionViewCell) ?? ImageCollectionViewCell()
         
         // Set up the cell
         let object = self.fetchController.fetchedResultController.object(at: indexPath)

@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.8.1)
   - ReachabilitySwift (4.3.1)
+  - SwiftLint (0.31.0)
 
 DEPENDENCIES:
   - Alamofire
   - ReachabilitySwift
+  - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - ReachabilitySwift
+    - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  SwiftLint: 7a0227733d786395817373b2d0ca799fd0093ff3
 
-PODFILE CHECKSUM: bb67d2e9094602cd78862b0d25bde7f711ea3e18
+PODFILE CHECKSUM: 86b6f02ffd80918a61eddb095f2d1b76b818ad25
 
 COCOAPODS: 1.5.3

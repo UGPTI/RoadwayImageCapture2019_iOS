@@ -5,6 +5,7 @@ target 'Road Capture' do
   use_frameworks!
 pod 'Alamofire'
 pod 'ReachabilitySwift'
+pod 'SwiftLint'
 #pod 'CameraManager', '~> 4.3'
 #pod 'SwiftLint',
 #pod 'SwiftyJSON', '~> 4.0'

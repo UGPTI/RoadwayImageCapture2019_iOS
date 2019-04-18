@@ -12,9 +12,9 @@ import CoreData
 class StoreImagesHelper: NSObject {
     
     //get app delegate
-    static var appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    static var appDelegate : AppDelegate? = UIApplication.shared.delegate as? AppDelegate
     //get context
-    static var context = appDelegate.persistentContainer.viewContext
+    static var context = appDelegate?.persistentContainer.viewContext ?? NSManagedObjectContext()
 
     //Stores an Image Capture entity with Core Data : saves a thumbnail and fulls size image to app documents
     static func storeImageCapture(id : Int, latitude : Float, longitude : Float, quality : Int, agency : String, image : UIImage, thumbnail : UIImage){

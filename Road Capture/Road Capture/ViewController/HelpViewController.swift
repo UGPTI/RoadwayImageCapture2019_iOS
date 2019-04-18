@@ -24,12 +24,10 @@ class HelpViewController: UIPageViewController {
         
         dataSource = self
         
-        if let firstViewController = orderedViewControllers.first{
+        if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController], direction: .forward, animated: false, completion: nil)
         }
     }
-    
-    
 }
 extension HelpViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

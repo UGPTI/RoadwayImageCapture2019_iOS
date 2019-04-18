@@ -23,12 +23,12 @@ extension CustomDataSource : UICollectionViewDelegateFlowLayout {
     }
     
     //Unselect all seleted cells
-    func clearSelected(){
+    func clearSelected() {
         selectedImageCaptures.removeAll()
     }
     
     //Delete selected cells
-    func deleteSelected(){
+    func deleteSelected() {
         //get app delegate
         let appDelegate : AppDelegate? = UIApplication.shared.delegate as? AppDelegate
         //get context
@@ -49,8 +49,7 @@ extension CustomDataSource : UICollectionViewDelegateFlowLayout {
         //save context
         do {
             try context?.save()
-        }
-        catch {
+        } catch {
             print("couldnt save after delete")
         }
         
@@ -58,9 +57,8 @@ extension CustomDataSource : UICollectionViewDelegateFlowLayout {
         clearSelected()
     }
     
-    
     //Layout stuff
-    func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = collectionView.superview!.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow

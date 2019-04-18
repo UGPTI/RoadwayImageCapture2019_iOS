@@ -46,9 +46,8 @@ class GalleryViewController: UIViewController {
         collectionView.delegate = datasource
     }
     
-    
     //bar button actions
-    @objc func editAction(sender: UIBarButtonItem){
+    @objc func editAction(sender: UIBarButtonItem) {
         print("edit")
         navigationBar.topItem?.leftBarButtonItem = trashButton
         navigationBar.topItem?.rightBarButtonItem = cancleEditButton
@@ -56,7 +55,7 @@ class GalleryViewController: UIViewController {
         collectionView.allowsMultipleSelection = true
     }
     
-    @objc func deleteSelectedAction(sender: UIBarButtonItem){
+    @objc func deleteSelectedAction(sender: UIBarButtonItem) {
         print("delete")
         navigationBar.topItem?.leftBarButtonItem = editButton
         navigationBar.topItem?.rightBarButtonItem = uploadButton
@@ -68,7 +67,7 @@ class GalleryViewController: UIViewController {
         datasource.deleteSelected()
     }
     
-    @objc func uploadAction(sender: UIBarButtonItem){
+    @objc func uploadAction(sender: UIBarButtonItem) {
         print("upload button clicked")
         
         //check that network is reachable via WiFi
@@ -78,10 +77,10 @@ class GalleryViewController: UIViewController {
             DispatchQueue.global(qos: .background).async {
                 self.datasource.uploadAll()
             }
-        }else{
+        } else {
             let alert = UIAlertController(title: "Not connected to WiFi", message: "This application requires that you be connected to Wifi to upload.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
-                switch action.style{
+                switch action.style {
                 case .default:
                     print("default")
                 case .cancel:
@@ -93,7 +92,7 @@ class GalleryViewController: UIViewController {
         }
     }
     
-    @objc func cancleEditAction(sender: UIBarButtonItem){
+    @objc func cancleEditAction(sender: UIBarButtonItem) {
         print("cancle")
         navigationBar.topItem?.leftBarButtonItem = editButton
         navigationBar.topItem?.rightBarButtonItem = uploadButton

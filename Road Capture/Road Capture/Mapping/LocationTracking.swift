@@ -35,7 +35,7 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
     //Distance to set off trigger
     var triggerDistance: Double!
     
-    init(triggerFunction : @escaping ()->Void) {
+    init(triggerFunction : @escaping () -> Void) {
         super.init()
         
         self.triggerDistance = getTriggerDistace()
@@ -45,7 +45,7 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
         startTracking()
     }
     
-    func getTriggerDistace() -> Double{
+    func getTriggerDistace() -> Double {
 //        UserDefaults.standard.set(100, forKey: "distance")
         var distanceInFeet = UserDefaults.standard.double(forKey: "distance")
         
@@ -56,11 +56,11 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
         return (Measurement(value: distanceInFeet, unit: UnitLength.feet)).converted(to: .meters).value
     }
     
-    func startTracking(){
+    func startTracking() {
         //Ask for premission to use location services
-        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse{
-            locationManager.requestWhenInUseAuthorization();
-        }else{
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
+            locationManager.requestWhenInUseAuthorization()
+        } else {
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.distanceFilter = 10
             locationManager.requestLocation()
@@ -69,11 +69,11 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
         }
     }
     
-    func start(){
+    func start() {
         isUpdating = true
     }
     
-    func stop(){
+    func stop() {
         isUpdating = false
     }
     
@@ -86,7 +86,7 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
         //set trigger distance - do this every time location is updated so you can change distance on the fly
         triggerDistance = getTriggerDistace()
         
-        if isUpdating{
+        if isUpdating {
             //Set location
             if startLocation == nil {
                 startLocation = locations.last
@@ -104,7 +104,7 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
                 straightDistance = startLocation!.distance(from: locations.last!)
                 
                 //Check if over threshold
-                if(traveledSinceLastResetDistance >= triggerDistance){
+                if traveledSinceLastResetDistance >= triggerDistance {
                     //Reset
                     traveledSinceLastResetDistance = 0
                     
@@ -113,11 +113,11 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
                 }
                 
                 //Print
-                print("Traveled Distance:\t",  traveledSinceLastResetDistance)
-                print("Total Distance:\t\t",  totalDistance)
+                print("Traveled Distance:\t", traveledSinceLastResetDistance)
+                print("Total Distance:\t\t", totalDistance)
             }
             lastLocation = locations.last
-        }else {
+        } else {
             startDate = Date()
             startLocation = locations.last
             lastLocation = startLocation

@@ -24,7 +24,7 @@ class CameraViewController: UIViewController {
     
     @IBAction func startButton(_ sender: Any) {
         //check if taking pictures
-        if !isTakingPicutres{
+        if !isTakingPicutres {
             endButton.isHidden = false
             endButton.isEnabled = true
             isTakingPicutres = true
@@ -38,7 +38,7 @@ class CameraViewController: UIViewController {
     }
     
     @IBAction func endButton(_ sender: Any) {
-        if isTakingPicutres{
+        if isTakingPicutres {
             //disable button
             endButton.isHidden = true
             endButton.isEnabled = false
@@ -60,13 +60,13 @@ class CameraViewController: UIViewController {
         //Dont let the screen go to sleep
         UIApplication.shared.isIdleTimerDisabled = true
         
-        if let value = UserDefaults.standard.string(forKey: "distance") {} else {
+        if UserDefaults.standard.string(forKey: "distance") == nil {
             UserDefaults.standard.set(100, forKey: "distance")
         }
-        if let value = UserDefaults.standard.string(forKey: "quality") {} else {
+        if UserDefaults.standard.string(forKey: "quality") == nil {
             UserDefaults.standard.set(90, forKey: "quality")
         }
-        if let value = UserDefaults.standard.string(forKey: "agency") {} else {
+        if UserDefaults.standard.string(forKey: "agency") == nil {
             UserDefaults.standard.set("default agency", forKey: "agency")
         }
         
@@ -85,7 +85,7 @@ class CameraViewController: UIViewController {
         locationTracker = LocationTracking.init(triggerFunction: takePhoto)
     }
     
-    func takePhoto(){
+    func takePhoto() {
         
         endButton.isEnabled = false
         endButton.backgroundColor = UIColor.gray
@@ -132,7 +132,7 @@ class CameraViewController: UIViewController {
     }
     
     //button animation
-    func automaticButtonPress(button : UIButton){
+    func automaticButtonPress(button : UIButton) {
         UIView.animate(withDuration: 0.15,
                        animations: {button.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)},
                        completion: { _ in UIView.animate(withDuration: 0.15) {button.transform = CGAffineTransform.identity}})

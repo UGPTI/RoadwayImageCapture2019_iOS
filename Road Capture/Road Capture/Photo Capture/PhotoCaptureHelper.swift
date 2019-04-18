@@ -49,7 +49,7 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
         
         let devices = deviceDiscoverySession.devices
         
-        for device in devices{
+        for device in devices {
             if device.position == AVCaptureDevice.Position.back {
                 backCamera =  device
             } else if device.position == AVCaptureDevice.Position.front {
@@ -99,16 +99,16 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
     }
     
     //take photo
-    func takePhoto(triggerFunction : @escaping ()->Void ){
+    func takePhoto(triggerFunction : @escaping () -> Void ) {
         self.triggerFunction = triggerFunction
         //Embed thumnail image
         let settings = AVCapturePhotoSettings()
         
-        photoOutput?.capturePhoto(with: settings , delegate: self)
+        photoOutput?.capturePhoto(with: settings, delegate: self)
     }
 }
 
-extension UIImage{
+extension UIImage {
     func resizeImageUsingVImage(size:CGSize) -> UIImage? {
         let cgImage = self.cgImage!
         var format = vImage_CGImageFormat(bitsPerComponent: 8, bitsPerPixel: 32, colorSpace: nil, bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.first.rawValue), version: 0, decode: nil, renderingIntent: CGColorRenderingIntent.defaultIntent)
@@ -126,7 +126,8 @@ extension UIImage{
         let destBytesPerRow = destWidth * bytesPerPixel
         let destData = UnsafeMutablePointer<UInt8>.allocate(capacity: destHeight * destBytesPerRow)
         defer {
-            destData.deallocate(capacity: destHeight * destBytesPerRow)
+//            destData.deallocate(capacity: destHeight * destBytesPerRow)
+            destData.deallocate()
         }
         var destBuffer = vImage_Buffer(data: destData, height: vImagePixelCount(destHeight), width: vImagePixelCount(destWidth), rowBytes: destBytesPerRow)
         // scale the image

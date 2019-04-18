@@ -14,11 +14,11 @@ class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var progressBar: UIProgressView!
     
     override var isSelected: Bool {
-        didSet{
+        didSet {
             if isSelected {
                 self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                 self.tickImageView.isHidden = false
-            }else{
+            } else {
                 self.transform = CGAffineTransform.identity
                 self.tickImageView.isHidden = true
             }

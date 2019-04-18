@@ -12,10 +12,10 @@ import CoreData
 class CustomDataSource: NSObject, UICollectionViewDataSource {
     
     //collection view stuff - used in the extention
-    var selectedImageCaptures : Dictionary<IndexPath, ImageCapture> = [:]
+    var selectedImageCaptures : [IndexPath:ImageCapture] = [:]
     //layout stuff
     let itemsPerRow : CGFloat = 3
-    let sectionInsets = UIEdgeInsets(top: 50.0,left: 20.0,bottom: 50.0,right: 20.0)
+    let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     
     var myCollectionView : UICollectionView!
     
@@ -28,7 +28,6 @@ class CustomDataSource: NSObject, UICollectionViewDataSource {
         
         myCollectionView = collectionView
     }
-    
     
     var backgroundTask: UIBackgroundTaskIdentifier = .invalid
     
@@ -45,7 +44,7 @@ class CustomDataSource: NSObject, UICollectionViewDataSource {
         backgroundTask = .invalid
     }
 
-    func uploadAll(){
+    func uploadAll() {
         //start background task
         registerBackgroundTask()
         
@@ -65,7 +64,7 @@ class CustomDataSource: NSObject, UICollectionViewDataSource {
             //get all image captures
             let imageCaptures = try context.fetch(fetchRequest)
     
-            for (index, imageCapture) in imageCaptures.enumerated() {
+            for imageCapture in imageCaptures {
                 //get cell
                 var progressBar : UIProgressView?
 

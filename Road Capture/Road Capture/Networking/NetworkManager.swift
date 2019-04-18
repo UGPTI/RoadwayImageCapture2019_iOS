@@ -16,7 +16,6 @@ class NetworkManager: NSObject {
     // Create a singleton instance
     static let sharedInstance: NetworkManager = { return NetworkManager() }()
     
-    
     override init() {
         super.init()
         
@@ -43,7 +42,7 @@ class NetworkManager: NSObject {
         // Do something globally here!
     }
     
-    static func stopNotifier() -> Void {
+    static func stopNotifier() {
         do {
             // Stop the network status notifier
             try (NetworkManager.sharedInstance.reachability).startNotifier()

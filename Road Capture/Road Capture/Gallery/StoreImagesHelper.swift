@@ -17,7 +17,7 @@ class StoreImagesHelper: NSObject {
     static var context = appDelegate?.persistentContainer.viewContext ?? NSManagedObjectContext()
 
     //Stores an Image Capture entity with Core Data : saves a thumbnail and fulls size image to app documents
-    static func storeImageCapture(id : Int, latitude : Float, longitude : Float, quality : Int, agency : String, image : UIImage, thumbnail : UIImage){
+    static func storeImageCapture(id : Int, latitude : Float, longitude : Float, quality : Int, agency : String, image : UIImage, thumbnail : UIImage) {
         //create entity
         let entity = NSEntityDescription.entity(forEntityName: "ImageCapture", in: context)
         let newImageCapture = NSManagedObject(entity: entity!, insertInto: context)
@@ -42,16 +42,15 @@ class StoreImagesHelper: NSObject {
     }
     
     //Saves image to app documents
-    static func saveImage(imageNameWithExtention : String, image : UIImage, quality : Float){
+    static func saveImage(imageNameWithExtention : String, image : UIImage, quality : Float) {
         //get path
         let imageURL = getImagePath(imageNameWithExtention: imageNameWithExtention)
-        
         
         //sanitate quality
         var qual = quality
         if qual > 1 {
             qual = 1.0
-        }else if qual < 0 {
+        } else if qual < 0 {
             qual = 0.0
         }
         
@@ -69,7 +68,7 @@ class StoreImagesHelper: NSObject {
             let imageData: Data = try? Data(contentsOf: imageURL),
             let image: UIImage = UIImage(data: imageData, scale: UIScreen.main.scale) {
             return image
-        }else {
+        } else {
             print("File doesn't exist")
         }
         return UIImage()
@@ -85,8 +84,7 @@ class StoreImagesHelper: NSObject {
 
         do {
             try fileManager.removeItem(atPath: imageURL.relativePath)
-        }
-        catch let error as NSError {
+        } catch let error as NSError {
             print("Image couldn't be deleted : \(error)")
         }
     }

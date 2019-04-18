@@ -16,7 +16,7 @@ class Marker: NSObject, MKAnnotation {
     var title: String?
     var image: UIImage?
     
-    init(coordinate: CLLocationCoordinate2D, image: UIImage?){
+    init(coordinate: CLLocationCoordinate2D, image: UIImage?) {
         self.coordinate = coordinate
         self.image = image
     }

@@ -15,10 +15,10 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
     var shouldReloadCollectionView = true
     
     //fetched results controller stuff
-    var localFetchedResultsController: NSFetchedResultsController<ImageCapture>? = nil
+    var localFetchedResultsController: NSFetchedResultsController<ImageCapture>?
     var blockOperations: [BlockOperation] = []
     
-    init(collectionView : UICollectionView){
+    init(collectionView : UICollectionView) {
         super.init()
         self.collectionView = collectionView
     }
@@ -38,7 +38,7 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: false)]
         let resultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
-        resultsController.delegate = self;
+        resultsController.delegate = self
         localFetchedResultsController = resultsController
         
         do {
@@ -75,8 +75,7 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
             } else {
                 self.shouldReloadCollectionView = true
             }
-        }
-        else if type == NSFetchedResultsChangeType.update {
+        } else if type == NSFetchedResultsChangeType.update {
             print("Update Object: \(indexPath!)")
             blockOperations.append(
                 BlockOperation(block: { [weak self] in
@@ -88,8 +87,7 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
                     }
                 })
             )
-        }
-        else if type == NSFetchedResultsChangeType.move {
+        } else if type == NSFetchedResultsChangeType.move {
             print("Move Object: \(indexPath!)")
             
             blockOperations.append(
@@ -101,8 +99,7 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
                     }
                 })
             )
-        }
-        else if type == NSFetchedResultsChangeType.delete {
+        } else if type == NSFetchedResultsChangeType.delete {
             print("Delete Object: \(indexPath!)")
             if collectionView?.numberOfItems( inSection: indexPath!.section ) == 1 {
                 self.shouldReloadCollectionView = true
@@ -132,8 +129,7 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
                     }
                 })
             )
-        }
-        else if type == NSFetchedResultsChangeType.update {
+        } else if type == NSFetchedResultsChangeType.update {
             print("Update Section: \(sectionIndex)")
             blockOperations.append(
                 BlockOperation(block: { [weak self] in
@@ -144,8 +140,7 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
                     }
                 })
             )
-        }
-        else if type == NSFetchedResultsChangeType.delete {
+        } else if type == NSFetchedResultsChangeType.delete {
             print("Delete Section: \(sectionIndex)")
             blockOperations.append(
                 BlockOperation(block: { [weak self] in
@@ -162,9 +157,9 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         
         // Checks if we should reload the collection view to fix a bug @ http://openradar.appspot.com/12954582
-        if (self.shouldReloadCollectionView) {
+        if self.shouldReloadCollectionView {
             DispatchQueue.main.async {
-                self.collectionView.reloadData();
+                self.collectionView.reloadData()
             }
         } else {
             DispatchQueue.main.async {
@@ -172,7 +167,7 @@ class FetchController: NSObject, NSFetchedResultsControllerDelegate {
                     for operation: BlockOperation in self.blockOperations {
                         operation.start()
                     }
-                }, completion: { (finished) -> Void in
+                }, completion: { (_) -> Void in
                     self.blockOperations.removeAll(keepingCapacity: false)
                 })
             }

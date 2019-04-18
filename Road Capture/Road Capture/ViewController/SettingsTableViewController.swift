@@ -21,14 +21,12 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
 ////
 ////    }
     
-    
     let resolution = ["High",
                       "Medium",
                       "Low"
                     ]
     let resolutionNumbers = [90, 60, 30]
 
-    
     let distance = [100,
                     200,
                     300,
@@ -64,25 +62,25 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
         //get quality
         var qualityString = "High"
         let quality = UserDefaults.standard.integer(forKey: "quality")
-        if  quality >= 90{
+        if  quality >= 90 {
             qualityString = "High"
         } else if quality >= 60 {
             qualityString = "Medium"
         } else {
             qualityString = "Low"
         }
-        resolutionTextfield.text = qualityString;
+        resolutionTextfield.text = qualityString
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         if let text = agencyNameTextfield.text {
             UserDefaults.standard.set(text, forKey: "agency")
-        }else{
+        } else {
             UserDefaults.standard.set("", forKey: "agency")
         }
     }
     
-    func setMilesLeft(){
+    func setMilesLeft() {
         let fileURL = URL(fileURLWithPath: NSHomeDirectory() as String)
         do {
             let values = try fileURL.resourceValues(forKeys: [.volumeAvailableCapacityForOpportunisticUsageKey])
@@ -93,7 +91,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
                 //set to constants : should probably be changed in the future
                 //I took a picuture of colored noise to try to get the largest sized photos and then
                 //used the sizes of those images as the sizeOfPhoto constants
-                if  compressionQuality >= 90{
+                if  compressionQuality >= 90 {
                     sizeOfPhoto = 5000000.0
                 } else if compressionQuality >= 60 {
                     sizeOfPhoto = 3500000.0
@@ -130,7 +128,6 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
         resolutionPickerView.tag = 1
         resolutionTextfield.inputView = resolutionPickerView
         
-        
         let distancePickerView = UIPickerView()
         distancePickerView.delegate = self
         distancePickerView.tag = 2
@@ -156,8 +153,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
         
         if pickerView.tag == 1 {
             return resolution.count
-        }
-        else if pickerView.tag == 2 {
+        } else if pickerView.tag == 2 {
             return distance.count
         }
         
@@ -167,8 +163,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 1 {
             return resolution[row]
-        }
-        else if pickerView.tag == 2 {
+        } else if pickerView.tag == 2 {
             return "\(distance[row]) ft"
         }
         
@@ -181,8 +176,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
             UserDefaults.standard.set(resolutionNumbers[row], forKey: "quality")
             setMilesLeft()
             return resolutionTextfield.text = resolution[row]
-        }
-        else if pickerView.tag == 2 {
+        } else if pickerView.tag == 2 {
             UserDefaults.standard.set(distance[row], forKey: "distance")
             setMilesLeft()
             return distanceTextfield.text =  "\(distance[row]) ft"
@@ -195,7 +189,6 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
 }
 
 extension SettingsTableViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

@@ -309,13 +309,23 @@
                     <view key="view" contentMode="scaleToFill" id="3Ju-8J-LxQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_01" translatesAutoresizingMaskIntoConstraints="NO" id="ict-T4-CvE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ict-T4-CvE" firstAttribute="leading" secondItem="3Ju-8J-LxQ" secondAttribute="leading" id="P7R-iu-JHL"/>
+                            <constraint firstItem="ict-T4-CvE" firstAttribute="top" secondItem="SAT-jo-t0b" secondAttribute="top" id="XwD-QH-nq0"/>
+                            <constraint firstItem="ict-T4-CvE" firstAttribute="bottom" secondItem="SAT-jo-t0b" secondAttribute="bottom" id="aQj-af-bKi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SAT-jo-t0b"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMc-RQ-0hF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2423" y="1238"/>
+            <point key="canvasLocation" x="-2423.1999999999998" y="1237.3313343328336"/>
         </scene>
         <!--Help-->
         <scene sceneID="jM0-Kf-b0P">
@@ -328,34 +338,54 @@
             <point key="canvasLocation" x="-1746" y="400"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="nu4-Ax-enq">
+        <scene sceneID="VDR-Fv-Tl2">
             <objects>
-                <viewController storyboardIdentifier="Second" id="J8Y-Al-Rzd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hkV-Ui-UCd">
+                <viewController storyboardIdentifier="Second" id="SC9-dF-xWi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="azX-uT-IPc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="TyJ-Gy-Tzh"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_02" translatesAutoresizingMaskIntoConstraints="NO" id="JE3-LD-CX7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JE3-LD-CX7" firstAttribute="leading" secondItem="azX-uT-IPc" secondAttribute="leading" id="AXm-hp-tOA"/>
+                            <constraint firstItem="JE3-LD-CX7" firstAttribute="top" secondItem="hrV-8U-qJj" secondAttribute="top" id="WlM-tH-M09"/>
+                            <constraint firstItem="JE3-LD-CX7" firstAttribute="bottom" secondItem="hrV-8U-qJj" secondAttribute="bottom" id="ptc-Kd-bxJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hrV-8U-qJj"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OYq-qV-3LT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kfq-sW-ImL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1737" y="1238"/>
+            <point key="canvasLocation" x="-1716" y="1237"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="Ekq-3W-yCt">
+        <scene sceneID="iVk-bt-YXb">
             <objects>
-                <viewController storyboardIdentifier="Third" id="5e7-cD-CFE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zda-vB-Prq">
+                <viewController storyboardIdentifier="Third" id="esl-ED-XjQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3bM-ky-aTm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="shq-dF-I26"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="lM9-EU-IO5">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lM9-EU-IO5" firstAttribute="leading" secondItem="3bM-ky-aTm" secondAttribute="leading" id="9Fw-ar-ceU"/>
+                            <constraint firstItem="lM9-EU-IO5" firstAttribute="top" secondItem="9H8-7x-LQe" secondAttribute="top" id="Qk9-PJ-K80"/>
+                            <constraint firstItem="lM9-EU-IO5" firstAttribute="bottom" secondItem="9H8-7x-LQe" secondAttribute="bottom" id="pUI-Rt-zEW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9H8-7x-LQe"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vEU-GS-yQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nv-x2-Mvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1046" y="1238"/>
+            <point key="canvasLocation" x="-999" y="1237"/>
         </scene>
     </scenes>
     <resources>
@@ -363,6 +393,9 @@
         <image name="checkBubble" width="30" height="30"/>
         <image name="endButton" width="333.66665649414062" height="333.33334350585938"/>
         <image name="galleryTab" width="30" height="30"/>
+        <image name="helpPage_01" width="375" height="812"/>
+        <image name="helpPage_02" width="375.33334350585938" height="812"/>
+        <image name="helpPage_03" width="375.33334350585938" height="812"/>
         <image name="helpTab" width="30" height="30"/>
         <image name="settingsTab" width="30" height="30"/>
         <image name="startButton" width="333.66665649414062" height="333.33334350585938"/>

@@ -92,7 +92,6 @@ class CameraViewController: UIViewController {
         
         endButton.isEnabled = false
         endButton.imageView?.alpha = 0.5
-//        endButton.backgroundColor = UIColor.gray
         
         photoCaptureHelper?.takePhoto(triggerFunction : {
             

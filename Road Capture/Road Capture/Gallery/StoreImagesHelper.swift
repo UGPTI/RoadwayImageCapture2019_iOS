@@ -11,34 +11,35 @@ import CoreData
 
 class StoreImagesHelper: NSObject {
     
-    //get app delegate
-    static var appDelegate : AppDelegate? = UIApplication.shared.delegate as? AppDelegate
-    //get context
-    static var context = appDelegate?.persistentContainer.viewContext ?? NSManagedObjectContext()
-
     //Stores an Image Capture entity with Core Data : saves a thumbnail and fulls size image to app documents
     static func storeImageCapture(id : Int, latitude : Float, longitude : Float, quality : Int, agency : String, image : UIImage, thumbnail : UIImage) {
-        //create entity
-        let entity = NSEntityDescription.entity(forEntityName: "ImageCapture", in: context)
-        let newImageCapture = NSManagedObject(entity: entity!, insertInto: context)
         
-        //populate entity
-        newImageCapture.setValue(id, forKey: "id")
-        newImageCapture.setValue(latitude, forKey: "latitude")
-        newImageCapture.setValue(longitude, forKey: "longitude")
-        newImageCapture.setValue(quality, forKey: "quality")
-        newImageCapture.setValue(agency, forKey: "agency")
-        
-        //save entity
-        do {
-            try context.save()
-        } catch {
-            print("Failed saving entity")
+        //get app delegate
+        let appDelegate : AppDelegate? = UIApplication.shared.delegate as? AppDelegate
+        //get context
+        if let context = appDelegate?.persistentContainer.viewContext {
+            //create entity
+            let entity = NSEntityDescription.entity(forEntityName: "ImageCapture", in: context)
+            let newImageCapture = NSManagedObject(entity: entity!, insertInto: context)
+            
+            //populate entity
+            newImageCapture.setValue(id, forKey: "id")
+            newImageCapture.setValue(latitude, forKey: "latitude")
+            newImageCapture.setValue(longitude, forKey: "longitude")
+            newImageCapture.setValue(quality, forKey: "quality")
+            newImageCapture.setValue(agency, forKey: "agency")
+            
+            //save entity
+            do {
+                try context.save()
+            } catch {
+                print("Failed saving entity")
+            }
+            
+            //save image
+            saveImage(imageNameWithExtention: "\(id).jpg", image: image, quality:  Float(quality)/100.0)
+            saveImage(imageNameWithExtention: "\(id)_thumbnail.jpg", image: thumbnail, quality: Float(quality)/100.0)
         }
-        
-        //save image
-        saveImage(imageNameWithExtention: "\(id).jpg", image: image, quality:  Float(quality)/100.0)
-        saveImage(imageNameWithExtention: "\(id)_thumbnail.jpg", image: thumbnail, quality: Float(quality)/100.0)
     }
     
     //Saves image to app documents

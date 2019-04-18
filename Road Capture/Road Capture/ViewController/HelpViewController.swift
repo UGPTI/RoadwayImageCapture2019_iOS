@@ -11,7 +11,24 @@ import UIKit
 class HelpViewController: UIPageViewController {
 
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [newViewController(name: "First"), newViewController(name: "Second"), newViewController(name: "Third")]
+        return [
+            newViewController(name: "Help Page 0"),
+            newViewController(name: "Help Page 1"),
+            newViewController(name: "Help Page 2"),
+            newViewController(name: "Help Page 3"),
+            newViewController(name: "Help Page 4"),
+            newViewController(name: "Help Page 5"),
+            newViewController(name: "Help Page 6"),
+            newViewController(name: "Help Page 7"),
+            newViewController(name: "Help Page 8"),
+            newViewController(name: "Help Page 9"),
+            newViewController(name: "Help Page 10"),
+            newViewController(name: "Help Page 11"),
+            newViewController(name: "Help Page 12"),
+            newViewController(name: "Help Page 13"),
+            newViewController(name: "Help Page 14"),
+            newViewController(name: "Help Page 15")
+        ]
     }()
     
     private func newViewController(name: String) -> UIViewController {

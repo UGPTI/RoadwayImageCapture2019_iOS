@@ -305,7 +305,7 @@
         <!--View Controller-->
         <scene sceneID="iCM-60-YkS">
             <objects>
-                <viewController storyboardIdentifier="First" id="FjE-cv-U7d" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Help Page 0" id="FjE-cv-U7d" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Ju-8J-LxQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMc-RQ-0hF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2423.1999999999998" y="1237.3313343328336"/>
+            <point key="canvasLocation" x="-2385" y="1236"/>
         </scene>
         <!--Help-->
         <scene sceneID="jM0-Kf-b0P">
@@ -340,7 +340,7 @@
         <!--View Controller-->
         <scene sceneID="VDR-Fv-Tl2">
             <objects>
-                <viewController storyboardIdentifier="Second" id="SC9-dF-xWi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Help Page 1" id="SC9-dF-xWi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="azX-uT-IPc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,12 +360,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kfq-sW-ImL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1716" y="1237"/>
+            <point key="canvasLocation" x="-1746" y="1236"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iVk-bt-YXb">
             <objects>
-                <viewController storyboardIdentifier="Third" id="esl-ED-XjQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Help Page 3" id="esl-ED-XjQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3bM-ky-aTm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,7 +385,307 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nv-x2-Mvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-999" y="1237"/>
+            <point key="canvasLocation" x="-1106" y="1236"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GzS-OM-p3W">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 4" id="VSv-li-dsi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="40v-Hz-hTI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="tGU-AP-BXB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tGU-AP-BXB" firstAttribute="top" secondItem="wcB-C3-FP5" secondAttribute="top" id="Dbj-rT-D6M"/>
+                            <constraint firstItem="tGU-AP-BXB" firstAttribute="leading" secondItem="40v-Hz-hTI" secondAttribute="leading" id="HmJ-hO-NBc"/>
+                            <constraint firstItem="tGU-AP-BXB" firstAttribute="bottom" secondItem="wcB-C3-FP5" secondAttribute="bottom" id="Qms-Ky-AA4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wcB-C3-FP5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5x0-su-oGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-463" y="1236"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GFL-iG-0bO">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 5" id="NJZ-O4-pQ2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4GG-Yd-pgq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="tbv-t9-dPR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tbv-t9-dPR" firstAttribute="leading" secondItem="4GG-Yd-pgq" secondAttribute="leading" id="OAr-Tc-zdw"/>
+                            <constraint firstItem="tbv-t9-dPR" firstAttribute="bottom" secondItem="3B6-i4-9aR" secondAttribute="bottom" id="P8q-Vw-4sF"/>
+                            <constraint firstItem="tbv-t9-dPR" firstAttribute="top" secondItem="3B6-i4-9aR" secondAttribute="top" id="epI-Aa-q0o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3B6-i4-9aR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FbA-Cj-2px" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="1236"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tmH-zA-jYm">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 6" id="F2d-th-Uaf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dUr-Zy-v1s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_01" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-95-ETH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dw5-95-ETH" firstAttribute="bottom" secondItem="209-UV-RD3" secondAttribute="bottom" id="sST-xw-jTc"/>
+                            <constraint firstItem="dw5-95-ETH" firstAttribute="leading" secondItem="dUr-Zy-v1s" secondAttribute="leading" id="v8z-t4-uf6"/>
+                            <constraint firstItem="dw5-95-ETH" firstAttribute="top" secondItem="209-UV-RD3" secondAttribute="top" id="wfT-cQ-xeC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="209-UV-RD3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FH4-9T-nJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2386" y="1890"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="C5W-AZ-ZGY">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 8" id="mV8-rf-tgJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JG5-Dx-jt8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="LuQ-3W-0eL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LuQ-3W-0eL" firstAttribute="bottom" secondItem="hso-bb-1J2" secondAttribute="bottom" id="IF9-fd-Oka"/>
+                            <constraint firstItem="LuQ-3W-0eL" firstAttribute="leading" secondItem="JG5-Dx-jt8" secondAttribute="leading" id="MrW-x4-Ih9"/>
+                            <constraint firstItem="LuQ-3W-0eL" firstAttribute="top" secondItem="hso-bb-1J2" secondAttribute="top" id="dMA-bj-pIc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hso-bb-1J2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dFa-7h-EX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1106" y="1890"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="z3t-dI-6FG">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 7" id="Brn-op-MH2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mF2-hF-CDe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_02" translatesAutoresizingMaskIntoConstraints="NO" id="Vg2-q2-qGB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vg2-q2-qGB" firstAttribute="leading" secondItem="mF2-hF-CDe" secondAttribute="leading" id="A6g-aK-pw8"/>
+                            <constraint firstItem="Vg2-q2-qGB" firstAttribute="top" secondItem="Guk-M7-xBa" secondAttribute="top" id="VLS-Y2-l2W"/>
+                            <constraint firstItem="Vg2-q2-qGB" firstAttribute="bottom" secondItem="Guk-M7-xBa" secondAttribute="bottom" id="c0f-yz-fOf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Guk-M7-xBa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CD2-Gf-T2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1746" y="1890"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X48-XX-Q1g">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 9" id="ZPX-Sh-cF4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wBU-1r-bJ9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="TIS-zM-4CW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TIS-zM-4CW" firstAttribute="top" secondItem="EH6-gi-1kL" secondAttribute="top" id="fXz-GS-4iq"/>
+                            <constraint firstItem="TIS-zM-4CW" firstAttribute="bottom" secondItem="EH6-gi-1kL" secondAttribute="bottom" id="pLF-Ai-A5c"/>
+                            <constraint firstItem="TIS-zM-4CW" firstAttribute="leading" secondItem="wBU-1r-bJ9" secondAttribute="leading" id="q6K-Lv-IUS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EH6-gi-1kL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OaP-9i-E0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-463" y="1890"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zE6-TK-Cda">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 10" id="BHu-f8-fi8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rQS-NB-DqA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="hzx-EF-hyx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hzx-EF-hyx" firstAttribute="bottom" secondItem="0TQ-7i-sGC" secondAttribute="bottom" id="1Ny-LY-EIC"/>
+                            <constraint firstItem="hzx-EF-hyx" firstAttribute="top" secondItem="0TQ-7i-sGC" secondAttribute="top" id="6z0-E7-gc1"/>
+                            <constraint firstItem="hzx-EF-hyx" firstAttribute="leading" secondItem="rQS-NB-DqA" secondAttribute="leading" id="Dp1-a7-GWB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0TQ-7i-sGC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LOU-Hn-jEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="1890"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sdG-76-V4d">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 15" id="for-8D-INM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wM9-yy-Xcy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="OFH-4a-Dsm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OFH-4a-Dsm" firstAttribute="leading" secondItem="wM9-yy-Xcy" secondAttribute="leading" id="evd-xp-FuW"/>
+                            <constraint firstItem="OFH-4a-Dsm" firstAttribute="top" secondItem="KXO-Iz-dto" secondAttribute="top" id="fYq-B6-DYf"/>
+                            <constraint firstItem="OFH-4a-Dsm" firstAttribute="bottom" secondItem="KXO-Iz-dto" secondAttribute="bottom" id="pqF-zM-6qu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KXO-Iz-dto"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Lf-hG-bnk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="2549"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VQ0-a1-Kyw">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 14" id="83O-mJ-Uy2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PrE-98-4XB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-tF-gxO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a8G-tF-gxO" firstAttribute="top" secondItem="MAW-Rc-x0e" secondAttribute="top" id="6Sw-XY-Okv"/>
+                            <constraint firstItem="a8G-tF-gxO" firstAttribute="bottom" secondItem="MAW-Rc-x0e" secondAttribute="bottom" id="Vv6-ir-tD8"/>
+                            <constraint firstItem="a8G-tF-gxO" firstAttribute="leading" secondItem="PrE-98-4XB" secondAttribute="leading" id="ZFg-07-VGT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MAW-Rc-x0e"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="35h-Zl-zn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-463" y="2549"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Fi4-EU-pSX">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 13" id="Ifx-6N-zMi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DtA-2g-6Nz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="zzr-7M-Z6V">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zzr-7M-Z6V" firstAttribute="leading" secondItem="DtA-2g-6Nz" secondAttribute="leading" id="DCx-q9-gIV"/>
+                            <constraint firstItem="zzr-7M-Z6V" firstAttribute="top" secondItem="tXQ-ev-Ert" secondAttribute="top" id="kja-Jr-GnD"/>
+                            <constraint firstItem="zzr-7M-Z6V" firstAttribute="bottom" secondItem="tXQ-ev-Ert" secondAttribute="bottom" id="pFO-Me-nDz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tXQ-ev-Ert"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mq-MT-qmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1106" y="2549"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cfm-St-rxq">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 12" id="88d-5L-szC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jqx-VK-Fld">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="HcO-C6-0xJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HcO-C6-0xJ" firstAttribute="bottom" secondItem="AIo-kG-SOK" secondAttribute="bottom" id="7ss-WL-XT6"/>
+                            <constraint firstItem="HcO-C6-0xJ" firstAttribute="leading" secondItem="jqx-VK-Fld" secondAttribute="leading" id="ifM-X2-eNX"/>
+                            <constraint firstItem="HcO-C6-0xJ" firstAttribute="top" secondItem="AIo-kG-SOK" secondAttribute="top" id="lc8-Vu-EjU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AIo-kG-SOK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zup-oJ-Qpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1746" y="2548"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="117-45-vq5">
+            <objects>
+                <viewController storyboardIdentifier="Help Page 11" id="44z-nR-OEd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mez-7u-d1z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-YV-6Fg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wfh-YV-6Fg" firstAttribute="top" secondItem="cRu-Ah-bOi" secondAttribute="top" id="FZG-oh-Waf"/>
+                            <constraint firstItem="wfh-YV-6Fg" firstAttribute="bottom" secondItem="cRu-Ah-bOi" secondAttribute="bottom" id="Pcf-mA-RCp"/>
+                            <constraint firstItem="wfh-YV-6Fg" firstAttribute="leading" secondItem="Mez-7u-d1z" secondAttribute="leading" id="SLH-qn-qfU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cRu-Ah-bOi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RzY-fD-HKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2386" y="2549"/>
         </scene>
     </scenes>
     <resources>
@@ -393,9 +693,9 @@
         <image name="checkBubble" width="30" height="30"/>
         <image name="endButton" width="333.66665649414062" height="333.33334350585938"/>
         <image name="galleryTab" width="30" height="30"/>
-        <image name="helpPage_01" width="375" height="812"/>
-        <image name="helpPage_02" width="375.33334350585938" height="812"/>
-        <image name="helpPage_03" width="375.33334350585938" height="812"/>
+        <image name="helpPage_01" width="375.33334350585938" height="812"/>
+        <image name="helpPage_02" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_03" width="375.33334350585938" height="812.33331298828125"/>
         <image name="helpTab" width="30" height="30"/>
         <image name="settingsTab" width="30" height="30"/>
         <image name="startButton" width="333.66665649414062" height="333.33334350585938"/>

@@ -19,6 +19,9 @@ class CameraViewController: UIViewController {
     var locationTracker : LocationTracking!
     var isTakingPicutres = false
     
+    let startButtonImage = UIImage(named: "startButton")
+    let cameraButtonImage = UIImage(named: "cameraButton")
+    
     @IBOutlet var startButton: UIButton!
     @IBOutlet var endButton: UIButton!
     
@@ -27,6 +30,8 @@ class CameraViewController: UIViewController {
         if !isTakingPicutres {
             endButton.isHidden = false
             endButton.isEnabled = true
+            startButton.setImage(cameraButtonImage, for: .normal)
+            
             isTakingPicutres = true
             
             //start tracking location
@@ -42,6 +47,8 @@ class CameraViewController: UIViewController {
             //disable button
             endButton.isHidden = true
             endButton.isEnabled = false
+            startButton.setImage(startButtonImage, for: .normal)
+            
             isTakingPicutres = false
             
             //stop tracking location

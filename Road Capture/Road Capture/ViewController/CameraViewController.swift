@@ -77,10 +77,8 @@ class CameraViewController: UIViewController {
             UserDefaults.standard.set("default agency", forKey: "agency")
         }
         
-        //make round buttons
-//        startButton.layer.cornerRadius = 0.5 * startButton.bounds.size.width
+        //make round buttons - prob delete
         startButton.clipsToBounds = true
-//        endButton.layer.cornerRadius = 0.5 * endButton.bounds.size.width
         endButton.clipsToBounds = true
         
         //disable button
@@ -90,6 +88,48 @@ class CameraViewController: UIViewController {
         //init helpers
         photoCaptureHelper = PhotoCaptureHelper.init(view: self.view, cameraView: cameraView)
         locationTracker = LocationTracking.init(triggerFunction: takePhoto)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        //request camera access
+        requestCameraAccess()
+        //request location access
+        requestLocationAccess()
+    }
+    
+    func requestLocationAccess() {
+        let status = CLLocationManager.authorizationStatus()
+        if status == .notDetermined || status == .denied || status == .authorizedWhenInUse {
+
+            // Create Alert
+            let alert = UIAlertController(title: "Location Access", message: "Location access is absolutely necessary to use this app", preferredStyle: .alert)
+
+            // Add "OK" Button to alert, pressing it will bring you to the settings app
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+            }))
+            // Show the alert with animation
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func requestCameraAccess() {
+        //Camera
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+            if response {
+                //access granted
+            } else {
+                // Create Alert
+                let alert = UIAlertController(title: "Camera", message: "Camera access is absolutely necessary to use this app", preferredStyle: .alert)
+                
+                // Add "OK" Button to alert, pressing it will bring you to the settings app
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+                }))
+                // Show the alert with animation
+                self.present(alert, animated: true)
+            }
+        }
     }
     
     func takePhoto() {

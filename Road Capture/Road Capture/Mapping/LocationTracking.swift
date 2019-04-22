@@ -57,39 +57,12 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
     }
     
     func startTracking() {
-//        //Ask for premission to use location services
-//        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse || CLLocationManager.authorizationStatus() != .authorizedAlways {
-//            locationManager.requestWhenInUseAuthorization()
-//        } else {
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.distanceFilter = 10
-            locationManager.requestLocation()
-            locationManager.startUpdatingLocation()
-            locationManager.startMonitoringSignificantLocationChanges()
-//        }
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 10
+        locationManager.requestLocation()
+        locationManager.startUpdatingLocation()
+        locationManager.startMonitoringSignificantLocationChanges()
     }
-    
-//    func requestLocationAccess() {
-//        let status = CLLocationManager.authorizationStatus()
-//        if status == .notDetermined || status == .denied || status == .authorizedWhenInUse {
-//
-//            // present an alert indicating location authorization required
-//            // and offer to take the user to Settings for the app via
-//            // UIApplication -openUrl: and UIApplicationOpenSettingsURLString
-//            dispatch_async(dispatch_get_main_queue(), {
-//                let alert = UIAlertController(title: "Error!", message: "GPS access is restricted. In order to use tracking, please enable GPS in the Settigs app under Privacy, Location Services.", preferredStyle: UIAlertControllerStyle.Alert)
-//                alert.addAction(UIAlertAction(title: "Go to Settings now", style: UIAlertActionStyle.Default, handler: { (alert: UIAlertAction!) in
-//                    print("")
-//                    UIApplication.sharedApplication().openURL(NSURL(string:UIApplicationOpenSettingsURLString)!)
-//                }))
-//                // self.presentViewController(alert, animated: true, completion: nil)
-//                self.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
-//            })
-//
-//            locationManager.requestAlwaysAuthorization()
-//            locationManager.requestWhenInUseAuthorization()
-//        }
-//    }
     
     func start() {
         isUpdating = true
@@ -103,7 +76,7 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
         switch status {
         case .notDetermined:
             // If status has not yet been determied, ask for authorization
-            manager.requestWhenInUseAuthorization()
+            manager.requestAlwaysAuthorization()
         case .authorizedWhenInUse:
             // If authorized when in use
             startTracking()
@@ -112,10 +85,10 @@ class LocationTracking : NSObject, CLLocationManagerDelegate {
             startTracking()
         case .restricted:
             // If restricted by e.g. parental controls. User can't enable Location Services
-            manager.requestWhenInUseAuthorization()
+            manager.requestAlwaysAuthorization()
         case .denied:
             // If user denied your app access to Location Services, but can grant access from Settings.app
-            manager.requestWhenInUseAuthorization()
+            manager.requestAlwaysAuthorization()
         default:
             break
         }

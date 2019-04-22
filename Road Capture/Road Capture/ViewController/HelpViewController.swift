@@ -38,6 +38,11 @@ class HelpViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = .white
+        let appearance = UIPageControl.appearance(whenContainedInInstancesOf: [UIPageViewController.self])
+        appearance.pageIndicatorTintColor = .lightGray
+        appearance.currentPageIndicatorTintColor = .gray
+        
         dataSource = self
         
         if let firstViewController = orderedViewControllers.first {
@@ -60,6 +65,8 @@ extension HelpViewController: UIPageViewControllerDataSource {
         guard orderedViewControllers.count > previousIndex else {
             return nil
         }
+        
+        orderedViewControllers[previousIndex].view.backgroundColor = .white
         
         return orderedViewControllers[previousIndex]
     }

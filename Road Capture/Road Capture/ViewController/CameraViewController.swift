@@ -99,7 +99,7 @@ class CameraViewController: UIViewController {
     
     func requestLocationAccess() {
         let status = CLLocationManager.authorizationStatus()
-        if status == .notDetermined || status == .denied || status == .authorizedWhenInUse {
+        if status == .notDetermined || status == .denied {
 
             // Create Alert
             let alert = UIAlertController(title: "Location Access", message: "Location access is absolutely necessary to use this app", preferredStyle: .alert)

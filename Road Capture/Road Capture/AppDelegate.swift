@@ -16,12 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//        UITabBar.appearance().barTintColor = .black
-//        UITabBar.appearance().tintColor = .white
-//        UIPageControl.appearance().backgroundColor = .clear
-//        UIPageControl.appearance()
-//        UIPageControl.appearance().tintColor = .black
+
+        //choose to show password or camera
+        
+        if UserDefaults.standard.bool(forKey: "loggedin") == false {
+//            self.window?.rootViewController = PasswordViewController()
+            
+            let viewController : UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasswordViewController") as UIViewController
+            // .instantiatViewControllerWithIdentifier() returns AnyObject! this must be downcast to utilize it
+//            self.presentViewController(viewController, animated: false, completion: nil)
+            
+            self.window?.rootViewController = viewController
+            
+        } else {
+//            self.window?.rootViewController = CameraViewController()
+            
+            let viewController : UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as UIViewController
+            
+            self.window?.rootViewController = viewController
+        }
+        self.window?.makeKeyAndVisible()
         
         return true
     }

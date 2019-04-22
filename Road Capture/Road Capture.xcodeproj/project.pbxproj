@@ -24,6 +24,7 @@
 		B24BF6312200EA0B009C5C51 /* Road_CaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF6302200EA0B009C5C51 /* Road_CaptureTests.swift */; };
 		B24BF63C2200EA0B009C5C51 /* Road_CaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */; };
 		B2624B662266374F006BDF05 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2624B652266374F006BDF05 /* NetworkManager.swift */; };
+		B26C0AFD226E174100017477 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26C0AFC226E174100017477 /* PasswordViewController.swift */; };
 		B28CFF682244183F00E30A14 /* StoreImagesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28CFF672244183F00E30A14 /* StoreImagesHelper.swift */; };
 		B28CFF6B224418FA00E30A14 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B28CFF69224418FA00E30A14 /* Model.xcdatamodeld */; };
 		B294FB3A2251864B0098BF1D /* FetchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B294FB392251864B0098BF1D /* FetchController.swift */; };
@@ -79,6 +80,7 @@
 		B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Road_CaptureUITests.swift; sourceTree = "<group>"; };
 		B24BF63D2200EA0B009C5C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2624B652266374F006BDF05 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B26C0AFC226E174100017477 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		B28CFF672244183F00E30A14 /* StoreImagesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreImagesHelper.swift; sourceTree = "<group>"; };
 		B28CFF6A224418FA00E30A14 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		B294FB392251864B0098BF1D /* FetchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchController.swift; sourceTree = "<group>"; };
@@ -127,7 +129,6 @@
 				79753D95F79D0E82D5874FE9 /* Pods-Road CaptureUITests.debug.xcconfig */,
 				ACEB086D0DF47B51C5925F97 /* Pods-Road CaptureUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -222,6 +223,7 @@
 				3F44DAD0221B47DD000E91CF /* CameraViewController.swift */,
 				3F44DAD1221B47DE000E91CF /* HelpViewController.swift */,
 				3F44DAD6221B4A55000E91CF /* SettingsTableViewController.swift */,
+				B26C0AFC226E174100017477 /* PasswordViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -506,6 +508,7 @@
 				B24BF61C2200EA0A009C5C51 /* AppDelegate.swift in Sources */,
 				B22A2C5822276BFE005D3C5A /* PhotoCaptureHelper.swift in Sources */,
 				B2624B662266374F006BDF05 /* NetworkManager.swift in Sources */,
+				B26C0AFD226E174100017477 /* PasswordViewController.swift in Sources */,
 				B238C14E2211165000DB9017 /* NetworkingHelper.swift in Sources */,
 				3F44DAD3221B47DE000E91CF /* CameraViewController.swift in Sources */,
 				B294FB3A2251864B0098BF1D /* FetchController.swift in Sources */,

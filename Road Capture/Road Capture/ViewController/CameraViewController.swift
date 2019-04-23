@@ -32,6 +32,8 @@ class CameraViewController: UIViewController {
             endButton.isEnabled = true
             startButton.setImage(cameraButtonImage, for: .normal)
             
+            self.tabBarController?.tabBar.isHidden = true
+            
             isTakingPicutres = true
             
             //start tracking location
@@ -48,6 +50,8 @@ class CameraViewController: UIViewController {
             endButton.isHidden = true
             endButton.isEnabled = false
             startButton.setImage(startButtonImage, for: .normal)
+            
+            self.tabBarController?.tabBar.isHidden = false
             
             isTakingPicutres = false
             

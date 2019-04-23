@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayQ-1a-kZZ">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayQ-1a-kZZ">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,17 +15,17 @@
             <objects>
                 <tableViewController id="o9C-ff-4pI" userLabel="Settings" customClass="SettingsTableViewController" customModule="Road_Capture" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e2J-Bk-LG8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
                             <tableViewSection headerTitle="Agency Name" id="HUW-FE-g29">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ceg-sl-OEI">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ceg-sl-OEI" id="IQa-h2-wFV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Agency Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rA-vR-CXW">
@@ -43,10 +43,10 @@
                             <tableViewSection headerTitle="Picture Quality" id="i8A-ks-q4z">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="OW8-d8-VTq">
-                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OW8-d8-VTq" id="fdl-Hp-tMj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Camera Resolution" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzk-7a-Sm7">
@@ -64,10 +64,10 @@
                             <tableViewSection headerTitle="Distance Between Pictures" id="aPu-Xl-4yg">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="XRI-Em-7mK">
-                                        <rect key="frame" x="0.0" y="172" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="172" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XRI-Em-7mK" id="EjJ-fp-Oys">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Distance" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Lo-1e-NUz">
@@ -85,10 +85,10 @@
                             <tableViewSection headerTitle="Miles before you run out of space" id="SON-mf-Sve">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RLD-hP-2v3">
-                                        <rect key="frame" x="0.0" y="244" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="244" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RLD-hP-2v3" id="MX9-Uq-fFf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRG-FG-x8q">
@@ -127,11 +127,11 @@
             <objects>
                 <viewController id="WOH-wg-Efl" customClass="GalleryViewController" customModule="Road_Capture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eZV-Nl-Mft">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vC7-78-wjX">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="veu-f3-icv">
                                     <size key="itemSize" width="200" height="200"/>
@@ -141,7 +141,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="D97-62-ZGG" customClass="ImageCollectionViewCell" customModule="Road_Capture" customModuleProvider="target">
-                                        <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -184,7 +184,7 @@
                                 </cells>
                             </collectionView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0p-Im-xP5">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem id="Uxo-ru-CBx"/>
@@ -218,17 +218,17 @@
             <objects>
                 <viewController storyboardIdentifier="PasswordViewController" id="ayQ-1a-kZZ" customClass="PasswordViewController" customModule="Road_Capture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qTx-SN-uNL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RLZ-qJ-F1B">
-                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <rect key="frame" x="18" y="433" width="378" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter password to access application." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYc-MR-llX">
-                                <rect key="frame" x="16" y="289" width="343" height="21"/>
+                                <rect key="frame" x="36" y="404" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -236,14 +236,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="RLZ-qJ-F1B" firstAttribute="centerY" secondItem="qTx-SN-uNL" secondAttribute="centerY" id="2o9-Jv-s5e"/>
-                            <constraint firstItem="ZYc-MR-llX" firstAttribute="leading" secondItem="RLZ-qJ-F1B" secondAttribute="leading" id="KPg-SD-F12"/>
-                            <constraint firstItem="RLZ-qJ-F1B" firstAttribute="trailing" secondItem="qTx-SN-uNL" secondAttribute="trailingMargin" id="OBQ-Nn-Zfc"/>
-                            <constraint firstItem="RLZ-qJ-F1B" firstAttribute="top" secondItem="ZYc-MR-llX" secondAttribute="bottom" constant="8" symbolic="YES" id="UAN-MH-P8s"/>
-                            <constraint firstItem="IIq-zH-GI7" firstAttribute="bottom" secondItem="RLZ-qJ-F1B" secondAttribute="bottom" constant="319" id="Uar-ZP-9lq"/>
-                            <constraint firstItem="ZYc-MR-llX" firstAttribute="top" secondItem="IIq-zH-GI7" secondAttribute="top" constant="269" id="Wg7-9Z-GV3"/>
-                            <constraint firstItem="RLZ-qJ-F1B" firstAttribute="leading" secondItem="qTx-SN-uNL" secondAttribute="leadingMargin" id="h8W-ao-A22"/>
-                            <constraint firstItem="ZYc-MR-llX" firstAttribute="trailing" secondItem="RLZ-qJ-F1B" secondAttribute="trailing" id="ug9-fZ-kKI"/>
+                            <constraint firstItem="IIq-zH-GI7" firstAttribute="trailing" secondItem="RLZ-qJ-F1B" secondAttribute="trailing" constant="18" id="HaB-52-nvt"/>
+                            <constraint firstItem="RLZ-qJ-F1B" firstAttribute="centerX" secondItem="IIq-zH-GI7" secondAttribute="centerX" id="Xuc-q3-B1W"/>
+                            <constraint firstItem="RLZ-qJ-F1B" firstAttribute="centerY" secondItem="IIq-zH-GI7" secondAttribute="centerY" id="e6e-R2-rzY"/>
+                            <constraint firstItem="RLZ-qJ-F1B" firstAttribute="top" secondItem="ZYc-MR-llX" secondAttribute="bottom" constant="8" id="gul-k5-bKH"/>
+                            <constraint firstItem="ZYc-MR-llX" firstAttribute="centerX" secondItem="IIq-zH-GI7" secondAttribute="centerX" id="oc2-A1-4cS"/>
+                            <constraint firstItem="RLZ-qJ-F1B" firstAttribute="leading" secondItem="IIq-zH-GI7" secondAttribute="leading" constant="18" id="u5D-AN-CmT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IIq-zH-GI7"/>
                     </view>
@@ -253,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqU-Ty-hcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1746" y="-412"/>
+            <point key="canvasLocation" x="-1746.376811594203" y="-412.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NKt-nu-Xay">
@@ -280,15 +278,14 @@
             <objects>
                 <viewController id="Al3-9I-E9z" customClass="CameraViewController" customModule="Road_Capture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2kP-oq-oms">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzQ-UB-VBU">
-                                <rect key="frame" x="145.5" y="514" width="84" height="84"/>
+                                <rect key="frame" x="165" y="709" width="84" height="84"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="JzQ-UB-VBU" secondAttribute="height" multiplier="1:1" id="2e9-qL-muS"/>
-                                    <constraint firstAttribute="width" constant="84" id="Orc-cb-Gah"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="bty-LK-VT2"/>
+                                    <constraint firstAttribute="width" secondItem="JzQ-UB-VBU" secondAttribute="height" multiplier="1:1" id="6PT-d2-8tO"/>
+                                    <constraint firstAttribute="height" constant="84" id="vcE-O8-dHu"/>
                                 </constraints>
                                 <state key="normal" image="startButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -303,11 +300,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-55-Lus">
-                                <rect key="frame" x="275" y="514" width="84" height="84"/>
+                                <rect key="frame" x="310" y="709" width="84" height="84"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZGW-55-Lus" secondAttribute="height" multiplier="1:1" id="ciE-EA-c4u"/>
-                                    <constraint firstAttribute="height" constant="84" id="ckg-ME-qaA"/>
-                                    <constraint firstAttribute="width" constant="84" id="obW-oO-i3s"/>
+                                    <constraint firstAttribute="height" constant="84" id="5jL-UQ-AZb"/>
+                                    <constraint firstAttribute="width" secondItem="ZGW-55-Lus" secondAttribute="height" multiplier="1:1" id="MLT-pj-v6w"/>
+                                    <constraint firstAttribute="width" constant="84" id="cU7-CS-Wy0"/>
                                 </constraints>
                                 <state key="normal" image="endButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -324,10 +321,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="centerX" secondItem="2kP-oq-oms" secondAttribute="centerX" id="BZa-DY-ga3"/>
-                            <constraint firstItem="ZGW-55-Lus" firstAttribute="leading" secondItem="JzQ-UB-VBU" secondAttribute="trailing" constant="45.5" id="SC7-Mu-a4r"/>
-                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="JzQ-UB-VBU" secondAttribute="bottom" constant="20" id="fH2-Nt-xqA"/>
-                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="ZGW-55-Lus" secondAttribute="bottom" constant="20" id="kfF-CD-I2E"/>
+                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="centerX" secondItem="k8c-TV-nCY" secondAttribute="centerX" id="Gbn-gi-x6O"/>
+                            <constraint firstItem="k8c-TV-nCY" firstAttribute="trailing" secondItem="ZGW-55-Lus" secondAttribute="trailing" constant="20" id="Gzb-g5-emG"/>
+                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="JzQ-UB-VBU" secondAttribute="bottom" constant="20" id="Xkp-Bp-hBw"/>
+                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="ZGW-55-Lus" secondAttribute="bottom" constant="20" id="sho-zT-M41"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k8c-TV-nCY"/>
                     </view>
@@ -349,11 +346,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 0" id="FjE-cv-U7d" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Ju-8J-LxQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_00" translatesAutoresizingMaskIntoConstraints="NO" id="ict-T4-CvE">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -384,11 +381,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 1" id="SC9-dF-xWi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="azX-uT-IPc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_01" translatesAutoresizingMaskIntoConstraints="NO" id="JE3-LD-CX7">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -409,11 +406,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 2" id="esl-ED-XjQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3bM-ky-aTm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_02" translatesAutoresizingMaskIntoConstraints="NO" id="lM9-EU-IO5">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -434,11 +431,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 3" id="VSv-li-dsi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="40v-Hz-hTI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="tGU-AP-BXB">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -459,11 +456,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 4" id="NJZ-O4-pQ2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4GG-Yd-pgq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_04" translatesAutoresizingMaskIntoConstraints="NO" id="tbv-t9-dPR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -484,11 +481,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 6" id="F2d-th-Uaf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dUr-Zy-v1s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_06" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-95-ETH">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -509,11 +506,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 8" id="mV8-rf-tgJ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JG5-Dx-jt8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_08" translatesAutoresizingMaskIntoConstraints="NO" id="LuQ-3W-0eL">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -534,11 +531,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 7" id="Brn-op-MH2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mF2-hF-CDe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_07" translatesAutoresizingMaskIntoConstraints="NO" id="Vg2-q2-qGB">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -559,11 +556,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 9" id="ZPX-Sh-cF4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wBU-1r-bJ9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_09" translatesAutoresizingMaskIntoConstraints="NO" id="TIS-zM-4CW">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -584,11 +581,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 10" id="BHu-f8-fi8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQS-NB-DqA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_10" translatesAutoresizingMaskIntoConstraints="NO" id="hzx-EF-hyx">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -609,11 +606,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 14" id="83O-mJ-Uy2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PrE-98-4XB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_14" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-tF-gxO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -634,11 +631,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 13" id="Ifx-6N-zMi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DtA-2g-6Nz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_13" translatesAutoresizingMaskIntoConstraints="NO" id="zzr-7M-Z6V">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -659,11 +656,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 12" id="88d-5L-szC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jqx-VK-Fld">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_12" translatesAutoresizingMaskIntoConstraints="NO" id="HcO-C6-0xJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -684,11 +681,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 11" id="44z-nR-OEd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mez-7u-d1z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_11" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-YV-6Fg">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -709,11 +706,11 @@
             <objects>
                 <viewController storyboardIdentifier="Help Page 5" id="mp7-H6-Wob" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tMK-Pz-D78">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_05" translatesAutoresizingMaskIntoConstraints="NO" id="ioT-lO-REs">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -733,28 +730,28 @@
     <resources>
         <image name="cameraTab" width="30" height="30"/>
         <image name="checkBubble" width="30" height="30"/>
-        <image name="endButton" width="333" height="333"/>
+        <image name="endButton" width="333.66665649414062" height="333.33334350585938"/>
         <image name="galleryTab" width="30" height="30"/>
         <image name="helpPage_00" width="375" height="812"/>
-        <image name="helpPage_01" width="375" height="812"/>
-        <image name="helpPage_02" width="375" height="812"/>
-        <image name="helpPage_03" width="375" height="812"/>
-        <image name="helpPage_04" width="375" height="812"/>
-        <image name="helpPage_05" width="375" height="812"/>
-        <image name="helpPage_06" width="375" height="812"/>
-        <image name="helpPage_07" width="375" height="812"/>
-        <image name="helpPage_08" width="375" height="812"/>
-        <image name="helpPage_09" width="375" height="812"/>
-        <image name="helpPage_10" width="375" height="812"/>
-        <image name="helpPage_11" width="375" height="812"/>
-        <image name="helpPage_12" width="375" height="812"/>
-        <image name="helpPage_13" width="375" height="812"/>
-        <image name="helpPage_14" width="375" height="812"/>
+        <image name="helpPage_01" width="375.33334350585938" height="812"/>
+        <image name="helpPage_02" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_03" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_04" width="375" height="812.33331298828125"/>
+        <image name="helpPage_05" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_06" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_07" width="375.33334350585938" height="812"/>
+        <image name="helpPage_08" width="375.33334350585938" height="812"/>
+        <image name="helpPage_09" width="375.33334350585938" height="812"/>
+        <image name="helpPage_10" width="375.33334350585938" height="812"/>
+        <image name="helpPage_11" width="375" height="812.33331298828125"/>
+        <image name="helpPage_12" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_13" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_14" width="375.33334350585938" height="812.33331298828125"/>
         <image name="helpTab" width="30" height="30"/>
         <image name="settingsTab" width="30" height="30"/>
-        <image name="startButton" width="333" height="333"/>
+        <image name="startButton" width="333.66665649414062" height="333.33334350585938"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cha-8O-nIJ"/>
+        <segue reference="JzF-IY-gsQ"/>
     </inferredMetricsTieBreakers>
 </document>

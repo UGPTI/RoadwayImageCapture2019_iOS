@@ -126,11 +126,24 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
         let resolutionPickerView = UIPickerView()
         resolutionPickerView.delegate = self
         resolutionPickerView.tag = 1
+        //get selected resolution
+        let quality = UserDefaults.standard.integer(forKey: "quality")
+        if  quality >= 90 {
+            resolutionPickerView.selectedRow(inComponent: 0)
+        } else if quality >= 60 {
+            resolutionPickerView.selectedRow(inComponent: 1)
+        } else {
+            resolutionPickerView.selectedRow(inComponent: 2)
+        }
         resolutionTextfield.inputView = resolutionPickerView
         
         let distancePickerView = UIPickerView()
         distancePickerView.delegate = self
         distancePickerView.tag = 2
+        //set selected distance
+        let distance = UserDefaults.standard.integer(forKey: "distance")
+        let index = self.distance.index(of: distance)
+        distancePickerView.selectedRow(inComponent: index ?? 0)
         distanceTextfield.inputView = distancePickerView
     }
     
@@ -183,6 +196,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDelegate, 
         }
         
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }

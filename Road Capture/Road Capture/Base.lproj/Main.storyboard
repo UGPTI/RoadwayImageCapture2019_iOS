@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayQ-1a-kZZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayQ-1a-kZZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -131,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vC7-78-wjX">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="veu-f3-icv">
                                     <size key="itemSize" width="200" height="200"/>
@@ -283,51 +283,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzQ-UB-VBU">
-                                <rect key="frame" x="145.5" y="514" width="84" height="84"/>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8Z-Bm-ORb">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="618"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-55-Lus">
+                                        <rect key="frame" x="283" y="526" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZGW-55-Lus" secondAttribute="height" multiplier="1:1" id="ciE-EA-c4u"/>
+                                            <constraint firstAttribute="height" constant="84" id="ckg-ME-qaA"/>
+                                            <constraint firstAttribute="width" constant="84" id="obW-oO-i3s"/>
+                                        </constraints>
+                                        <state key="normal" image="endButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="endButton:" destination="Al3-9I-E9z" eventType="touchUpInside" id="fBw-da-Urm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JzQ-UB-VBU">
+                                        <rect key="frame" x="145" y="526" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="JzQ-UB-VBU" secondAttribute="height" multiplier="1:1" id="2e9-qL-muS"/>
+                                            <constraint firstAttribute="width" constant="84" id="Orc-cb-Gah"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="bty-LK-VT2"/>
+                                        </constraints>
+                                        <state key="normal" image="startButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startButton:" destination="Al3-9I-E9z" eventType="touchUpInside" id="GBc-EN-3Id"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="JzQ-UB-VBU" secondAttribute="height" multiplier="1:1" id="2e9-qL-muS"/>
-                                    <constraint firstAttribute="width" constant="84" id="Orc-cb-Gah"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="bty-LK-VT2"/>
+                                    <constraint firstItem="JzQ-UB-VBU" firstAttribute="leading" secondItem="h8Z-Bm-ORb" secondAttribute="leading" constant="145" id="EJ8-jj-jhf"/>
+                                    <constraint firstItem="JzQ-UB-VBU" firstAttribute="top" secondItem="ZGW-55-Lus" secondAttribute="top" id="Hga-TP-bAq"/>
+                                    <constraint firstItem="JzQ-UB-VBU" firstAttribute="centerX" secondItem="h8Z-Bm-ORb" secondAttribute="centerX" id="K8c-2J-PPB"/>
+                                    <constraint firstItem="JzQ-UB-VBU" firstAttribute="bottom" secondItem="h8Z-Bm-ORb" secondAttribute="bottomMargin" id="YWz-bx-rga"/>
+                                    <constraint firstItem="ZGW-55-Lus" firstAttribute="leading" secondItem="JzQ-UB-VBU" secondAttribute="trailing" constant="54" id="yvd-MJ-t2j"/>
                                 </constraints>
-                                <state key="normal" image="startButton">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startButton:" destination="Al3-9I-E9z" eventType="touchUpInside" id="GBc-EN-3Id"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGW-55-Lus">
-                                <rect key="frame" x="275" y="514" width="84" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZGW-55-Lus" secondAttribute="height" multiplier="1:1" id="ciE-EA-c4u"/>
-                                    <constraint firstAttribute="height" constant="84" id="ckg-ME-qaA"/>
-                                    <constraint firstAttribute="width" constant="84" id="obW-oO-i3s"/>
-                                </constraints>
-                                <state key="normal" image="endButton">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="endButton:" destination="Al3-9I-E9z" eventType="touchUpInside" id="fBw-da-Urm"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JzQ-UB-VBU" firstAttribute="centerX" secondItem="2kP-oq-oms" secondAttribute="centerX" id="BZa-DY-ga3"/>
-                            <constraint firstItem="ZGW-55-Lus" firstAttribute="leading" secondItem="JzQ-UB-VBU" secondAttribute="trailing" constant="45.5" id="SC7-Mu-a4r"/>
-                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="JzQ-UB-VBU" secondAttribute="bottom" constant="20" id="fH2-Nt-xqA"/>
-                            <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="ZGW-55-Lus" secondAttribute="bottom" constant="20" id="kfF-CD-I2E"/>
+                            <constraint firstItem="h8Z-Bm-ORb" firstAttribute="bottom" secondItem="k8c-TV-nCY" secondAttribute="bottom" id="AZ2-Te-0oR"/>
+                            <constraint firstItem="h8Z-Bm-ORb" firstAttribute="leading" secondItem="2kP-oq-oms" secondAttribute="leading" id="Zas-Tq-rX6"/>
+                            <constraint firstItem="h8Z-Bm-ORb" firstAttribute="top" secondItem="2kP-oq-oms" secondAttribute="top" id="emy-za-mqh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k8c-TV-nCY"/>
                     </view>
@@ -733,28 +744,28 @@
     <resources>
         <image name="cameraTab" width="30" height="30"/>
         <image name="checkBubble" width="30" height="30"/>
-        <image name="endButton" width="333" height="333"/>
+        <image name="endButton" width="333.66665649414062" height="333.33334350585938"/>
         <image name="galleryTab" width="30" height="30"/>
         <image name="helpPage_00" width="375" height="812"/>
-        <image name="helpPage_01" width="375" height="812"/>
-        <image name="helpPage_02" width="375" height="812"/>
-        <image name="helpPage_03" width="375" height="812"/>
-        <image name="helpPage_04" width="375" height="812"/>
-        <image name="helpPage_05" width="375" height="812"/>
-        <image name="helpPage_06" width="375" height="812"/>
-        <image name="helpPage_07" width="375" height="812"/>
-        <image name="helpPage_08" width="375" height="812"/>
-        <image name="helpPage_09" width="375" height="812"/>
-        <image name="helpPage_10" width="375" height="812"/>
-        <image name="helpPage_11" width="375" height="812"/>
-        <image name="helpPage_12" width="375" height="812"/>
-        <image name="helpPage_13" width="375" height="812"/>
-        <image name="helpPage_14" width="375" height="812"/>
+        <image name="helpPage_01" width="375.33334350585938" height="812"/>
+        <image name="helpPage_02" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_03" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_04" width="375" height="812.33331298828125"/>
+        <image name="helpPage_05" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_06" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_07" width="375.33334350585938" height="812"/>
+        <image name="helpPage_08" width="375.33334350585938" height="812"/>
+        <image name="helpPage_09" width="375.33334350585938" height="812"/>
+        <image name="helpPage_10" width="375.33334350585938" height="812"/>
+        <image name="helpPage_11" width="375" height="812.33331298828125"/>
+        <image name="helpPage_12" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_13" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_14" width="375.33334350585938" height="812.33331298828125"/>
         <image name="helpTab" width="30" height="30"/>
         <image name="settingsTab" width="30" height="30"/>
-        <image name="startButton" width="333" height="333"/>
+        <image name="startButton" width="333.66665649414062" height="333.33334350585938"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cha-8O-nIJ"/>
+        <segue reference="JzF-IY-gsQ"/>
     </inferredMetricsTieBreakers>
 </document>

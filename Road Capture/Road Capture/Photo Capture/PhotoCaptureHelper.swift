@@ -21,6 +21,7 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     var cameraView: CameraView?
     var currentImage : UIImage?
+    var currentDevice: UIDevice!
 
     var triggerFunction : () -> Void = {}
     
@@ -45,6 +46,10 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
     }
     
     func setupDevice() {
+        
+        currentDevice = .current
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+        
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
         
         let devices = deviceDiscoverySession.devices
@@ -78,6 +83,7 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
         cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         cameraPreviewLayer?.frame = cameraView?.bounds ?? view.frame
+        photoOutput?.connection(with: .video)?.videoOrientation = managePhotoOrientation()
         
         cameraView?.layer.addSublayer(cameraPreviewLayer!)
         cameraView?.addPreviewLayer(previewLayer: cameraPreviewLayer)
@@ -111,7 +117,34 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
         //Embed thumnail image
         let settings = AVCapturePhotoSettings()
         
+        //set orientation
+        photoOutput?.connection(with: .video)?.videoOrientation = managePhotoOrientation()
+        
         photoOutput?.capturePhoto(with: settings, delegate: self)
+    }
+    
+    func managePhotoOrientation() -> AVCaptureVideoOrientation {
+        var deviceOrientation: UIDeviceOrientation
+        var imageOrientation: AVCaptureVideoOrientation
+        
+        deviceOrientation = currentDevice.orientation
+        
+        if deviceOrientation == .portrait {
+            imageOrientation = .portrait
+            print("portrait")
+        } else if deviceOrientation == .landscapeLeft {
+            imageOrientation = .landscapeLeft
+            print("landscape left")
+        } else if deviceOrientation == .landscapeRight {
+            imageOrientation = .landscapeRight
+            print("landscape right")
+        } else if deviceOrientation == .portraitUpsideDown {
+            imageOrientation = .portraitUpsideDown
+            print("upside down")
+        } else {
+            imageOrientation = .portrait
+        }
+        return imageOrientation
     }
 }
 

@@ -19,13 +19,13 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
     var currentCamera: AVCaptureDevice?
     var photoOutput: AVCapturePhotoOutput?
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
-    var cameraView: UIView?
+    var cameraView: CameraView?
     var currentImage : UIImage?
 
     var triggerFunction : () -> Void = {}
     
     //init
-    init(view: UIView, cameraView: UIView) {
+    init(cameraView: CameraView) {
         super.init()
         
         //set properties
@@ -35,7 +35,7 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
         setupCaptureSession()
         setupDevice()
         setupInputOutput()
-        setupPreviewLayer(view: view)
+        setupPreviewLayer(view: cameraView)
         startRunningCaptureSession()
     }
     
@@ -75,12 +75,16 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
     }
     
     func setupPreviewLayer(view: UIView) {
+        cameraView?.videoPreviewLayer = cameraPreviewLayer
+        
         cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
         
         cameraPreviewLayer?.frame = view.frame
         view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
+        
+        
     }
     
     func startRunningCaptureSession() {

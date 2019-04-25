@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayQ-1a-kZZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayQ-1a-kZZ">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -277,7 +277,7 @@
         <scene sceneID="LVK-fU-HPb">
             <objects>
                 <viewController id="Al3-9I-E9z" customClass="CameraViewController" customModule="Road_Capture" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2kP-oq-oms" customClass="CameraView" customModule="Road_Capture" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="2kP-oq-oms" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -318,12 +318,20 @@
                                     <action selector="endButton:" destination="Al3-9I-E9z" eventType="touchUpInside" id="fBw-da-Urm"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riR-GU-l87" userLabel="Camera View" customClass="CameraView" customModule="Road_Capture" customModuleProvider="target">
+                                <rect key="frame" x="-12" y="0.0" width="426" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="riR-GU-l87" secondAttribute="trailing" id="A1g-nk-MYa"/>
                             <constraint firstItem="JzQ-UB-VBU" firstAttribute="centerX" secondItem="k8c-TV-nCY" secondAttribute="centerX" id="Gbn-gi-x6O"/>
                             <constraint firstItem="k8c-TV-nCY" firstAttribute="trailing" secondItem="ZGW-55-Lus" secondAttribute="trailing" constant="20" id="Gzb-g5-emG"/>
+                            <constraint firstItem="riR-GU-l87" firstAttribute="top" secondItem="2kP-oq-oms" secondAttribute="top" id="Iah-Rs-JVt"/>
+                            <constraint firstItem="riR-GU-l87" firstAttribute="leading" secondItem="2kP-oq-oms" secondAttribute="leadingMargin" constant="-32" id="SsR-Rp-0yx"/>
                             <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="JzQ-UB-VBU" secondAttribute="bottom" constant="20" id="Xkp-Bp-hBw"/>
+                            <constraint firstAttribute="bottom" secondItem="riR-GU-l87" secondAttribute="bottom" id="iLX-qZ-DD8"/>
                             <constraint firstItem="k8c-TV-nCY" firstAttribute="bottom" secondItem="ZGW-55-Lus" secondAttribute="bottom" constant="20" id="sho-zT-M41"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k8c-TV-nCY"/>
@@ -331,7 +339,7 @@
                     <tabBarItem key="tabBarItem" title="Camera" image="cameraTab" id="eDw-Nx-tKJ"/>
                     <navigationItem key="navigationItem" id="Ft5-H9-Kng"/>
                     <connections>
-                        <outlet property="cameraView" destination="2kP-oq-oms" id="SUa-kB-hIw"/>
+                        <outlet property="cameraView" destination="riR-GU-l87" id="Dvx-kf-Lu1"/>
                         <outlet property="endButton" destination="ZGW-55-Lus" id="Kno-jy-UGR"/>
                         <outlet property="startButton" destination="JzQ-UB-VBU" id="nUr-hQ-zlP"/>
                         <segue destination="WOH-wg-Efl" kind="show" identifier="showGallery_Segue" id="JzF-IY-gsQ"/>
@@ -339,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J10-9n-5gx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71.200000000000003" y="-412.44377811094455"/>
+            <point key="canvasLocation" x="-72.463768115942031" y="-412.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="iCM-60-YkS">
@@ -730,26 +738,26 @@
     <resources>
         <image name="cameraTab" width="30" height="30"/>
         <image name="checkBubble" width="30" height="30"/>
-        <image name="endButton" width="333" height="333"/>
+        <image name="endButton" width="333.66665649414062" height="333.33334350585938"/>
         <image name="galleryTab" width="30" height="30"/>
         <image name="helpPage_00" width="375" height="812"/>
-        <image name="helpPage_01" width="375" height="812"/>
-        <image name="helpPage_02" width="375" height="812"/>
-        <image name="helpPage_03" width="375" height="812"/>
-        <image name="helpPage_04" width="375" height="812"/>
-        <image name="helpPage_05" width="375" height="812"/>
-        <image name="helpPage_06" width="375" height="812"/>
-        <image name="helpPage_07" width="375" height="812"/>
-        <image name="helpPage_08" width="375" height="812"/>
-        <image name="helpPage_09" width="375" height="812"/>
-        <image name="helpPage_10" width="375" height="812"/>
-        <image name="helpPage_11" width="375" height="812"/>
-        <image name="helpPage_12" width="375" height="812"/>
-        <image name="helpPage_13" width="375" height="812"/>
-        <image name="helpPage_14" width="375" height="812"/>
+        <image name="helpPage_01" width="375.33334350585938" height="812"/>
+        <image name="helpPage_02" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_03" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_04" width="375" height="812.33331298828125"/>
+        <image name="helpPage_05" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_06" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_07" width="375.33334350585938" height="812"/>
+        <image name="helpPage_08" width="375.33334350585938" height="812"/>
+        <image name="helpPage_09" width="375.33334350585938" height="812"/>
+        <image name="helpPage_10" width="375.33334350585938" height="812"/>
+        <image name="helpPage_11" width="375" height="812.33331298828125"/>
+        <image name="helpPage_12" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_13" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_14" width="375.33334350585938" height="812.33331298828125"/>
         <image name="helpTab" width="30" height="30"/>
         <image name="settingsTab" width="30" height="30"/>
-        <image name="startButton" width="333" height="333"/>
+        <image name="startButton" width="333.66665649414062" height="333.33334350585938"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JzF-IY-gsQ"/>

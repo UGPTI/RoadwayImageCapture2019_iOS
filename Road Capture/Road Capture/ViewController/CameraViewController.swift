@@ -68,6 +68,8 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.sendSubviewToBack(cameraView)
+        
         //Dont let the screen go to sleep
         UIApplication.shared.isIdleTimerDisabled = true
         
@@ -90,7 +92,7 @@ class CameraViewController: UIViewController {
         endButton.isEnabled = false
         
         //init helpers
-        photoCaptureHelper = PhotoCaptureHelper.init(view: self.view, cameraView: cameraView)
+        photoCaptureHelper = PhotoCaptureHelper.init(cameraView: cameraView)
         locationTracker = LocationTracking.init(triggerFunction: takePhoto)
     }
 

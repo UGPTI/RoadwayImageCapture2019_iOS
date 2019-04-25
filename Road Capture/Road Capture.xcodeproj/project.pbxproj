@@ -25,6 +25,7 @@
 		B24BF63C2200EA0B009C5C51 /* Road_CaptureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24BF63B2200EA0B009C5C51 /* Road_CaptureUITests.swift */; };
 		B2624B662266374F006BDF05 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2624B652266374F006BDF05 /* NetworkManager.swift */; };
 		B26C0AFD226E174100017477 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26C0AFC226E174100017477 /* PasswordViewController.swift */; };
+		B26C0AFF2270AEC900017477 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26C0AFE2270AEC900017477 /* CameraView.swift */; };
 		B28CFF682244183F00E30A14 /* StoreImagesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28CFF672244183F00E30A14 /* StoreImagesHelper.swift */; };
 		B28CFF6B224418FA00E30A14 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B28CFF69224418FA00E30A14 /* Model.xcdatamodeld */; };
 		B294FB3A2251864B0098BF1D /* FetchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B294FB392251864B0098BF1D /* FetchController.swift */; };
@@ -81,6 +82,7 @@
 		B24BF63D2200EA0B009C5C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2624B652266374F006BDF05 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B26C0AFC226E174100017477 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		B26C0AFE2270AEC900017477 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		B28CFF672244183F00E30A14 /* StoreImagesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreImagesHelper.swift; sourceTree = "<group>"; };
 		B28CFF6A224418FA00E30A14 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		B294FB392251864B0098BF1D /* FetchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B22A2C5722276BFE005D3C5A /* PhotoCaptureHelper.swift */,
+				B26C0AFE2270AEC900017477 /* CameraView.swift */,
 			);
 			path = "Photo Capture";
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				B294FB3E225191F50098BF1D /* GalleryCollectionViewDelegate.swift in Sources */,
 				B238C14C2210CD6700DB9017 /* LocationTracking.swift in Sources */,
 				B24BF61C2200EA0A009C5C51 /* AppDelegate.swift in Sources */,
+				B26C0AFF2270AEC900017477 /* CameraView.swift in Sources */,
 				B22A2C5822276BFE005D3C5A /* PhotoCaptureHelper.swift in Sources */,
 				B2624B662266374F006BDF05 /* NetworkManager.swift in Sources */,
 				B26C0AFD226E174100017477 /* PasswordViewController.swift in Sources */,
@@ -702,7 +706,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -721,7 +725,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Road-Capture1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayQ-1a-kZZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayQ-1a-kZZ">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -277,7 +277,7 @@
         <scene sceneID="LVK-fU-HPb">
             <objects>
                 <viewController id="Al3-9I-E9z" customClass="CameraViewController" customModule="Road_Capture" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2kP-oq-oms">
+                    <view key="view" contentMode="scaleToFill" id="2kP-oq-oms" customClass="CameraView" customModule="Road_Capture" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -730,26 +730,26 @@
     <resources>
         <image name="cameraTab" width="30" height="30"/>
         <image name="checkBubble" width="30" height="30"/>
-        <image name="endButton" width="333.66665649414062" height="333.33334350585938"/>
+        <image name="endButton" width="333" height="333"/>
         <image name="galleryTab" width="30" height="30"/>
         <image name="helpPage_00" width="375" height="812"/>
-        <image name="helpPage_01" width="375.33334350585938" height="812"/>
-        <image name="helpPage_02" width="375.33334350585938" height="812.33331298828125"/>
-        <image name="helpPage_03" width="375.33334350585938" height="812.33331298828125"/>
-        <image name="helpPage_04" width="375" height="812.33331298828125"/>
-        <image name="helpPage_05" width="375.33334350585938" height="812.33331298828125"/>
-        <image name="helpPage_06" width="375.33334350585938" height="812.33331298828125"/>
-        <image name="helpPage_07" width="375.33334350585938" height="812"/>
-        <image name="helpPage_08" width="375.33334350585938" height="812"/>
-        <image name="helpPage_09" width="375.33334350585938" height="812"/>
-        <image name="helpPage_10" width="375.33334350585938" height="812"/>
-        <image name="helpPage_11" width="375" height="812.33331298828125"/>
-        <image name="helpPage_12" width="375.33334350585938" height="812.33331298828125"/>
-        <image name="helpPage_13" width="375.33334350585938" height="812.33331298828125"/>
-        <image name="helpPage_14" width="375.33334350585938" height="812.33331298828125"/>
+        <image name="helpPage_01" width="375" height="812"/>
+        <image name="helpPage_02" width="375" height="812"/>
+        <image name="helpPage_03" width="375" height="812"/>
+        <image name="helpPage_04" width="375" height="812"/>
+        <image name="helpPage_05" width="375" height="812"/>
+        <image name="helpPage_06" width="375" height="812"/>
+        <image name="helpPage_07" width="375" height="812"/>
+        <image name="helpPage_08" width="375" height="812"/>
+        <image name="helpPage_09" width="375" height="812"/>
+        <image name="helpPage_10" width="375" height="812"/>
+        <image name="helpPage_11" width="375" height="812"/>
+        <image name="helpPage_12" width="375" height="812"/>
+        <image name="helpPage_13" width="375" height="812"/>
+        <image name="helpPage_14" width="375" height="812"/>
         <image name="helpTab" width="30" height="30"/>
         <image name="settingsTab" width="30" height="30"/>
-        <image name="startButton" width="333.66665649414062" height="333.33334350585938"/>
+        <image name="startButton" width="333" height="333"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JzF-IY-gsQ"/>

@@ -63,7 +63,7 @@ class CameraViewController: UIViewController {
         }
     }
     
-    @IBOutlet var cameraView: UIView!
+    @IBOutlet var cameraView: CameraView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -66,7 +66,7 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
             captureSession.addInput(captureDeviceInput)
             
             photoOutput = AVCapturePhotoOutput()
-        photoOutput?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
+            photoOutput?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
             
             captureSession.addOutput(photoOutput!)
         } catch {
@@ -75,16 +75,19 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
     }
     
     func setupPreviewLayer(view: UIView) {
-        cameraView?.videoPreviewLayer = cameraPreviewLayer
-        
         cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+        cameraPreviewLayer?.frame = cameraView?.bounds ?? view.frame
         
-        cameraPreviewLayer?.frame = view.frame
-        view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
+        cameraView?.layer.addSublayer(cameraPreviewLayer!)
+        cameraView?.addPreviewLayer(previewLayer: cameraPreviewLayer)
         
-        
+//        cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+//        cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+//        cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+//
+//        cameraPreviewLayer?.frame = view.frame
+//        view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
     }
     
     func startRunningCaptureSession() {

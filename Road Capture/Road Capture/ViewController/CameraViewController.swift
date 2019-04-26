@@ -171,40 +171,53 @@ class CameraViewController: UIViewController {
             }
 
             //thumbnail width and hieght
-            let width = Float(image.size.width)
-            let height = Float(image.size.height)
+            let height = image.size.height
+            let width = image.size.width
             let ratio = width/height
-            var newWidth : Int?
-            var newHeight : Int?
+            var thumbnail : UIImage!
+            
             if ratio > 1 {
-                //portrait
-                newHeight = 300
-                let scaleFactor = 300.0 / height
-                newWidth = Int(width * scaleFactor)
-            } else {
                 //landscape
-                newWidth = 300
-                let scaleFactor = 300.0 / width
-                newHeight = Int(height * scaleFactor)
+                thumbnail = self.imageWithImage(sourceImage: image, scaledToWidth: 300)
+            } else {
+                //portrait
+                let scaleFactor = 300.0 / height
+                let newWidth = Int(width * scaleFactor)
+                
+                thumbnail = self.imageWithImage(sourceImage: image, scaledToWidth: newWidth )
             }
-            let newSize = CGSize(width: newWidth ?? 300, height: newHeight ?? 400)
             
             //Save photo using core data - protect against FAILURES!!!! dont use !
-            StoreImagesHelper.storeImageCapture(id: self.getDateInt(), latitude: lat, longitude: long, quality: quality, agency: agency, image: image, thumbnail: image.resizeImageUsingVImage(size: newSize)!)
+            StoreImagesHelper.storeImageCapture(id: self.getDateInt(), latitude: lat, longitude: long, quality: quality, agency: agency, image: image, thumbnail: thumbnail)
         
             //enable buttons
             self.startButton.isEnabled = true
             self.startButton.imageView?.alpha = 1
             self.endButton.isEnabled = true
             self.endButton.imageView?.alpha = 1
-            
         })
     }
     
-    //MOVE LATER!!!!!!
     func getDateInt() -> Int {
         let date = Date().timeIntervalSince1970 //This is a Double
         return Int(date*1000)
+    }
+    
+    func imageWithImage (sourceImage : UIImage, scaledToWidth: Int) -> UIImage {
+        let oldWidth : CGFloat = sourceImage.size.width
+        let scaleFactor : CGFloat = CGFloat(scaledToWidth) / oldWidth
+    
+        let newHeight : CGFloat = sourceImage.size.height * scaleFactor
+        let newWidth : CGFloat = oldWidth * scaleFactor;
+    
+        let size = CGSize(width: newWidth, height: newHeight)
+        
+        UIGraphicsBeginImageContext(size)
+        sourceImage.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
     
     //button animation

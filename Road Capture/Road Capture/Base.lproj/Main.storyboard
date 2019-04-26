@@ -358,14 +358,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_00" translatesAutoresizingMaskIntoConstraints="NO" id="ict-T4-CvE">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ict-T4-CvE" firstAttribute="leading" secondItem="3Ju-8J-LxQ" secondAttribute="leading" id="P7R-iu-JHL"/>
-                            <constraint firstItem="ict-T4-CvE" firstAttribute="top" secondItem="SAT-jo-t0b" secondAttribute="top" id="XwD-QH-nq0"/>
-                            <constraint firstItem="ict-T4-CvE" firstAttribute="bottom" secondItem="SAT-jo-t0b" secondAttribute="bottom" id="aQj-af-bKi"/>
+                            <constraint firstItem="ict-T4-CvE" firstAttribute="bottom" secondItem="SAT-jo-t0b" secondAttribute="bottom" id="5zs-6a-hrA"/>
+                            <constraint firstAttribute="trailing" secondItem="ict-T4-CvE" secondAttribute="trailing" id="JdC-Dl-51W"/>
+                            <constraint firstItem="ict-T4-CvE" firstAttribute="leading" secondItem="3Ju-8J-LxQ" secondAttribute="leading" id="ezD-SC-bDb"/>
+                            <constraint firstItem="ict-T4-CvE" firstAttribute="top" secondItem="SAT-jo-t0b" secondAttribute="top" id="mwF-VF-QAe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SAT-jo-t0b"/>
                     </view>
@@ -393,14 +394,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_01" translatesAutoresizingMaskIntoConstraints="NO" id="JE3-LD-CX7">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JE3-LD-CX7" firstAttribute="leading" secondItem="azX-uT-IPc" secondAttribute="leading" id="AXm-hp-tOA"/>
-                            <constraint firstItem="JE3-LD-CX7" firstAttribute="top" secondItem="hrV-8U-qJj" secondAttribute="top" id="WlM-tH-M09"/>
-                            <constraint firstItem="JE3-LD-CX7" firstAttribute="bottom" secondItem="hrV-8U-qJj" secondAttribute="bottom" id="ptc-Kd-bxJ"/>
+                            <constraint firstAttribute="trailing" secondItem="JE3-LD-CX7" secondAttribute="trailing" id="N90-89-Bz4"/>
+                            <constraint firstItem="JE3-LD-CX7" firstAttribute="top" secondItem="hrV-8U-qJj" secondAttribute="top" id="NG2-DW-zFi"/>
+                            <constraint firstItem="JE3-LD-CX7" firstAttribute="bottom" secondItem="hrV-8U-qJj" secondAttribute="bottom" id="OxH-QR-Ebf"/>
+                            <constraint firstItem="JE3-LD-CX7" firstAttribute="leading" secondItem="azX-uT-IPc" secondAttribute="leading" id="PXN-Tu-tK2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hrV-8U-qJj"/>
                     </view>
@@ -417,15 +419,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_02" translatesAutoresizingMaskIntoConstraints="NO" id="lM9-EU-IO5">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_02" translatesAutoresizingMaskIntoConstraints="NO" id="lM9-EU-IO5">
+                                <rect key="frame" x="20" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lM9-EU-IO5" firstAttribute="leading" secondItem="3bM-ky-aTm" secondAttribute="leading" id="9Fw-ar-ceU"/>
-                            <constraint firstItem="lM9-EU-IO5" firstAttribute="top" secondItem="9H8-7x-LQe" secondAttribute="top" id="Qk9-PJ-K80"/>
-                            <constraint firstItem="lM9-EU-IO5" firstAttribute="bottom" secondItem="9H8-7x-LQe" secondAttribute="bottom" id="pUI-Rt-zEW"/>
+                            <constraint firstItem="lM9-EU-IO5" firstAttribute="leading" secondItem="3bM-ky-aTm" secondAttribute="leadingMargin" id="7fY-Le-Njw"/>
+                            <constraint firstItem="lM9-EU-IO5" firstAttribute="top" secondItem="9H8-7x-LQe" secondAttribute="top" id="JYn-cD-5Kg"/>
+                            <constraint firstItem="lM9-EU-IO5" firstAttribute="bottom" secondItem="9H8-7x-LQe" secondAttribute="bottom" id="WTD-7A-l9z"/>
+                            <constraint firstItem="lM9-EU-IO5" firstAttribute="centerX" secondItem="3bM-ky-aTm" secondAttribute="centerX" id="dgd-af-hA5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9H8-7x-LQe"/>
                     </view>
@@ -442,15 +445,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="tGU-AP-BXB">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_03" translatesAutoresizingMaskIntoConstraints="NO" id="tGU-AP-BXB">
+                                <rect key="frame" x="20" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tGU-AP-BXB" firstAttribute="top" secondItem="wcB-C3-FP5" secondAttribute="top" id="Dbj-rT-D6M"/>
-                            <constraint firstItem="tGU-AP-BXB" firstAttribute="leading" secondItem="40v-Hz-hTI" secondAttribute="leading" id="HmJ-hO-NBc"/>
-                            <constraint firstItem="tGU-AP-BXB" firstAttribute="bottom" secondItem="wcB-C3-FP5" secondAttribute="bottom" id="Qms-Ky-AA4"/>
+                            <constraint firstItem="tGU-AP-BXB" firstAttribute="top" secondItem="wcB-C3-FP5" secondAttribute="top" id="3iA-oO-cAj"/>
+                            <constraint firstItem="tGU-AP-BXB" firstAttribute="leading" secondItem="40v-Hz-hTI" secondAttribute="leadingMargin" id="HQT-58-sU7"/>
+                            <constraint firstItem="tGU-AP-BXB" firstAttribute="centerX" secondItem="40v-Hz-hTI" secondAttribute="centerX" id="ayY-9z-gSy"/>
+                            <constraint firstItem="tGU-AP-BXB" firstAttribute="bottom" secondItem="wcB-C3-FP5" secondAttribute="bottom" id="jhY-DP-1ea"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wcB-C3-FP5"/>
                     </view>
@@ -467,15 +471,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_04" translatesAutoresizingMaskIntoConstraints="NO" id="tbv-t9-dPR">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_04" translatesAutoresizingMaskIntoConstraints="NO" id="tbv-t9-dPR">
+                                <rect key="frame" x="19" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tbv-t9-dPR" firstAttribute="leading" secondItem="4GG-Yd-pgq" secondAttribute="leading" id="OAr-Tc-zdw"/>
-                            <constraint firstItem="tbv-t9-dPR" firstAttribute="bottom" secondItem="3B6-i4-9aR" secondAttribute="bottom" id="P8q-Vw-4sF"/>
-                            <constraint firstItem="tbv-t9-dPR" firstAttribute="top" secondItem="3B6-i4-9aR" secondAttribute="top" id="epI-Aa-q0o"/>
+                            <constraint firstItem="tbv-t9-dPR" firstAttribute="bottom" secondItem="3B6-i4-9aR" secondAttribute="bottom" id="5vD-jW-h2c"/>
+                            <constraint firstItem="tbv-t9-dPR" firstAttribute="trailing" secondItem="4GG-Yd-pgq" secondAttribute="trailingMargin" id="pQV-qr-wI0"/>
+                            <constraint firstItem="tbv-t9-dPR" firstAttribute="top" secondItem="3B6-i4-9aR" secondAttribute="top" id="u1o-Hh-8zW"/>
+                            <constraint firstItem="tbv-t9-dPR" firstAttribute="centerX" secondItem="4GG-Yd-pgq" secondAttribute="centerX" id="vun-cJ-7JO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3B6-i4-9aR"/>
                     </view>
@@ -492,15 +497,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_06" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-95-ETH">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_06" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-95-ETH">
+                                <rect key="frame" x="20" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dw5-95-ETH" firstAttribute="bottom" secondItem="209-UV-RD3" secondAttribute="bottom" id="sST-xw-jTc"/>
-                            <constraint firstItem="dw5-95-ETH" firstAttribute="leading" secondItem="dUr-Zy-v1s" secondAttribute="leading" id="v8z-t4-uf6"/>
-                            <constraint firstItem="dw5-95-ETH" firstAttribute="top" secondItem="209-UV-RD3" secondAttribute="top" id="wfT-cQ-xeC"/>
+                            <constraint firstItem="dw5-95-ETH" firstAttribute="bottom" secondItem="209-UV-RD3" secondAttribute="bottom" id="99X-pA-Xra"/>
+                            <constraint firstItem="dw5-95-ETH" firstAttribute="centerX" secondItem="dUr-Zy-v1s" secondAttribute="centerX" id="Blx-lh-QKb"/>
+                            <constraint firstItem="dw5-95-ETH" firstAttribute="top" secondItem="209-UV-RD3" secondAttribute="top" id="C7n-yP-zlX"/>
+                            <constraint firstItem="dw5-95-ETH" firstAttribute="leading" secondItem="dUr-Zy-v1s" secondAttribute="leadingMargin" id="dYf-BR-NY1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="209-UV-RD3"/>
                     </view>
@@ -517,15 +523,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_08" translatesAutoresizingMaskIntoConstraints="NO" id="LuQ-3W-0eL">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_08" translatesAutoresizingMaskIntoConstraints="NO" id="LuQ-3W-0eL">
+                                <rect key="frame" x="20" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LuQ-3W-0eL" firstAttribute="bottom" secondItem="hso-bb-1J2" secondAttribute="bottom" id="IF9-fd-Oka"/>
-                            <constraint firstItem="LuQ-3W-0eL" firstAttribute="leading" secondItem="JG5-Dx-jt8" secondAttribute="leading" id="MrW-x4-Ih9"/>
-                            <constraint firstItem="LuQ-3W-0eL" firstAttribute="top" secondItem="hso-bb-1J2" secondAttribute="top" id="dMA-bj-pIc"/>
+                            <constraint firstItem="LuQ-3W-0eL" firstAttribute="top" secondItem="hso-bb-1J2" secondAttribute="top" id="CM6-Xb-MER"/>
+                            <constraint firstItem="LuQ-3W-0eL" firstAttribute="bottom" secondItem="hso-bb-1J2" secondAttribute="bottom" id="orF-qU-wvu"/>
+                            <constraint firstItem="LuQ-3W-0eL" firstAttribute="leading" secondItem="JG5-Dx-jt8" secondAttribute="leadingMargin" id="qca-sV-Zwo"/>
+                            <constraint firstItem="LuQ-3W-0eL" firstAttribute="centerX" secondItem="JG5-Dx-jt8" secondAttribute="centerX" id="scu-X6-3Ow"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hso-bb-1J2"/>
                     </view>
@@ -542,15 +549,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_07" translatesAutoresizingMaskIntoConstraints="NO" id="Vg2-q2-qGB">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_07" translatesAutoresizingMaskIntoConstraints="NO" id="Vg2-q2-qGB">
+                                <rect key="frame" x="20" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Vg2-q2-qGB" firstAttribute="leading" secondItem="mF2-hF-CDe" secondAttribute="leading" id="A6g-aK-pw8"/>
-                            <constraint firstItem="Vg2-q2-qGB" firstAttribute="top" secondItem="Guk-M7-xBa" secondAttribute="top" id="VLS-Y2-l2W"/>
-                            <constraint firstItem="Vg2-q2-qGB" firstAttribute="bottom" secondItem="Guk-M7-xBa" secondAttribute="bottom" id="c0f-yz-fOf"/>
+                            <constraint firstItem="Vg2-q2-qGB" firstAttribute="centerX" secondItem="mF2-hF-CDe" secondAttribute="centerX" id="1Db-O4-Phc"/>
+                            <constraint firstItem="Vg2-q2-qGB" firstAttribute="bottom" secondItem="Guk-M7-xBa" secondAttribute="bottom" id="Bs3-ll-O0j"/>
+                            <constraint firstItem="Vg2-q2-qGB" firstAttribute="top" secondItem="Guk-M7-xBa" secondAttribute="top" id="q76-SV-zek"/>
+                            <constraint firstItem="Vg2-q2-qGB" firstAttribute="leading" secondItem="mF2-hF-CDe" secondAttribute="leadingMargin" id="qIT-Wh-RV5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Guk-M7-xBa"/>
                     </view>
@@ -567,15 +575,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_09" translatesAutoresizingMaskIntoConstraints="NO" id="TIS-zM-4CW">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_09" translatesAutoresizingMaskIntoConstraints="NO" id="TIS-zM-4CW">
+                                <rect key="frame" x="20" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TIS-zM-4CW" firstAttribute="top" secondItem="EH6-gi-1kL" secondAttribute="top" id="fXz-GS-4iq"/>
-                            <constraint firstItem="TIS-zM-4CW" firstAttribute="bottom" secondItem="EH6-gi-1kL" secondAttribute="bottom" id="pLF-Ai-A5c"/>
-                            <constraint firstItem="TIS-zM-4CW" firstAttribute="leading" secondItem="wBU-1r-bJ9" secondAttribute="leading" id="q6K-Lv-IUS"/>
+                            <constraint firstItem="TIS-zM-4CW" firstAttribute="centerX" secondItem="wBU-1r-bJ9" secondAttribute="centerX" id="0Rk-HD-Koo"/>
+                            <constraint firstItem="TIS-zM-4CW" firstAttribute="leading" secondItem="wBU-1r-bJ9" secondAttribute="leadingMargin" id="Iz0-pp-t8J"/>
+                            <constraint firstItem="TIS-zM-4CW" firstAttribute="top" secondItem="EH6-gi-1kL" secondAttribute="top" id="LfO-3w-ZRo"/>
+                            <constraint firstItem="TIS-zM-4CW" firstAttribute="bottom" secondItem="EH6-gi-1kL" secondAttribute="bottom" id="c5L-HB-d9z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EH6-gi-1kL"/>
                     </view>
@@ -592,15 +601,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_10" translatesAutoresizingMaskIntoConstraints="NO" id="hzx-EF-hyx">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_10" translatesAutoresizingMaskIntoConstraints="NO" id="hzx-EF-hyx">
+                                <rect key="frame" x="20" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hzx-EF-hyx" firstAttribute="bottom" secondItem="0TQ-7i-sGC" secondAttribute="bottom" id="1Ny-LY-EIC"/>
-                            <constraint firstItem="hzx-EF-hyx" firstAttribute="top" secondItem="0TQ-7i-sGC" secondAttribute="top" id="6z0-E7-gc1"/>
-                            <constraint firstItem="hzx-EF-hyx" firstAttribute="leading" secondItem="rQS-NB-DqA" secondAttribute="leading" id="Dp1-a7-GWB"/>
+                            <constraint firstItem="hzx-EF-hyx" firstAttribute="top" secondItem="0TQ-7i-sGC" secondAttribute="top" id="0Be-sI-OSm"/>
+                            <constraint firstItem="hzx-EF-hyx" firstAttribute="bottom" secondItem="0TQ-7i-sGC" secondAttribute="bottom" id="BBJ-f4-Mgg"/>
+                            <constraint firstItem="hzx-EF-hyx" firstAttribute="leading" secondItem="rQS-NB-DqA" secondAttribute="leadingMargin" id="Tha-yy-WEN"/>
+                            <constraint firstItem="hzx-EF-hyx" firstAttribute="centerX" secondItem="rQS-NB-DqA" secondAttribute="centerX" id="nEV-sZ-XPj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0TQ-7i-sGC"/>
                     </view>
@@ -617,15 +627,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_14" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-tF-gxO">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_14" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-tF-gxO">
+                                <rect key="frame" x="20" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="a8G-tF-gxO" firstAttribute="top" secondItem="MAW-Rc-x0e" secondAttribute="top" id="6Sw-XY-Okv"/>
-                            <constraint firstItem="a8G-tF-gxO" firstAttribute="bottom" secondItem="MAW-Rc-x0e" secondAttribute="bottom" id="Vv6-ir-tD8"/>
-                            <constraint firstItem="a8G-tF-gxO" firstAttribute="leading" secondItem="PrE-98-4XB" secondAttribute="leading" id="ZFg-07-VGT"/>
+                            <constraint firstItem="a8G-tF-gxO" firstAttribute="bottom" secondItem="MAW-Rc-x0e" secondAttribute="bottom" id="5BP-o0-t9j"/>
+                            <constraint firstItem="a8G-tF-gxO" firstAttribute="leading" secondItem="PrE-98-4XB" secondAttribute="leadingMargin" id="OJY-LB-HxK"/>
+                            <constraint firstItem="a8G-tF-gxO" firstAttribute="centerX" secondItem="PrE-98-4XB" secondAttribute="centerX" id="OoF-1Y-YP9"/>
+                            <constraint firstItem="a8G-tF-gxO" firstAttribute="top" secondItem="MAW-Rc-x0e" secondAttribute="top" id="Rm8-F5-bpx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MAW-Rc-x0e"/>
                     </view>
@@ -642,15 +653,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_13" translatesAutoresizingMaskIntoConstraints="NO" id="zzr-7M-Z6V">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_13" translatesAutoresizingMaskIntoConstraints="NO" id="zzr-7M-Z6V">
+                                <rect key="frame" x="20" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="zzr-7M-Z6V" firstAttribute="leading" secondItem="DtA-2g-6Nz" secondAttribute="leading" id="DCx-q9-gIV"/>
-                            <constraint firstItem="zzr-7M-Z6V" firstAttribute="top" secondItem="tXQ-ev-Ert" secondAttribute="top" id="kja-Jr-GnD"/>
-                            <constraint firstItem="zzr-7M-Z6V" firstAttribute="bottom" secondItem="tXQ-ev-Ert" secondAttribute="bottom" id="pFO-Me-nDz"/>
+                            <constraint firstItem="zzr-7M-Z6V" firstAttribute="leading" secondItem="DtA-2g-6Nz" secondAttribute="leadingMargin" id="1Lh-pC-kFM"/>
+                            <constraint firstItem="zzr-7M-Z6V" firstAttribute="top" secondItem="tXQ-ev-Ert" secondAttribute="top" id="4SN-GZ-A9v"/>
+                            <constraint firstItem="zzr-7M-Z6V" firstAttribute="centerX" secondItem="DtA-2g-6Nz" secondAttribute="centerX" id="PgY-nb-fLt"/>
+                            <constraint firstItem="zzr-7M-Z6V" firstAttribute="bottom" secondItem="tXQ-ev-Ert" secondAttribute="bottom" id="iZe-qm-NSY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tXQ-ev-Ert"/>
                     </view>
@@ -667,15 +679,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_12" translatesAutoresizingMaskIntoConstraints="NO" id="HcO-C6-0xJ">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_12" translatesAutoresizingMaskIntoConstraints="NO" id="HcO-C6-0xJ">
+                                <rect key="frame" x="19" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HcO-C6-0xJ" firstAttribute="bottom" secondItem="AIo-kG-SOK" secondAttribute="bottom" id="7ss-WL-XT6"/>
-                            <constraint firstItem="HcO-C6-0xJ" firstAttribute="leading" secondItem="jqx-VK-Fld" secondAttribute="leading" id="ifM-X2-eNX"/>
-                            <constraint firstItem="HcO-C6-0xJ" firstAttribute="top" secondItem="AIo-kG-SOK" secondAttribute="top" id="lc8-Vu-EjU"/>
+                            <constraint firstItem="HcO-C6-0xJ" firstAttribute="bottom" secondItem="AIo-kG-SOK" secondAttribute="bottom" id="8c7-yk-Q5z"/>
+                            <constraint firstItem="HcO-C6-0xJ" firstAttribute="trailing" secondItem="jqx-VK-Fld" secondAttribute="trailingMargin" id="BkH-hx-Ccn"/>
+                            <constraint firstItem="HcO-C6-0xJ" firstAttribute="centerX" secondItem="jqx-VK-Fld" secondAttribute="centerX" id="XMG-ta-OfV"/>
+                            <constraint firstItem="HcO-C6-0xJ" firstAttribute="top" secondItem="AIo-kG-SOK" secondAttribute="top" id="koF-Re-NwC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AIo-kG-SOK"/>
                     </view>
@@ -692,15 +705,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_11" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-YV-6Fg">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_11" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-YV-6Fg">
+                                <rect key="frame" x="19" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="wfh-YV-6Fg" firstAttribute="top" secondItem="cRu-Ah-bOi" secondAttribute="top" id="FZG-oh-Waf"/>
-                            <constraint firstItem="wfh-YV-6Fg" firstAttribute="bottom" secondItem="cRu-Ah-bOi" secondAttribute="bottom" id="Pcf-mA-RCp"/>
-                            <constraint firstItem="wfh-YV-6Fg" firstAttribute="leading" secondItem="Mez-7u-d1z" secondAttribute="leading" id="SLH-qn-qfU"/>
+                            <constraint firstItem="wfh-YV-6Fg" firstAttribute="centerX" secondItem="Mez-7u-d1z" secondAttribute="centerX" id="Umj-Zv-REw"/>
+                            <constraint firstItem="wfh-YV-6Fg" firstAttribute="top" secondItem="cRu-Ah-bOi" secondAttribute="top" id="egM-DM-fjA"/>
+                            <constraint firstItem="wfh-YV-6Fg" firstAttribute="trailing" secondItem="Mez-7u-d1z" secondAttribute="trailingMargin" id="f9z-8e-ADu"/>
+                            <constraint firstItem="wfh-YV-6Fg" firstAttribute="bottom" secondItem="cRu-Ah-bOi" secondAttribute="bottom" id="xmm-H7-eFn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cRu-Ah-bOi"/>
                     </view>
@@ -717,15 +731,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage_05" translatesAutoresizingMaskIntoConstraints="NO" id="ioT-lO-REs">
-                                <rect key="frame" x="0.0" y="44" width="375" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpPage_05" translatesAutoresizingMaskIntoConstraints="NO" id="ioT-lO-REs">
+                                <rect key="frame" x="20" y="44" width="375" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ioT-lO-REs" firstAttribute="top" secondItem="xhA-0g-0SX" secondAttribute="top" id="4Jy-Va-6TV"/>
-                            <constraint firstItem="ioT-lO-REs" firstAttribute="bottom" secondItem="xhA-0g-0SX" secondAttribute="bottom" id="GGT-1a-fpf"/>
-                            <constraint firstItem="ioT-lO-REs" firstAttribute="leading" secondItem="tMK-Pz-D78" secondAttribute="leading" id="mXj-ap-Bi0"/>
+                            <constraint firstItem="ioT-lO-REs" firstAttribute="leading" secondItem="tMK-Pz-D78" secondAttribute="leadingMargin" id="8oc-je-fBl"/>
+                            <constraint firstItem="ioT-lO-REs" firstAttribute="top" secondItem="xhA-0g-0SX" secondAttribute="top" id="Asg-jS-fsU"/>
+                            <constraint firstItem="ioT-lO-REs" firstAttribute="bottom" secondItem="xhA-0g-0SX" secondAttribute="bottom" id="ZJW-qJ-LYj"/>
+                            <constraint firstItem="ioT-lO-REs" firstAttribute="centerX" secondItem="tMK-Pz-D78" secondAttribute="centerX" id="fJh-ZJ-rXB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xhA-0g-0SX"/>
                     </view>

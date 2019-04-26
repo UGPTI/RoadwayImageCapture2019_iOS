@@ -170,8 +170,27 @@ class CameraViewController: UIViewController {
                 quality = 30 //set to low
             }
 
+            //thumbnail width and hieght
+            let width = Float(image.size.width)
+            let height = Float(image.size.height)
+            let ratio = width/height
+            var newWidth : Int?
+            var newHeight : Int?
+            if ratio > 1 {
+                //portrait
+                newHeight = 300
+                let scaleFactor = 300.0 / height
+                newWidth = Int(width * scaleFactor)
+            } else {
+                //landscape
+                newWidth = 300
+                let scaleFactor = 300.0 / width
+                newHeight = Int(height * scaleFactor)
+            }
+            let newSize = CGSize(width: newWidth ?? 300, height: newHeight ?? 400)
+            
             //Save photo using core data - protect against FAILURES!!!! dont use !
-            StoreImagesHelper.storeImageCapture(id: self.getDateInt(), latitude: lat, longitude: long, quality: quality, agency: agency, image: image, thumbnail: image.resizeImageUsingVImage(size: CGSize(width: 300, height: 300))!)
+            StoreImagesHelper.storeImageCapture(id: self.getDateInt(), latitude: lat, longitude: long, quality: quality, agency: agency, image: image, thumbnail: image.resizeImageUsingVImage(size: newSize)!)
         
             //enable buttons
             self.startButton.isEnabled = true

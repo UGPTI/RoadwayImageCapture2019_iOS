@@ -12,6 +12,9 @@ class PasswordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var passwordTextField: UITextField!
     
+//    let password = "1234"
+    let password = "iTvR!c6u"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +25,7 @@ class PasswordViewController: UIViewController, UITextFieldDelegate {
         
         textField.resignFirstResponder()
         
-        if textField.text == "1234" {
+        if textField.text == password {
             UserDefaults.standard.set(true, forKey: "loggedin")
             
             //go to home screen

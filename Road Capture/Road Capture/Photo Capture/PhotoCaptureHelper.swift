@@ -55,7 +55,7 @@ class PhotoCaptureHelper: NSObject, AVCapturePhotoCaptureDelegate {
     //set up camera
     func setup() {
         captureSession = AVCaptureSession()
-        captureSession.sessionPreset = .hd4K3840x2160
+        captureSession.sessionPreset = .high
         
         guard let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
             else {

@@ -208,7 +208,7 @@ class CameraViewController: UIViewController {
         let scaleFactor : CGFloat = CGFloat(scaledToWidth) / oldWidth
     
         let newHeight : CGFloat = sourceImage.size.height * scaleFactor
-        let newWidth : CGFloat = oldWidth * scaleFactor;
+        let newWidth : CGFloat = oldWidth * scaleFactor
     
         let size = CGSize(width: newWidth, height: newHeight)
         
